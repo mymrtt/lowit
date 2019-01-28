@@ -1,0 +1,145 @@
+*,
+*:after,
+*:before{
+	margin: 0; 
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+}
+
+/* APP */
+.container_conteudo{
+	width: 100%;
+	height: 100%;
+	background-color:#CCF2F7;
+}
+.container_infos{
+  width: 100%;
+  height: 100%;
+  background-color: #0acae2;
+}
+/* APP */
+
+/* HEADER */
+.container_header{
+	width: 85%;
+	height: 100%;
+}
+.container_header-itens{
+	width: 100%;
+	height: 100%;
+	display: flex;
+  justify-content: flex-end;
+  text-transform: uppercase;
+}
+.logolowit{
+  width: 100%;
+  height: 13%;
+}
+/* HEADER */
+
+/* MENU NAVBAR*/
+.container_navbar {
+	width: 15%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	color: #00717F;
+	background-color:#00BCD4;
+} 
+.navbar{
+	width: 15%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #F6F6F6;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+aside{
+	width: 100%;
+	height: 100%;
+}
+
+.container_navbar-links{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.navbar-links{
+	display: flex;
+	width: 100%;
+	height: 50%;
+	justify-content: space-evenly;
+	flex-direction: column;
+	align-items: center;
+}
+/* MENU NAVBAR*/
+
+
+/* LEITURA */
+.container_leitura{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.container_leitura-itens{
+  width: 30%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+.container_leitura-titulo{
+  width: 100%;
+  height: 20%;
+  background-color: #93DEE8;
+}
+.container_leitura-paragrafo{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #00717F;
+}
+/* LEITURA */
+
+
+
+/* DASHBOARD */
+.ContainerDashboard{
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+.container_btns{
+	width: 35%;
+	height: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.btnOnOff{
+  width: 60px;
+  height: 30px;
+  border: none;
+}
+.inpuTextDashboard{
+	width: 30%;
+	height: 30%;
+}
+/* DASHBOARD */
+
+
