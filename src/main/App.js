@@ -7,19 +7,16 @@ import Menu from './Menu';
 
 
 import Header from '../components/Header';
-import Leitura from '../components/Leitura';
-import Dashboard from '../components/Dashboard';
-import Dados from '../components/Dados';
-
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <div className="container_conteudo">
+        <div className="container_app">
           <Header />
           <Menu/>
           <Routes/>
+          {/* <div className="container_conteudo"> */}
           <div>
             <div>
               <a href="/Leitura" />
