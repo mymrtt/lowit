@@ -4,14 +4,14 @@ import {Link} from 'react-router-dom';
 import ButtonsMenu from '../components/ButtonsMenu';
 
 import LowItIMG from '../Assets/lowitpqn.png';
-import DashpqnIMG from '../Assets/dashpqn.png';
-import Dashpqn2IMG from '../Assets/dashpqn2.png';
-import DashpqnHoverIMG from '../Assets/dashpqnhover.png';
+// import DashpqnIMG from '../Assets/dashpqn.png';
+// import Dashpqn2IMG from '../Assets/dashpqn2.png';
+// import DashpqnHoverIMG from '../Assets/dashpqnhover.png';
 
 const links = [
-  { route: "/leitura", image:`${DashpqnIMG}`, imageOver:`${DashpqnHoverIMG}`, label: "Leitura"},
-  { route: "/dashboard", image:`${DashpqnIMG}`, label: "Dashboard"},
-  { route: "/dados", image:`${Dashpqn2IMG}`, label: "Dados"},
+  { route: "/leitura", label: "Leitura", className:"nav_link-label1"},
+  { route: "/dashboard", label: "Dashboard", className:"nav_link-label1"},
+  { route: "/dados", label: "Dados", className:"nav_link-label2"},
 ];
 
 export class Menu extends Component {
@@ -34,15 +34,17 @@ export class Menu extends Component {
 
   renderLink = () => {
     return links.map( link =>
-      <Link key={link.route} className="nav-link" to={link.route}>
-        {/* {onmouseover
-          ? <img src={link.imageOver} className="nav-img" alt="Ícone Menu" />
-          : <img src={link.image} className="nav-img" alt="Ícone Menu" />
-        } */}
-        <img src={link.image} className="nav-img" alt="Ícone Menu" />
-        <span>
-          {link.label}
+      <Link key={link.route} className="nav_link" to={link.route}>
+        <span
+          className={link.label === "Dados"
+            ? "nav_link-label2"
+            : "nav_link-label1"}>
+          {link.label}  
         </span>
+        {/* <img src={link.image} className="nav_link-img" alt="Ícone Menu" /> */}
+        {/* <span className="nav_link-label">
+          {link.label}
+        </span> */}
       </Link>
     )
   }

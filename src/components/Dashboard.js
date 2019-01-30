@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import FormSelectDash from './FormSelectDash';
+
 class Dashboard extends Component {
   constructor(){
     super();
@@ -23,6 +25,64 @@ class Dashboard extends Component {
   render(){
     return(
       <div className="ContainerDashboard" onload="plot();">
+        <div>
+          <FormSelectDash />
+        </div>
+        <div>
+          <div>
+
+            
+            <div>
+              <div className="containerTabela">
+                <div className="ContainerTabelaCabecalho">
+                  <div className="ContainerTabelaCabecalhoItems">
+                    <p className="HeaderTable">Dispositivos</p>
+                    <p className="HeaderTable">Corrente</p> 
+                    <p className="HeaderTable">Tensão</p> 
+                    <p className="HeaderTable">Unidade</p> 
+                    <p className="HeaderTable">Temperatura</p>
+                    <p className="HeaderTable">Ligar/Desligar</p> 
+                  </div>
+                </div>
+                <div className="ContainerTabelaConteudo">
+                  {/* {
+                    this.state.pedidos.map(item => {
+                      return (
+                        <div>
+                          <p className="CelTable" value={item['dispositivos']} />
+                          <p className="CelTable" value={item['corrente']} /> 
+                          <p className="CelTable" value={item['tensão']} /> 
+                          <p className="CelTable" value={item['unidade']} />
+                          <p className="CelTable" value={item['temperatura']} />
+                          <p className="CelTable" value={item['ligardesligar']} />
+                        </div>
+                      )
+                    })
+                  } */}
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+          <div>
+            {/* dispositivos */}
+          </div>
+        </div>
+      
+        
         {/* DISPOSITIVO 1 */}
         <div>
           <div>
