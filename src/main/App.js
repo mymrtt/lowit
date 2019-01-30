@@ -5,7 +5,6 @@ import './App.css';
 import Routes from './Routes';
 import Menu from './Menu';
 
-
 import Header from '../components/Header';
 
 class App extends Component {
@@ -16,18 +15,6 @@ class App extends Component {
           <Header />
           <Menu/>
           <Routes/>
-          {/* <div className="container_conteudo"> */}
-          <div>
-            <div>
-              <a href="/Leitura" />
-            </div>
-            <div>
-              <a href="/Dashboard" />
-            </div>
-            <div>
-              <a href="/Dados" />
-            </div>
-          </div>
         </div>
       </Router>
     );

@@ -60,10 +60,6 @@ a{
 .a_header{
 	color: #00717F;
 }
-.logolowit{
-  width: 100%;
-  height: 13%;
-}
 /* HEADER */
 
 /* MENU NAVBAR*/
@@ -103,13 +99,27 @@ aside{
 .container_navbar-img{
 	width: 100%;
 	height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-image: linear-gradient(#00717F, #00BCD4);
 }
+.logolowitIMG{
+  width: 30%;
+  height: 50%;
+}
 .nav-link{
-	color:#000
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color:#000;
 }
 .nav-link:hover{
 	color:#00717F;
+}
+.nav-img{
+	width: 30%;
+	height: 30%;
 }
 .navbar_links-lista{
 	display: flex;
@@ -175,7 +185,7 @@ aside{
   align-items: center;
   text-align: center;
   flex-wrap: nowrap;
-  font-size: 70px;
+  font-size: 60px;
   color: #00717F;
 }
 /* LEITURA */
