@@ -41,10 +41,6 @@ export class Menu extends Component {
             : "nav_link-label1"}>
           {link.label}  
         </span>
-        {/* <img src={link.image} className="nav_link-img" alt="Ícone Menu" /> */}
-        {/* <span className="nav_link-label">
-          {link.label}
-        </span> */}
       </Link>
     )
   }

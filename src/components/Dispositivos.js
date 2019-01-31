@@ -1,47 +1,63 @@
-// import React, { Component } from 'react';
+import React, { Component } from 'react';
 
-// class Dispositivo extends Component {
-//   constructor(props){
-//     super(props);
-//     this.state = {
-//       toggleState: true
-//     }
-//   }
+class Dispositivos extends Component {
 
-//   // changeColor(){
-//   //   if(this.state.toggleState === true){
-//   //     return '#F44336'
-//   //   }
-//   //   return '#4CAF50'
-//   // }
+  constructor(props){
+    super(props);
+    this.state = {
+      toggleState: true,
+      inputext: '',
+      value: '',
+    }
+  }
 
-//   changeColor = () => {
-//     this.setState({
-//       toggleState: !this.state.toggleState
-//     })
-//   }
+  changeColor = () => {
+    this.setState({
+      toggleState: !this.state.toggleState
+    })
+  }
 
-//   render() {
-//     return(
-//       <div className="container_dispositivos">
-//         <p>Dispositivos Conectados</p> 
-//         <div>
-//           <div className="container_btns">
-//             <div className="btn">
-//               <p>Disposito 1</p>
-//               <input type="button" value="button" name="btn1" style={{backgroundColor: this.state.toggleState === true ? '#F44336' : '#4CAF50'}}
-//             className="btnOnOff" onClick={this.changeColor} />
-//             </div>
-//             <div className="btn">
-//               <p>Disposito 2</p>
-//               <input type="button" value="button" name="btn2" style={{backgroundColor: this.state.toggleState === true ? '#F44336' : '#4CAF50'}}
-//             className="btnOnOff" onClick={this.changeColor} />
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     );
-//   }
-// }
+  updateInpuText(event){
+    this.setState({inputext: event.target.value.substr(0, 20)});
+  }
 
-// export default Dispositivo;
+  render() {
+    return(
+      <div className="container_dispositivos" onload="plot();">
+        <div className="container_dispositivos-blocos">
+          {/* um bloco */}
+          <div className="dispositivos_blocos">
+            <input  type="number" className="input_dispositivos" name={this.state.inputext} value="" onChange={this.updateInpuText.bind(this)} onInput="plot();"/>
+          </div>
+          {/* um bloco */}
+          {/* dois blocos */}
+          <div className="dispositivos_blocos">
+            <input type="number" className="input_dispositivos" name={this.state.inputext} value="" onChange={this.updateInpuText.bind(this)} onInput="plot();"/>
+          </div>
+          {/* dois blocos */}
+          {/* 3 blocos */}
+          <div className="dispositivos_blocos">
+            <input type="number" className="input_dispositivos" name={this.state.inputext} value="" onChange={this.updateInpuText.bind(this)} onInput="plot();"/>
+          </div>
+          {/* 3 blocos */}
+          {/* 4 blocos */}
+          <div className="dispositivos_blocos">
+            <input type="number" className="input_dispositivos" name={this.state.inputext} value="" onChange={this.updateInpuText.bind(this)} onInput="plot();"/>
+          </div>
+          {/* 4 blocos */}
+          {/* 5 blocos */}
+          <div className="dispositivos_blocos">
+            <input type="number" className="input_dispositivos" name={this.state.inputext} value="" onChange={this.updateInpuText.bind(this)} onInput="plot();"/>
+            <div className="container_btns">
+              <input type="button" value="button" name="btn1" style={{backgroundColor: this.state.toggleState === true ? '#F44336' : '#4CAF50'}}
+              className="btnOnOff" onClick={this.changeColor} />
+            </div>
+          </div>
+          {/* 5 blocos */}
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Dispositivos;

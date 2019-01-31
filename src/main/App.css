@@ -231,10 +231,41 @@ aside{
 /* LEITURA */
 
 /* DASHBOARD */
-.ContainerDashboard{
+.container_dashboard{
 	width: 100%;
-	height: 100%;
-	display: flex;
+	height: 40vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #00717F;
+}
+.container_dashboard-tabela{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.container_tabela-cabecalho{
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+}
+.container_dashboard-conteudo{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color:#00BCD4;
+}
+.container_dashboard-tabeladispositivos{
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.tabela_dispositivos-itens{
+  width: 100%;
+  height: 15%;
 }
 .container_btns{
 	width: 35%;
@@ -248,11 +279,36 @@ aside{
   height: 30px;
   border: none;
 }
-.inpuTextDashboard{
-	width: 30%;
-	height: 30%;
-}
 /* DASHBOARD */
+
+/* FORMSELECTDASH */
+.container_formselectdash{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* FORMSELECTDASH */
+
+/* DISPOSITIVOS DASHBOARD */
+.container_dispositivos{
+  display: flex;
+  width: 80%;
+  height: 100%;
+}
+.container_dispositivos-blocos{
+	width: 100%;
+  height: 15%;
+  display: flex;
+}
+.dispositivos_blocos{
+  display: flex;
+}
+.input_dispositivos{
+	width: 100%;
+	height: 100%;
+}
+/* DISPOSITIVOS DASHBOARD */
 
 /* DADOS */
 .container_dados{
