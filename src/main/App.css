@@ -30,6 +30,12 @@ a{
   justify-content: flex-end;
   flex-direction: column;
 }
+@media(max-width: 640px){
+	.container_app{
+		width: 100%;
+		height: 100%;
+	}
+}
 .container_infos{
   width: 100%;
   height: 100%;
@@ -50,6 +56,11 @@ a{
   justify-content: flex-end;
   text-transform: uppercase;
 }
+/* @media(max-width: 640px){
+	.container_header-elementos{
+		display: none;
+	}
+} */
 .container_header-itens{
 	width: 35%;
 	height: 100%;
@@ -95,6 +106,11 @@ a{
 	top: 0;
 	left: 0;
 }
+/* @media(max-width: 640px){
+	.navbar{
+		display: none;
+	}
+} */
 aside{
 	width: 100%;
 	height: 60%;
@@ -158,7 +174,7 @@ aside{
 	content:url('../Assets/dashpqnhover.png');
 }
 .nav_link-img{
-	width: 25%;
+	width: 23%;
 	height: 30%;
 }
 .navbar_links-lista{
@@ -196,6 +212,15 @@ aside{
   align-items: center;
   text-align: center;
 }
+@media(max-width: 640px){
+	.container_leitura{
+		display: flex;
+		width: 100%;
+		height: 80vh;
+		justify-content: space-around;
+		flex-direction: column;
+	}
+}
 /* .container_leitura-elementos{
   width: 100%;
   height: 100%;
@@ -209,6 +234,13 @@ aside{
   flex-direction: column;
   background-color: #fff;
 }
+@media(max-width: 640px){
+	.container_leitura-itens{
+		width: 90%;
+		height: 25%;
+		display: flex;
+	}
+}
 .container_leitura-titulo{
   width: 100%;
   height: 20%;
@@ -216,6 +248,11 @@ aside{
   justify-content: center;
   align-items: center;
 	background-color: #93DEE8;
+}
+@media(max-width: 640px){
+	.container_leitura-titulo{
+		height: 30%;
+	}
 }
 .container_leitura-paragrafo{
   width: 100%;
@@ -228,44 +265,69 @@ aside{
   font-size: 60px;
   color: #00717F;
 }
+@media(max-width: 640px){
+	.container_leitura-paragrafo{
+		font-size: 50px;
+	}
+}
 /* LEITURA */
 
 /* DASHBOARD */
 .container_dashboard{
 	width: 100%;
-	height: 40vh;
-  display: flex;
-  flex-direction: column;
-  background-color: #00717F;
+	height: 100%;
+	padding: 10px;
+	background-color: #00717F;
 }
 .container_dashboard-tabela{
   width: 100%;
   height: 100%;
-  display: flex;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
 }
 .container_tabela-cabecalho{
   width: 100%;
-  height: 30%;
+	/* height: 15%; */
+	height: 4vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: #fff;
+	color: #fff;
+	font-size: 15px;
+}
+.container_tabela-conteudo{
+	width: 100%;
+	height: 200px;
+	overflow-y: scroll;
 }
 .container_dashboard-conteudo{
-  width: 100%;
-  height: 100%;
-  display: flex;
+	width: 100%;
+	height: 20%;
+	display: flex;
+	padding: 5px 0;
   background-color:#00BCD4;
 }
 .container_dashboard-tabeladispositivos{
-  width: 15%;
+  width: 17%;
   height: 100%;
-  display: flex;
+	display: flex;
+	justify-content: space-between;
   flex-direction: column;
 }
 .tabela_dispositivos-itens{
-  width: 100%;
-  height: 15%;
+	width: 100%;
+	height: 100%;
+	border-radius: 9px;
+	outline: none;
+}
+.tabela_dispositivos-itens-btn{
+	width: 100%;
+  height: 100%;
+	background-color: #F8F8F8;
+	border: none;
+	outline: none;
+	cursor: pointer;
 }
 .container_btns{
 	width: 35%;
@@ -284,29 +346,42 @@ aside{
 /* FORMSELECTDASH */
 .container_formselectdash{
   width: 100%;
-  height: 100%;
+	height: 50%;
   display: flex;
   flex-direction: column;
+}
+.container_formselectdash-label{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.formselectdash-select{
+	width: 100%;
+	height: 4vh;
 }
 /* FORMSELECTDASH */
 
 /* DISPOSITIVOS DASHBOARD */
 .container_dispositivos{
   display: flex;
-  width: 80%;
-  height: 100%;
+  width: 83%;
+	height: 100%;
+	overflow-y: scroll;
 }
 .container_dispositivos-blocos{
 	width: 100%;
-  height: 15%;
+  height: 20%;
   display: flex;
 }
 .dispositivos_blocos{
+	width: 100%;
   display: flex;
 }
 .input_dispositivos{
 	width: 100%;
 	height: 100%;
+	border-radius: 9px;
 }
 /* DISPOSITIVOS DASHBOARD */
 
@@ -320,6 +395,14 @@ aside{
 	text-align: center;
 	font-size: 15px;
 }
+@media(max-width: 640px){
+	.container_dados{
+		width: 100%;
+		height: 85vh;
+		display: flex;
+		flex-direction: column;
+	}
+}
 .container_dados-row{
 	width: 100%;
 	height: 75%;
@@ -327,6 +410,13 @@ aside{
 	justify-content: space-between;
 	align-items: center;
 	flex-direction: column;
+}
+@media(max-width: 640px){
+	.container_dados-row{
+		width: 100%;
+		height: 100%;
+		justify-content: space-around;
+	}
 }
 .container_dados-titulo{
   width: 100%;
@@ -349,5 +439,11 @@ aside{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-size: 15px;
 }
+/* @media(max-width: 640px){
+	.container_dados-paragrafo{
+		font-size: 15px;
+	}
+} */
 /* DADOS */

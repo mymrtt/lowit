@@ -6,7 +6,6 @@ class FormSelectDash extends React.Component {
     this.state = {
       
     };
-
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -18,14 +17,14 @@ class FormSelectDash extends React.Component {
     return (
       <div className="container_formselectdash">
         <form onSubmit={this.handleSubmit}>
-          <label>
-            <select onChange={this.handleChange}>
+          <label className="container_formselectdash-label">
+            <select className="formselectdash-select" onChange={this.handleChange}>
               <option value="">Prédio Inteiro</option>
               <option value="">1º Andar</option>
               <option value="">2º Andar</option>
               <option value="">3º Andar</option>
             </select>
-            <select>
+            <select className="formselectdash-select">
               {/* opçao apos escolher o andar */}
               <option value="">Sala de Vídeo</option>
               <option value="">Hall</option>
@@ -33,7 +32,7 @@ class FormSelectDash extends React.Component {
               <option value="">Área de Lazer</option>
             </select>
             {/* opçao escolhida */}
-            <input type="text" value="" name="" />
+            <input className="formselectdash-select" type="text" value="" name="" />
           </label>
           {/* <label>
             <input type="text" value="" name="andar" />
