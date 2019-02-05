@@ -9,7 +9,7 @@ class GraphicDashboard extends Component{
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets:[
           {
-            label: 'Consumo',
+            label: 'Consumo por dia',
             data:[
               20,
               25,
@@ -24,7 +24,25 @@ class GraphicDashboard extends Component{
               20,
               60
             ],
-            backgroundColor: '#00717F'
+            backgroundColor: '#00717F'  
+          },
+          {
+            label: 'Consumo por mês',
+            data:[
+              30,
+              25,
+              15,
+              40,
+              35,
+              45,
+              20,
+              10,
+              15,
+              10,
+              20,
+              60
+            ],
+            backgroundColor: '#93DEE8'  
           }
         ]
       }
@@ -35,7 +53,7 @@ class GraphicDashboard extends Component{
     displayTitle:true,
     displayLegend: true,
     legendPosition:'right',
-    location:''
+    // location:''
   }
 
   render(){
@@ -46,7 +64,7 @@ class GraphicDashboard extends Component{
           options={{
             title:{
               display:this.props.displayTitle,
-              text:'Consumo '+this.props.location,
+              // text:'Consumo '+this.props.location,
               fontSize:25
             },
             legend:{

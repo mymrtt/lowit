@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import BtnOnpqnIMG from '../Assets/btnonpqn.png';
 import BtnOffpqnIMG from '../Assets/btnoffpqn.png';
 
-class ButtonsDashboard extends React.Component {
+class ButtonsDashboard extends Component {
 
   ChangeBackgroundButton = () => {
     switch(this.props.backgroundImage){

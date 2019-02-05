@@ -89,7 +89,7 @@ class Dashboard extends Component {
             }
           </div>
         </div>
-        <GraphicDashboard />
+        <GraphicDashboard legendPosition="left"/>
       </div>
     )
   }
