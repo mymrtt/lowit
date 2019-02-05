@@ -8,7 +8,7 @@ class Header extends Component {
   render() {
     return(
       <header className="container_header">
-        <div className="container_header-elementos">
+        <div className="container_header-conteudo">
           <div className="container_header-itens">
             <div className="header_itens">
               <img src={ConfigpqnIMG} className="header_itens-img" alt="configuração" />

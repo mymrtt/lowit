@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class FormSelectDash extends React.Component {
+class FormSelectDashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,16 +15,16 @@ class FormSelectDash extends React.Component {
 
   render() {
     return (
-      <div className="container_formselectdash">
+      <div className="container_formSelectDashboard">
         <form onSubmit={this.handleSubmit}>
-          <label className="container_formselectdash-label">
-            <select className="formselectdash-select" onChange={this.handleChange}>
+          <label className="container_formSelectDashboard-label">
+            <select className="formSelectDashboard-select" onChange={this.handleChange}>
               <option value="">Prédio Inteiro</option>
               <option value="">1º Andar</option>
               <option value="">2º Andar</option>
               <option value="">3º Andar</option>
             </select>
-            <select className="formselectdash-select">
+            <select className="formSelectDashboard-select">
               {/* opçao apos escolher o andar */}
               <option value="">Sala de Vídeo</option>
               <option value="">Hall</option>
@@ -32,16 +32,12 @@ class FormSelectDash extends React.Component {
               <option value="">Área de Lazer</option>
             </select>
             {/* opçao escolhida */}
-            <input className="formselectdash-select" type="text" value="" name="" />
+            <input className="formSelectDashboard-select" type="text" value="" name="" />
           </label>
-          {/* <label>
-            <input type="text" value="" name="andar" />
-            <input type="text" value="Tomada 2" name="" />
-          </label> */}
         </form>
       </div>
     );
   }
 }
 
-export default FormSelectDash;
+export default FormSelectDashboard;

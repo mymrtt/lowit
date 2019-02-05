@@ -49,7 +49,7 @@ a{
 	height: 70px;
 	background-color: #00BCD4;
 }
-.container_header-elementos{
+.container_header-conteudo{
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -133,7 +133,7 @@ aside{
 	background-image: linear-gradient(#00717F, #00BCD4);
 }
 .logolowitIMG{
-  width: 25%;
+  width: 23%;
   height: 60%;
 }
 .nav_link{
@@ -221,12 +221,6 @@ aside{
 		flex-direction: column;
 	}
 }
-/* .container_leitura-elementos{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-evenly;
-} */
 .container_leitura-itens{
   width: 25%;
   height: 60%;
@@ -277,14 +271,14 @@ aside{
 	width: 100%;
 	height: 100%;
 	padding: 10px;
-	background-color: #00717F;
 }
-.container_dashboard-tabela{
+.container_tabela{
+	padding: 10px;
   width: 100%;
   height: 100%;
 	display: flex;
 	flex-direction: column;
-	padding: 10px;
+	background-color: #00717F;
 }
 .container_tabela-cabecalho{
   width: 100%;
@@ -296,33 +290,37 @@ aside{
 	color: #fff;
 	font-size: 15px;
 }
+.tabela_cabecalho-itens{
+
+}
 .container_tabela-conteudo{
 	width: 100%;
 	height: 200px;
 	overflow-y: scroll;
 }
-.container_dashboard-conteudo{
+.container_tabela-inputs{
 	width: 100%;
 	height: 20%;
 	display: flex;
 	padding: 5px 0;
   background-color:#00BCD4;
 }
-.container_dashboard-tabeladispositivos{
-  width: 17%;
-  height: 100%;
-	display: flex;
-	justify-content: space-between;
-  flex-direction: column;
-}
-.tabela_dispositivos-itens{
-	width: 100%;
+.tabela_inputs{
+	width: 50%;
 	height: 100%;
-	border-radius: 9px;
+	border: none;
+	text-align: center;
+	border-radius: 6px;
 	outline: none;
+	background-color: #F8F8F8;
 }
-.tabela_dispositivos-itens-btn{
-	width: 100%;
+.tabela_inputs-dispositivos{
+	width: 55%;
+	height: 100%;
+	text-align: start;
+}
+.tabela_inputs-btn{
+	width: 50%;
   height: 100%;
 	background-color: #F8F8F8;
 	border: none;
@@ -336,29 +334,39 @@ aside{
 	justify-content: space-evenly;
 	align-items: center;
 }
-.btnOnOff{
+/* .btnsOnOff_dasboard{
   width: 60px;
   height: 30px;
   border: none;
+} */
+
+/* .btnOn_dashboard{
+	content:url('../Assets/btnonpqn.png');
 }
+.btnOff_dashboard{
+	content:url('../Assets/btnoffpqn.png');
+} */
 /* DASHBOARD */
 
 /* FORMSELECTDASH */
-.container_formselectdash{
+.container_formSelectDashboard{
   width: 100%;
 	height: 50%;
   display: flex;
   flex-direction: column;
 }
-.container_formselectdash-label{
+.container_formSelectDashboard-label{
 	width: 100%;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 }
-.formselectdash-select{
+.formSelectDashboard-select{
 	width: 100%;
 	height: 4vh;
+	/* border: none; */
+	border-radius: 5px;
+	background-color: #F8F8F8;
 }
 /* FORMSELECTDASH */
 
@@ -447,3 +455,19 @@ aside{
 	}
 } */
 /* DADOS */
+
+/* GRAPHIC DASHBOARD */
+.container_graphicDashboard{
+	margin: 30px 0 0 0;
+	width: 100%;
+	height: 100%;
+	background-color: #F8F8F8;
+}
+canvas{
+	width: 65%;
+}
+.chartjs-render-monitor{
+	width: 65%;
+}
+
+/* GRAPHIC DASHBOARD */

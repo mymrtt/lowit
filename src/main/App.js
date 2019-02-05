@@ -4,7 +4,6 @@ import './App.css';
 
 import Routes from './Routes';
 import Menu from './Menu';
-
 import Header from '../components/Header';
 
 class App extends Component {
