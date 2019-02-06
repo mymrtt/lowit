@@ -351,10 +351,11 @@ aside{
 
 /* FORMSELECTDASH */
 .container_formSelectDashboard{
-  width: 100%;
+	width: 100%;
 	height: 50%;
-  display: flex;
+	display: flex;
   flex-direction: column;
+  border: 3px solid;
 }
 .container_formSelectDashboard-label{
 	width: 100%;
@@ -474,3 +475,9 @@ aside{
 } */
 
 /* GRAPHIC DASHBOARD */
+
+.TreeExample{
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}

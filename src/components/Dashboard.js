@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 
-import FormSelectDashboard from './FormSelectDashboard';
+import TabelaDispositivos from './TabelaDispositivos';
+
 import ButtonsDashboard from './ButtonsDashboard';
 import GraphicDashboard from './GraphicDashboard';
+
+// import ListaTabela from './ListaTabela';
+
+
+// import TabelaDispositivos from './TabelaDispositivos';
+// import ListaTabela from './ListaTabela';
 
 class Dashboard extends Component {
   constructor(props){
@@ -63,7 +70,7 @@ class Dashboard extends Component {
     return(
       <div className="container_dashboard">
         <div className="container_tabela">
-          <FormSelectDashboard />
+          {/* <FormSelectDashboard /> */}
           <div className="container_tabela-cabecalho">
             <p className="tabela_cabecalho-itens">Dispositivos</p>
             <p className="tabela_cabecalho-itens">Corrente</p> 
@@ -90,6 +97,9 @@ class Dashboard extends Component {
           </div>
         </div>
         <GraphicDashboard legendPosition="left"/>
+        {/* <TabelaDispositivos /> */}
+        <TabelaDispositivos />
+        {/* <ListaTabela /> */}
       </div>
     )
   }
