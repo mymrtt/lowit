@@ -1,105 +1,64 @@
 import React, { Component } from 'react';
 
-import TabelaDispositivos from './TabelaDispositivos';
-
-import ButtonsDashboard from './ButtonsDashboard';
-import GraphicDashboard from './GraphicDashboard';
-
-// import ListaTabela from './ListaTabela';
-
-
 // import TabelaDispositivos from './TabelaDispositivos';
+
+import GraficoConsumo from './GraficoConsumo';
+import GraficoDemanda from './GraficoDemanda';
+
 // import ListaTabela from './ListaTabela';
+// import TabelaDispositivos from './TabelaDispositivos';
 
 class Dashboard extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      dados: [
-      {   'dispositivos': 'Iluminação 2',
-          'corrente': '2.3',
-          'tensao': '3.1', 
-          'unidade': '4', 
-          'temperatura': '12', 
-          'ligardesligar': <ButtonsDashboard />
-        },
-        {
-          'dispositivos': 'Tomada 1',
-          'corrente': '2.3',
-          'tensao': '3.1', 
-          'unidade': '4', 
-          'temperatura': '12', 
-          'ligardesligar': <ButtonsDashboard />
-        },
-        {
-          'dispositivos': 'Ar condicionado',
-          'corrente': '1.2',
-          'tensao': '1.2', 
-          'unidade': '1', 
-          'temperatura': '17', 
-          'ligardesligar': <ButtonsDashboard />
-        },
-        {
-          'dispositivos': 'Iluminação 2',
-          'corrente': '2.3',
-          'tensao': '3.1', 
-          'unidade': '4', 
-          'temperatura': '12', 
-          'ligardesligar': <ButtonsDashboard />
-        },
-        {
-          'dispositivos': 'Tomada 2',
-          'corrente': '1.2',
-          'tensao': '1.2', 
-          'unidade': '1', 
-          'temperatura': '17', 
-          'ligardesligar': <ButtonsDashboard />
-        },
-        {
-          'dispositivos': 'Tomada 3',
-          'corrente': '1.2',
-          'tensao': '1.2', 
-          'unidade': '1', 
-          'temperatura': '17', 
-          'ligardesligar': <ButtonsDashboard />
-        }
-      ]
-    };
-  }
   render(){
     return(
       <div className="container_dashboard">
-        <div className="container_tabela">
-          {/* <FormSelectDashboard /> */}
-          <div className="container_tabela-cabecalho">
-            <p className="tabela_cabecalho-itens">Dispositivos</p>
-            <p className="tabela_cabecalho-itens">Corrente</p> 
-            <p className="tabela_cabecalho-itens">Tensão</p> 
-            <p className="tabela_cabecalho-itens">Unidade</p> 
-            <p className="tabela_cabecalho-itens">Temperatura</p>
-            <p className="tabela_cabecalho-itens">Ligar/Desligar</p> 
+        <div className="container_dashboard-consumoedemanda">
+          <div className="container_dashboard-consumo">
+            <div className="container_tabela">
+              <div className="container_tabela-itens">
+                <p className="container_tabela-titulo">Consumo atual (em Reais)</p>
+                {/* o consumo */}
+                <p className="container_tabela-paragrafo">R$ 45,36</p>
+              </div>
+              <div className="container_tabelaDispositivos-consumo">
+                <div className="tabela_dispositivos">
+                  {/* <TabelaDispositivos /> */}
+                  <h3 className="tabela_dispositivos-titulo">selecione o grupo/dispositivos</h3>
+                  <p>predio inteiro</p>
+                  <p>1 andar</p>
+                  <p>area de lazer</p>
+                  <p>iluminaçao 2</p>
+                </div>
+              </div>
+            </div>
+              <GraficoConsumo/>
           </div>
-          <div className="container_tabela-conteudo">
-            {
-              this.state.dados.map(item => {
-                return (
-                  <div className="container_tabela-inputs">
-                    <input className="tabela_inputs-dispositivos tabela_inputs" value={item['dispositivos']} />
-                    <input className="tabela_inputs" type="number" value={item['corrente']} />
-                    <input className="tabela_inputs" type="number" value={item['tensao']} /> 
-                    <input className="tabela_inputs" type="number" value={item['unidade']} />
-                    <input className="tabela_inputs" type="number" value={item['temperatura']} />
-                    <input className="tabela_inputs  tabela_inputs-btn" type="button" value={item['ligardesligar']} backgroundColor='BtnOn'/>
-                  </div>
-                )
-              })
-            }
+          <div className="container_dashboard-demanda">
+            <div className="container_tabela">
+              <div className="container_tabela-itens">
+                <p className="container_tabela-titulo">Demanda Atual</p>
+                {/* a demanda */}
+                <p className="container_tabela-paragrafo">40 kwh</p>
+              </div>
+              <div className="container_tabela-itens">
+                <p className="container_tabela-titulo">Total de dispositivos conectados</p>
+                {/* os dispositivos */}
+                <p className="container_tabela-paragrafo">22</p>
+              </div>
+            </div>
+            <GraficoDemanda/>
           </div>
         </div>
-        <GraphicDashboard legendPosition="left"/>
-        {/* <TabelaDispositivos /> */}
-        <TabelaDispositivos />
-        {/* <ListaTabela /> */}
+        <div className="container_tabelaDispositivos">
+          <div className="tabela_dispositivos">
+            {/* <TabelaDispositivos /> */}
+            <h3 className="tabela_dispositivos-titulo">Ligar ou Desligar Grupo/Dispositivo:</h3>
+            <p>predio inteiro</p>
+            <p>1 andar</p>
+            <p>area de lazer</p>
+            <p>iluminaçao 2</p>
+          </div>
+        </div>
       </div>
     )
   }

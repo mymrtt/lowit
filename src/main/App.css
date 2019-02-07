@@ -24,7 +24,7 @@ a{
 
 /* APP */
 .container_app{
-  width: 85%;
+  width: 87%;
   height: 100%;
   display: flex;
   justify-content: flex-end;
@@ -95,7 +95,7 @@ a{
 	background-color:#00BCD4;
 } 
 .navbar{
-	width: 15%;
+	width: 13%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
@@ -113,7 +113,7 @@ a{
 } */
 aside{
 	width: 100%;
-	height: 60%;
+	height: 100%;
 	border-bottom: 3px solid #e4e4e4;
 }
 .container_navbar-links{
@@ -181,26 +181,10 @@ aside{
 .navbar_links-lista{
 	display: flex;
 	width: 100%;
-	height: 50%;
+	height: 30%;
 	justify-content: space-evenly;
 	flex-direction: column;
 	align-items: center;
-}
-.container_buttons{
-	width: 100%;
-	height: 80%;
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	flex-direction: column;
-} 
-.btns_menu{
-	width: 50px;
-	height: 25px;
-	border: none;
-	border-radius: 6px;
-	outline: none;
-	cursor: pointer;
 }
 /* MENU NAVBAR*/
 
@@ -222,34 +206,67 @@ aside{
 		flex-direction: column;
 	}
 }
-.container_leitura-itens{
-  width: 25%;
-  height: 60%;
+
+/* LEITURA */
+
+/* DASHBOARD */
+.container_dashboard{
+	width: 100%;
+  height: 100%;
+  display: flex;
+	padding: 10px;
+}
+.container_dashboard-consumoedemanda{
+  width: 80%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #fff;
 }
+.container_dashboard-consumo{
+	width: 100%;
+  height: 60%;
+  display: flex;
+  background-color: #00717F;
+  border-radius: 10px;
+}
+.container_tabela{
+  width: 17%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container_tabela-itens{
+	width: 100%;
+	height: 100%;
+	display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+	background-color: #fff;
+  }
 @media(max-width: 640px){
-	.container_leitura-itens{
-		width: 90%;
-		height: 25%;
-		display: flex;
-	}
+  .container_tabela-itens{
+    width: 90%;
+    height: 25%;
+    display: flex;
+  }
 }
-.container_leitura-titulo{
+.container_tabela-titulo{
   width: 100%;
   height: 20%;
   display: flex;
   justify-content: center;
-  align-items: center;
-	background-color: #93DEE8;
+  text-align: center;
+  font-size: 15px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: #93DEE8;
 }
 @media(max-width: 640px){
-	.container_leitura-titulo{
-		height: 30%;
-	}
+  .container_tabela-titulo{
+    height: 30%;
+  }
 }
-.container_leitura-paragrafo{
+.container_tabela-paragrafo{
   width: 100%;
   height: 100%;
   display: flex;
@@ -257,96 +274,96 @@ aside{
   align-items: center;
   text-align: center;
   flex-wrap: nowrap;
-  font-size: 60px;
+  font-size: 40px;
   color: #00717F;
 }
 @media(max-width: 640px){
-	.container_leitura-paragrafo{
-		font-size: 50px;
-	}
+  .container_tabela-paragrafo{
+    font-size: 50px;
+  }
 }
-/* LEITURA */
-
-/* DASHBOARD */
-.container_dashboard{
-	width: 100%;
-	height: 100%;
-	padding: 10px;
-}
-.container_tabela{
-	padding: 10px;
+.container_tabelaDispositivos-consumo{
   width: 100%;
   height: 100%;
-	display: flex;
-	flex-direction: column;
-	background-color: #00717F;
-}
-.container_tabela-cabecalho{
-  width: 100%;
-	/* height: 15%; */
-	height: 4vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-	color: #fff;
-	font-size: 15px;
+  flex-direction: column;
+  background-color: #00717F;
+  border-radius: 10px;
 }
-.tabela_cabecalho-itens{
-
+.container_tabela-dispositivos{
+  width: 100%;
+  height: 50%;
 }
-.container_tabela-conteudo{
-	width: 100%;
-	height: 200px;
-	overflow-y: scroll;
+.container_dashboard-demanda{
+  width: 100%;
+  height: 40%;
+  display: flex;
+  background-color: #00717F;
+  border-radius: 10px;
 }
-.container_tabela-inputs{
-	width: 100%;
-	height: 20%;
-	display: flex;
-	padding: 5px 0;
-  background-color:#00BCD4;
+.container_tabelaDispositivos{
+  width: 20%;
+  /* height: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #00717F;
+  border-radius: 10px;
 }
-.tabela_inputs{
-	width: 50%;
-	height: 100%;
-	border: none;
-	text-align: center;
-	border-radius: 6px;
-	outline: none;
-	background-color: #F8F8F8;
+.tabela_dispositivos{
+  width: 90%;
+	height: 95%;
+  display: flex;
+	flex-direction: column;
+  background-color: #F8F8F8;
+  border-radius: 10px;
+  border-bottom: 10px solid #57B6C2;
 }
-.tabela_inputs-dispositivos{
-	width: 55%;
-	height: 100%;
-	text-align: start;
+.tabela_dispositivos-titulo{
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  background-color: #57B6C2;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
-.tabela_inputs-btn{
-	width: 50%;
+.container_grafico{
+  width: 83%;
   height: 100%;
-	background-color: #F8F8F8;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #57B6C2;
+}
+.container_buttonsGrafico{
+  width: 95%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.buttonsGrafico{
+	width: 48%;
+	height: 80%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+} 
+.btns{
+	width: 60px;
+	height: 20px;
 	border: none;
+	border-radius: 6px;
 	outline: none;
 	cursor: pointer;
 }
-.container_btns{
-	width: 35%;
-	height: 100%;
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
+.input_grafico{
+  background-color: #F8F8F8;
+  border-radius: 9px;
+  outline: none;
 }
-/* .btnsOnOff_dasboard{
-  width: 60px;
-  height: 30px;
-  border: none;
-} */
-
-/* .btnOn_dashboard{
-	content:url('../Assets/btnonpqn.png');
-}
-.btnOff_dashboard{
-	content:url('../Assets/btnoffpqn.png');
-} */
 /* DASHBOARD */
 
 /* FORMSELECTDASH */

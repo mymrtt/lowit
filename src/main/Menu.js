@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
-import ButtonsMenu from '../components/ButtonsMenu';
+// import ButtonsMenu from '../components/ButtonsMenu';
 
 import LowItIMG from '../Assets/lowitgrande.png';
 
@@ -20,14 +20,14 @@ export class Menu extends Component {
     }
   }
 
-  ChangeBtnColor = () => {
-    switch(this.param.color){
-      case 'DarkBlue':
-        return '#00717F';
-      default:
-        return '#93DEE8';
-    }
-  }
+  // ChangeBtnColor = () => {
+  //   switch(this.param.color){
+  //     case 'DarkBlue':
+  //       return '#00717F';
+  //     default:
+  //       return '#93DEE8';
+  //   }
+  // }
 
   renderLink = () => {
     return links.map( link =>
@@ -55,9 +55,9 @@ export class Menu extends Component {
             </ul>
           </div>
         </aside>
-        <ButtonsMenu value="Dia"/>
+        {/* <ButtonsMenu value="Dia"/>
         <ButtonsMenu value="Mês" backgroundColor='DarkBlue'/>
-        <ButtonsMenu value="Ano"/>
+        <ButtonsMenu value="Ano"/> */}
       </nav>
     )
   }
