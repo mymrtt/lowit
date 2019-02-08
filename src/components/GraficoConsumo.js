@@ -44,7 +44,7 @@ class GraficoConsumo extends Component{
               20,
               60
             ],
-            backgroundColor: '#93DEE8'  
+            backgroundColor: '#00717F'  
           },
           {
             label: 'Mês',
@@ -65,7 +65,7 @@ class GraficoConsumo extends Component{
             backgroundColor: '#00717F'
           },
           {
-            label: 'Ano',
+            label:  'Ano',
             data:[
               100,
               150,
@@ -88,47 +88,29 @@ class GraficoConsumo extends Component{
   }
 
   static defaultProps = {
-    displayTitle:true,
-    displayLegend: true,
-    legendPosition:'right',
-    // location:''
-  }
-
-  chartData = canvas => {
-    const data = this.state.data;
-
-    return data;
+    // displayTitle:true,
+    // displayLegend: true,
+    // legendPosition:'right',
   }
 
   render(){
     return (
       <div className="container_grafico">
-        <div className="container_buttonsGrafico">
-          <input className="input_grafico" type="text" />
-          <div className="buttonsGrafico">
-            <ButtonsGrafico value="Hora" backgroundColor='Grey'/>
-            <ButtonsGrafico value="Dia" backgroundColor='Grey'/>
-            <ButtonsGrafico value="Mês" backgroundColor='Grey'/>
-            <ButtonsGrafico value="Ano" backgroundColor='Grey'/>
+        <div className="container_grafico-conteudo">
+          <div className="container_buttonsGrafico">
+            <input className="input_grafico" type="text" value="Sala de vídeo" />
+            <div className="buttonsGrafico">
+              <ButtonsGrafico value="Hora" backgroundColor='Grey'/>
+              <ButtonsGrafico value="Dia" backgroundColor='Grey'/>
+              <ButtonsGrafico value="Mês" backgroundColor='Grey'/>
+              <ButtonsGrafico value="Ano" backgroundColor='Grey'/>
+            </div>
           </div>
-        </div>
-        <div style={{ position: "relative", width: '95%', height: '50%', backgroundColor: '#fff', justifyContent: 'flex-end' }}>
-          <h3>Consumo</h3>
-          <Line
-            data={this.state.chartData}
-            options={{
-              title:{
-                display:this.props.displayTitle,
-                // text:'Consumo '+this.props.location,
-                  
-                fontSize:20
-              },
-              legend:{
-                display:this.props.displayLegend,
-                position:this.props.legendPosition
-              }
-            }}
-          />
+          <div style={{ width: '95%', height: '100%', backgroundColor: '#fff', justifyContent: 'flex-end', borderRadius: '8px' }}>
+            <h3 className="grafico_consumo-texto">Consumo</h3>
+            <Line data={this.state.chartData} options={{title:{responsive: true, maintainAspectRatio: true}}} width={600} height={240} />
+            <p className="grafico_demanda-textos">Mês</p>
+          </div>
         </div>
       </div> 
     )

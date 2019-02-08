@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-// import TabelaDispositivos from './TabelaDispositivos';
+import TabelaDispositivos from './TabelaDispositivos';
 
 import GraficoConsumo from './GraficoConsumo';
 import GraficoDemanda from './GraficoDemanda';
@@ -22,12 +22,12 @@ class Dashboard extends Component {
               </div>
               <div className="container_tabelaDispositivos-consumo">
                 <div className="tabela_dispositivos">
-                  {/* <TabelaDispositivos /> */}
-                  <h3 className="tabela_dispositivos-titulo">selecione o grupo/dispositivos</h3>
-                  <p>predio inteiro</p>
+                  <h3 className="tabela_dispositivos-titulo">Selecione o Grupo/Dispositivo:</h3>
+                  <TabelaDispositivos />
+                  {/* <p>predio inteiro</p>
                   <p>1 andar</p>
                   <p>area de lazer</p>
-                  <p>iluminaçao 2</p>
+                  <p>iluminaçao 2</p> */}
                 </div>
               </div>
             </div>
@@ -51,12 +51,12 @@ class Dashboard extends Component {
         </div>
         <div className="container_tabelaDispositivos">
           <div className="tabela_dispositivos">
-            {/* <TabelaDispositivos /> */}
             <h3 className="tabela_dispositivos-titulo">Ligar ou Desligar Grupo/Dispositivo:</h3>
-            <p>predio inteiro</p>
+            <TabelaDispositivos />
+            {/* <p>predio inteiro</p>
             <p>1 andar</p>
             <p>area de lazer</p>
-            <p>iluminaçao 2</p>
+            <p>iluminaçao 2</p> */}
           </div>
         </div>
       </div>

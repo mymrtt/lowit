@@ -26,7 +26,7 @@ class GraficoDemanda extends Component{
               20,
               60
             ],
-            backgroundColor: '#00717F'  
+            backgroundColor: '#CCF2F7'  
           },
           {
             label: 'Dia',
@@ -44,7 +44,7 @@ class GraficoDemanda extends Component{
               20,
               60
             ],
-            backgroundColor: '#93DEE8'  
+            backgroundColor: '#CCF2F7'  
           },
           {
             label: 'Mês',
@@ -62,7 +62,7 @@ class GraficoDemanda extends Component{
               45,
               50
             ],
-            backgroundColor: '#00717F'
+            backgroundColor: '#CCF2F7'
           },
           {
             label: 'Ano',
@@ -80,7 +80,7 @@ class GraficoDemanda extends Component{
               100,
               200
             ],
-            backgroundColor: '#00717F'
+            backgroundColor: '#CCF2F7'
           }
         ]
       }
@@ -88,41 +88,28 @@ class GraficoDemanda extends Component{
   }
 
   static defaultProps = {
-    displayTitle:true,
-    displayLegend: true,
-    legendPosition:'right',
-    // location:''
+    // displayTitle:true,
+    // displayLegend: true,
+    // legendPosition:'right',
   }
 
   render(){
     return (
       <div className="container_grafico">
-        <div className="container_buttonsGrafico">
-          <input className="input_grafico" type="text" />
-          <div className="buttonsGrafico">
-            <ButtonsGrafico value="Hora" backgroundColor='Grey'/>
-            <ButtonsGrafico value="Dia" backgroundColor='Grey'/>
-            <ButtonsGrafico value="Mês" backgroundColor='Grey'/>
-            <ButtonsGrafico value="Ano" backgroundColor='Grey'/>
+        <div className="container_grafico-conteudoDemanda">
+          <div className="container_buttonsGrafico-demanda">
+            <div className="buttonsGrafico">
+              <ButtonsGrafico value="Hora" backgroundColor='Grey'/>
+              <ButtonsGrafico value="Dia" backgroundColor='Grey'/>
+              <ButtonsGrafico value="Mês" backgroundColor='Grey'/>
+              <ButtonsGrafico value="Ano" backgroundColor='Grey'/>
+            </div>
           </div>
-        </div>
-        <div style={{ position: "relative", width: '95%', height: '50%', backgroundColor: '#fff', justifyContent: 'flex-end' }}>
-          <h3>Demanda</h3>
-          <Line
-            data={this.state.chartData}
-            options={{
-              title:{
-                display:this.props.displayTitle,
-                // text:'Demanda '+this.props.location,
-                  
-                fontSize:25
-              },
-              legend:{
-                display:this.props.displayLegend,
-                position:this.props.legendPosition
-              }
-            }}
-          />
+          <div style={{ width: '95%', height: '50%', backgroundColor: '#fff', justifyContent: 'flex-end', borderRadius: '8px'}}>
+            <h3 className="grafico_demanda-textos">Demanda</h3>
+            <Line data={this.state.chartData} options={{title:{responsive: true, maintainAspectRatio: true}}} width={600} height={130} />
+            <p className="grafico_demanda-textos">Mês</p>
+          </div>
         </div>
       </div>
     )
