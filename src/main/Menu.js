@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 // import ButtonsMenu from '../components/ButtonsMenu';
 
-import LowItIMG from '../Assets/lowitgrande.png';
+import LowItIMG from '../Assets/lowitpqn.png';
 
 const links = [
   { route: "/leitura", label: "Leitura", className:"nav_link-label1"},

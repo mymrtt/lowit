@@ -95,7 +95,7 @@ class GraficoConsumo extends Component{
 
   render(){
     return (
-      <div className="container_grafico">
+      // <div className="container_grafico">
         <div className="container_grafico-conteudo">
           <div className="container_buttonsGrafico">
             <input className="input_grafico" type="text" value="Sala de vídeo" />
@@ -112,7 +112,7 @@ class GraficoConsumo extends Component{
             <p className="grafico_demanda-textos">Mês</p>
           </div>
         </div>
-      </div> 
+      // </div> 
     )
   }
 }

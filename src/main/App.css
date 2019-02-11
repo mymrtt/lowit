@@ -68,6 +68,7 @@ a{
 	justify-content: space-evenly;
 	align-items: center;
 	font-size: 12px;
+	font-family: 'Roboto', sans-serif;
 }
 .header_itens{
 	width: 80%;
@@ -211,62 +212,45 @@ aside{
 
 /* DASHBOARD */
 .container_dashboard{
+	padding: 10px 0 0 0;
 	width: 100%;
   height: 100%;
-  display: flex;
-	padding: 10px;
+	display: flex;
+	flex-direction: column;
 }
-.container_dashboard-consumoedemanda{
-  width: 80%;
-  height: 100%;
-  /* display: flex;
-  flex-direction: column; */
-}
-.container_dashboard-consumo{
-	padding: 10px;
+.container_dashboard-conteudo{
 	width: 100%;
-  height: 60%;
-	display: flex;
-	justify-content: space-evenly;
-  background-color: #00717F;
-	border-radius: 10px;
-}
-.container_dashboard-demanda{
-	padding: 10px;
-  width: 100%;
-  height: 40%;
-	display: flex;
-	justify-content: space-evenly;
-	border-radius: 10px;
-	background-color: #00717F;
-}
-.container_tabela{
-  width: 18%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.container_tabela-itens{
-	width: 95%;
 	height: 100%;
+	display: flex;
+}
+.container_dashboard-info{
+	display: flex;
+	width: 100%;
+	/* height: 100%; */
+}
+.container_info-items{
+	width: 95%;
+	height: 60%;
 	display: flex;
 	align-self: center;
   flex-direction: column;
   border-radius: 10px;
 	background-color: #fff;
-  }
+	font-family: 'Roboto', sans-serif;
+}
 @media(max-width: 640px){
-  .container_tabela-itens{
+  .container_info-items{
     width: 90%;
     height: 25%;
     display: flex;
   }
 }
-.container_tabela-titulo{
+.container_info-title{
   width: 100%;
-  height: 20%;
+  height: 40%;
   display: flex;
-  justify-content: center;
+	justify-content: center;
+	align-items: center;
   text-align: center;
   font-size: 15px;
   border-top-right-radius: 10px;
@@ -274,25 +258,101 @@ aside{
   background-color: #93DEE8;
 }
 @media(max-width: 640px){
-  .container_tabela-titulo{
-    height: 30%;
+  .container_info-title{
+    height: 40%;
   }
 }
-.container_tabela-paragrafo{
+.container_info-paragraph{
   width: 100%;
-  height: 100%;
+  height: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  flex-wrap: nowrap;
-  font-size: 30px;
+  font-size: 25px;
   color: #00717F;
 }
 @media(max-width: 640px){
-  .container_tabela-paragrafo{
+  .container_info-paragraph{
     font-size: 50px;
   }
+}
+.container_graficos{
+  width: 100%;
+	height: 100%;
+	display: flex;
+	/* padding: 10px; */
+}
+.container_graficos-consumoEdemanda{
+	display: flex;
+	flex-direction: column;
+}
+.container_grafico-consumo{
+	margin: 0 0 10px 0;
+	width: 98%;
+  height: 65%;
+	display: flex;
+	/* justify-content: space-evenly; */
+	border-radius: 10px;
+  background-color: #00717F;
+}
+.container_grafico-demanda{
+	padding: 10px 0 0 0;
+  width: 98%;
+  height: 40%;
+	display: flex;
+	justify-content: space-evenly;
+	border-radius: 10px;
+	background-color: #00717F;
+}
+.container_grafico-info{
+  width: 18%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container_graficoInfo-items{
+	width: 95%;
+	height: 60%;
+	display: flex;
+	align-self: center;
+	flex-direction: column;
+	border-radius: 10px;
+	background-color: #fff;
+	font-family: 'Roboto', sans-serif;
+}
+.container_graficoInfo-title{
+	width: 100%;
+	height: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 15px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	background-color: #93DEE8;
+}
+@media(max-width: 640px){
+	.container_graficoInfo-title{
+		height: 30%;
+	}
+}
+.container_graficoInfo-paragraph{
+	width: 100%;
+	height: 70%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-wrap: nowrap;
+	font-size: 30px;
+	color: #00717F;
+}
+@media(max-width: 640px){
+	.container_graficoInfo-paragraph{
+		font-size: 50px;
+	}
 }
 .container_tabelaDispositivos-consumo{
   width: 100%;
@@ -316,7 +376,7 @@ aside{
   align-items: center;
   flex-direction: column;
   background-color: #00717F;
-  border-radius: 10px;
+	border-radius: 10px;
 }
 .tabela_dispositivos{
   width: 95%;
@@ -333,7 +393,8 @@ aside{
   font-size: 15px;
   background-color: #57B6C2;
   border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+	border-top-left-radius: 10px;
+	font-family: 'Roboto', sans-serif;
 }
 .container_grafico{
   width: 82%;
@@ -345,7 +406,7 @@ aside{
 }
 .container_grafico-conteudo{
 	width: 100%;
-	height: 60%;
+	height: 100%;
 	display: flex;
 	/* justify-content: center; */
 	align-items: center;
@@ -361,10 +422,11 @@ aside{
 	flex-direction: column;
 }
 .container_buttonsGrafico{
-  width: 95%;
-  /* height: 10%; */
+  width: 95%;	
+  height: 10%;
   display: flex;
-  justify-content: space-between;
+	justify-content: space-between;
+	align-items: center;
 }
 .container_buttonsGrafico-demanda{
 	width: 95%;
@@ -373,7 +435,7 @@ aside{
 	justify-content: flex-end;
 }
 .buttonsGrafico{
-	width: 40%;
+	/* width: 40%; */
 	height: 100%;
 	display: flex;
 	justify-content: space-evenly;
@@ -386,15 +448,22 @@ aside{
 	border-radius: 6px;
 	outline: none;
 	cursor: pointer;
+	background-color: #F8F8F8;
+	font-family: 'Roboto', sans-serif;
+}
+.btns:hover {
+	background-color: #CCF2F7;
 }
 .input_grafico{
 	width: 25%;
-	height: 100%;
+	height: 70%;
 	text-align: center;
 	color: #00717F;
-  background-color: #F8F8F8;
+	border: none;
   border-radius: 6px;
-  outline: none;
+	outline: none;
+	background-color: #F8F8F8;
+	font-family: 'Roboto', sans-serif;
 }
 /* DASHBOARD */
 
@@ -406,7 +475,7 @@ aside{
 /* GRAFICOCONSUMO */
 .grafico_consumo-texto{
 	width: 30%;
-	height: 40%;
+	height: 10%;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
@@ -418,7 +487,8 @@ aside{
 .grafico_demanda-textos{
 	display: flex;
 	justify-content: center;
-	font-size: 18px;
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
 }
 /* GRAFICODEMANDA */
 
@@ -553,4 +623,9 @@ aside{
   width: 100%;
   height: 100%;
   background-color: red;
+}
+
+.teste{
+	display: flex;
+	flex-direction: column;
 }
