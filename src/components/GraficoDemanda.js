@@ -95,7 +95,7 @@ class GraficoDemanda extends Component{
 
   render(){
     return (
-      <div className="container_grafico">
+      <div className="container_graficoDemanda">
         <div className="container_grafico-conteudoDemanda">
           <div className="container_buttonsGrafico-demanda">
             <div className="buttonsGrafico">
@@ -105,10 +105,12 @@ class GraficoDemanda extends Component{
               <ButtonsGrafico value="Ano" backgroundColor='Grey'/>
             </div>
           </div>
-          <div style={{ width: '95%', height: '50%', backgroundColor: '#fff', justifyContent: 'flex-end', borderRadius: '8px'}}>
-            <h3 className="grafico_demanda-textos">Demanda</h3>
-            <Line data={this.state.chartData} options={{title:{responsive: true, maintainAspectRatio: true}}} width={600} height={130} />
-            <p className="grafico_demanda-textos">Mês</p>
+          <div className="grafico">
+            <div style={{ width: '95%', height: '100%', backgroundColor: '#fff', justifyContent: 'flex-end', borderRadius: '8px'}}>
+              <h3 className="grafico_textos">Demanda</h3>
+              <Line data={this.state.chartData} options={{title:{responsive: true, maintainAspectRatio: true}}} width={600} height={120} />
+              <p className="grafico_textos">Mês</p>
+            </div>
           </div>
         </div>
       </div>

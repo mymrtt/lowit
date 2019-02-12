@@ -95,9 +95,9 @@ class GraficoConsumo extends Component{
 
   render(){
     return (
-      // <div className="container_grafico">
-        <div className="container_grafico-conteudo">
-          <div className="container_buttonsGrafico">
+      <div className="container_graficoConsumo">
+        <div className="container_grafico-conteudoConsumo">
+          <div className="container_buttonsGrafico-consumo">
             <input className="input_grafico" type="text" value="Sala de vídeo" />
             <div className="buttonsGrafico">
               <ButtonsGrafico value="Hora" backgroundColor='Grey'/>
@@ -106,13 +106,15 @@ class GraficoConsumo extends Component{
               <ButtonsGrafico value="Ano" backgroundColor='Grey'/>
             </div>
           </div>
-          <div style={{ width: '95%', height: '100%', backgroundColor: '#fff', justifyContent: 'flex-end', borderRadius: '8px' }}>
-            <h3 className="grafico_consumo-texto">Consumo</h3>
-            <Line data={this.state.chartData} options={{title:{responsive: true, maintainAspectRatio: true}}} width={600} height={240} />
-            <p className="grafico_demanda-textos">Mês</p>
+          <div className="grafico">
+            <div style={{ width: '97%', height: '95%', backgroundColor: '#fff', borderRadius: '8px' }}>
+              <h3 className="grafico_textos">Consumo</h3>
+              <Line data={this.state.chartData} options={{title:{responsive: true, maintainAspectRatio: true}}} width={800} height={180} />
+              <p className="grafico_textos">Mês</p>
+            </div>
           </div>
         </div>
-      // </div> 
+      </div> 
     )
   }
 }
