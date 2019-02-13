@@ -239,6 +239,7 @@ aside{
 	display: flex;
 	align-self: center;
 	flex-direction: column; */
+	margin: 0 10px;
 	width: 70%;
 	/* height: 15vh; */
 	height: 100px;
@@ -277,7 +278,7 @@ aside{
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 23px;
+  font-size: 21px;
   color: #00717F;
 }
 @media(max-width: 640px){
@@ -289,7 +290,7 @@ aside{
   width: 98%;
 	height: 95%;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-items: center;
 	flex-direction: column;
 	/* padding: 10px; */
@@ -315,7 +316,7 @@ aside{
 .container_grafico-consumo{
 	/* margin: 0 0 10px 0; */
 	width: 98%;
-  height: 53%;
+  height: 54%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -324,7 +325,7 @@ aside{
 }
 .grafico{
 	width: 100%;
-	height: 90%;
+	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -332,23 +333,37 @@ aside{
 .container_grafico-demanda{
 	/* padding: 10px 0 0 0; */
   width: 98%;
-  height: 42%;
+  height: 44%;
 	display: flex;
 	justify-content: space-evenly;
-	align-items: center;
+	/* align-items: center; */
+	flex-direction: column;
 	border-radius: 10px;
 	background-color: #00717F;
 }
-.container_grafico-info{
+.container_demanda-conteudo{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+.container_graficoConsumo-info{
   width: 18%;
   height: 90%;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
   flex-direction: column;
+}
+.container_graficoDemanda-info{
+	width: 18%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
 }
 .container_graficoInfo-items{
 	width: 95%;
-	height: 45%;
+	height: 25%;
 	display: flex;
 	align-self: center;
 	flex-direction: column;
@@ -389,9 +404,19 @@ aside{
 		font-size: 50px;
 	}
 }
+.variacao_graficoInfo-consumo--items{
+	width: 95%;
+	height: 40%;
+}
+.variacao_graficoInfo-consumo--title{
+
+}
+.variacao_graficoInfo-consumo--paragraph{
+
+}
 .container_tabelaDispositivos-consumo{
   width: 100%;
-  height: 100%;
+  height: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -404,17 +429,34 @@ aside{
   height: 50%;
 }
 .container_tabelaDispositivos{
-  width: 20%;
+	width: 95%;
+	/* height: 100%; */
+	height: 67vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container_dispositivosLateral{
+	width: 20%;
 	/* height: 100%; */
 	height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #00717F;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #00717F;
 	border-radius: 10px;
 }
-.tabela_dispositivos{
+.tabela_dispositivos-lateral{
+	width: 93%;
+	height: 100%;
+  display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+  border-bottom: 10px solid #57B6C2;
+  background-color: #F8F8F8;
+}
+.tabela_consumo-dispositivos{
   width: 93%;
 	height: 100%;
   display: flex;
@@ -432,11 +474,13 @@ aside{
 	border-top-left-radius: 10px;
 	font-family: 'Roboto', sans-serif;
 }
+
 .container_graficoDemanda{
   width: 82%;
-  height: 100%;
-  display: flex;
-  align-items: center;
+  height: 98%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
   flex-direction: column;
 }
 .container_grafico-conteudoConsumo{
@@ -451,7 +495,7 @@ aside{
 }
 .container_grafico-conteudoDemanda{
 	width: 100%;
-	/* height: 60%; */
+	height: 100%;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -464,18 +508,24 @@ aside{
 	align-items: center;
 }
 .container_buttonsGrafico-demanda{
-	width: 95%;
-	height: 100%;
+	width: 98%;
+	height: 15%;
 	display: flex;
 	justify-content: flex-end;
 }
-.buttonsGrafico{
-	width: 38%;
+.container_buttons{
+	width: 37%;
 	height: 100%;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-} 
+}
+.variacao_btns-demanda{
+	width: 30%;
+}
+/* .container_buttons{
+
+} */
 .btns{
 	width: 60px;
 	height: 20px;
@@ -653,14 +703,3 @@ aside{
 } */
 
 /* GRAPHIC DASHBOARD */
-
-.TreeExample{
-  width: 100%;
-  height: 100%;
-  background-color: red;
-}
-
-.teste{
-	display: flex;
-	flex-direction: column;
-}

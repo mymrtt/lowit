@@ -99,7 +99,7 @@ class GraficoConsumo extends Component{
         <div className="container_grafico-conteudoConsumo">
           <div className="container_buttonsGrafico-consumo">
             <input className="input_grafico" type="text" value="Sala de vídeo" />
-            <div className="buttonsGrafico">
+            <div className="container_buttons">
               <ButtonsGrafico value="Hora" backgroundColor='Grey'/>
               <ButtonsGrafico value="Dia" backgroundColor='Grey'/>
               <ButtonsGrafico value="Mês" backgroundColor='Grey'/>

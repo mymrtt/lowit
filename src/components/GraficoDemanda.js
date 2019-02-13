@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
 
-import ButtonsGrafico from './ButtonsGrafico'
+// import ButtonsGrafico from './ButtonsGrafico'
 
 class GraficoDemanda extends Component{
   constructor(props){
@@ -97,16 +97,16 @@ class GraficoDemanda extends Component{
     return (
       <div className="container_graficoDemanda">
         <div className="container_grafico-conteudoDemanda">
-          <div className="container_buttonsGrafico-demanda">
+          {/* <div className="container_buttonsGrafico-demanda">
             <div className="buttonsGrafico">
               <ButtonsGrafico value="Hora" backgroundColor='Grey'/>
               <ButtonsGrafico value="Dia" backgroundColor='Grey'/>
               <ButtonsGrafico value="Mês" backgroundColor='Grey'/>
               <ButtonsGrafico value="Ano" backgroundColor='Grey'/>
             </div>
-          </div>
+          </div> */}
           <div className="grafico">
-            <div style={{ width: '95%', height: '100%', backgroundColor: '#fff', justifyContent: 'flex-end', borderRadius: '8px'}}>
+            <div style={{ width: '95%', height: '95%', backgroundColor: '#fff', borderRadius: '8px'}}>
               <h3 className="grafico_textos">Demanda</h3>
               <Line data={this.state.chartData} options={{title:{responsive: true, maintainAspectRatio: true}}} width={600} height={120} />
               <p className="grafico_textos">Mês</p>
