@@ -7,8 +7,8 @@ import LowItIMG from '../Assets/lowitlogo.png';
 
 const links = [
   { route: "/leitura", label: "Leitura", className:"nav_link-label1"},
-  { route: "/dashboard", label: "Dashboard", className:"nav_link-label1"},
-  { route: "/dados", label: "Dados", className:"nav_link-label2"},
+  { route: "/dashboard", label: "Dashboard", className:"nav_link-label2"},
+  { route: "/dados", label: "Dados", className:"nav_link-label1"},
 ];
 
 export class Menu extends Component {
@@ -45,16 +45,14 @@ export class Menu extends Component {
   render() {
     return (
       <nav className="navbar">
-        <aside>
-          <div className="container_navbar-links">
-            <div className="container_navbar-img">
-              <img src={LowItIMG} className="logolowitIMG" alt="Logo Low-It" />
-            </div>
-            <ul className="navbar_links-lista">
-              { this.renderLink() }
-            </ul>
+        <div className="container_navbar-links">
+          <div className="container_navbar-img">
+            <img src={LowItIMG} className="logolowitIMG" alt="Logo Low-It" />
           </div>
-        </aside>
+          <ul className="navbar_links-lista">
+            { this.renderLink() }
+          </ul>
+        </div>
         {/* <ButtonsMenu value="Dia"/>
         <ButtonsMenu value="Mês" backgroundColor='DarkBlue'/>
         <ButtonsMenu value="Ano"/> */}

@@ -13,9 +13,9 @@ export class ButtonsGrafico extends Component {
 
   render(){
     return(
-    <div className="buttonsGrafico">
+    // <div className="container_buttonsGrafico">
       <button className="btns" style={{backgroundColor: this.ChooseBackgroundColor()}}>{this.props.value}</button>
-    </div>
+    // </div>
     );
   }
 }

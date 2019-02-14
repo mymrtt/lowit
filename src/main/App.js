@@ -5,6 +5,7 @@ import './App.css';
 import Routes from './Routes';
 import Menu from './Menu';
 import Header from '../components/Header';
+import HeaderMobile from '../components/HeaderMobile';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
       <Router>
         <div className="container_app">
           <Header />
+          <HeaderMobile />
           <Menu/>
           <Routes/>
         </div>

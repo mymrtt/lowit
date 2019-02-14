@@ -106,7 +106,7 @@ class GraficoDemanda extends Component{
             </div>
           </div> */}
           <div className="grafico">
-            <div style={{ width: '95%', height: '95%', backgroundColor: '#fff', borderRadius: '8px'}}>
+            <div style={{ width: '97%', height: '100%', display: 'flex', alignItems: 'center', flexDirection: 'column', backgroundColor: '#fff', borderRadius: '8px'}}>
               <h3 className="grafico_textos">Demanda</h3>
               <Line data={this.state.chartData} options={{title:{responsive: true, maintainAspectRatio: true}}} width={600} height={120} />
               <p className="grafico_textos">Mês</p>
