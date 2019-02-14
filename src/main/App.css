@@ -249,6 +249,7 @@ aside{
 	align-items: center;
 	/* justify-content: space-around; */
 	flex-direction: column;
+	font-family: 'Roboto', sans-serif;
 }
 .container_dashboard-info{
 	display: flex;
@@ -269,7 +270,7 @@ aside{
 	height: 100px;
   border-radius: 10px;
 	background-color: #fff;
-	font-family: 'Roboto', sans-serif;
+	/* font-family: 'Roboto', sans-serif; */
 }
 @media(max-width: 640px){
   .container_info-items{
@@ -498,7 +499,7 @@ aside{
   background-color: #57B6C2;
   border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
-	font-family: 'Roboto', sans-serif;
+	/* font-family: 'Roboto', sans-serif; */
 }
 
 .container_graficoDemanda{
@@ -667,6 +668,7 @@ aside{
   align-items: center;
 	text-align: center;
 	font-size: 15px;
+	font-family: 'Roboto', sans-serif;
 }
 @media(max-width: 640px){
 	.container_dados{
