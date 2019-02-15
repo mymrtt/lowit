@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Route, Switch} from 'react-router-dom';
 
-// import Home from '../components/Home';
+import Home from '../components/Home';
 import Leitura from '../components/Leitura';
 import Dashboard from '../components/Dashboard';
 import Dados from '../components/Dados';
@@ -12,7 +12,7 @@ export class Routes extends Component {
     return (
       // <main className="container">
         <Switch>
-          <Route exact path='/' component={Leitura} />
+          <Route exact path='/' component={Home} />
           <Route path='/leitura' component={Leitura}/>
           <Route path='/dashboard' component={Dashboard}/>
           <Route path='/dados' component={Dados}/>
