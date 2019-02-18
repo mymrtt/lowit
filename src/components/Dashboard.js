@@ -45,13 +45,15 @@ class Dashboard extends Component {
                 <div className="container_tabelaDispositivos-consumo">
                   <div className="tabela_consumo-dispositivos">
                     <h3 className="tabela_dispositivos-titulo">Selecione o Grupo/Dispositivo:</h3>
-                    {/* <Filter /> */}
-                    <p>Prédio Inteiro</p>
-                    <p>1º Andar</p>
-                    <p>Área de Lazer</p>
-                    <p>Ar condicionado</p>
-                    <p>2º Andar</p>
-                    <p>3º Andar</p>
+                    <div className="filter">
+                      {/* <Filter /> */}
+                      <p>Prédio Inteiro</p>
+                      <p>1º Andar</p>
+                      <p>Área de Lazer</p>
+                      <p>Ar condicionado</p>
+                      <p>2º Andar</p>
+                      <p>3º Andar</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -86,13 +88,15 @@ class Dashboard extends Component {
           <div className="container_tabelaDispositivos">
             <div className="tabela_dispositivos-lateral">
               <h3 className="tabela_dispositivos-titulo">Ligar ou Desligar Grupo/Dispositivo:</h3>
-              <Filter />
-              {/* <p>Prédio Inteiro</p>
-              <p>1º Andar</p>
-              <p>Área de Lazer</p>
-              <p>Ar condicionado</p>
-              <p>2º Andar</p>
-              <p>3º Andar</p> */}
+              <div className="filter">
+                <Filter />
+                {/* <p>Prédio Inteiro</p>
+                <p>1º Andar</p>
+                <p>Área de Lazer</p>
+                <p>Ar condicionado</p>
+                <p>2º Andar</p>
+                <p>3º Andar</p> */}
+              </div>
             </div>
           </div>
         </div>
