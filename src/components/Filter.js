@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import {Treebeard} from 'react-treebeard';
 
-import styles from './styles';
-
 var treeData = "";
 
 class Filter extends Component {

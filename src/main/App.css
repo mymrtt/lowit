@@ -91,7 +91,6 @@ a{
   }
   .header_itens-img{
     height: 25%;
-    /* margin-right: 3px; */
   }
 }
 .a_header{
@@ -317,8 +316,6 @@ aside{
 }
 /* MENU NAVBAR*/
 
-/*MENU MOBILE*/
-
 /*MENU MOBILE */
 .nav_mobile{
   display: none;
@@ -328,6 +325,8 @@ aside{
     display: flex;
   }
 }
+/*MENU MOBILE*/
+
 /* LEITURA */
 .container_leitura{
   width: 100%;
@@ -346,7 +345,6 @@ aside{
 		flex-direction: column;
 	}
 }
-
 /* LEITURA */
 
 /* DASHBOARD */
@@ -369,7 +367,6 @@ aside{
 	height: 87vh;
 	display: flex;
 	align-items: center;
-	/* justify-content: space-around; */
 	flex-direction: column;
 	font-family: 'Roboto', sans-serif;
 }
@@ -377,7 +374,6 @@ aside{
 	display: flex;
 	width: 98%;
 	height: 21%;
-	/* justify-content: space-evenly; */
 	align-items: center;
 }
 @media(max-width: 640px){
@@ -626,12 +622,6 @@ aside{
 	width: 90%;
 	height: 42%;
 }
-/* .variacao_graficoInfo-consumo--title{
-
-}
-.variacao_graficoInfo-consumo--paragraph{
-
-} */
 .container_tabelaDispositivos-consumo{
   width: 100%;
   height: 70%;
@@ -714,7 +704,6 @@ aside{
   background-color: #57B6C2;
   border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
-	/* font-family: 'Roboto', sans-serif; */
 }
 @media(max-width: 640px){
 	.tabela_consumo-dispositivos{
@@ -771,11 +760,8 @@ aside{
 	width: 100%;
 	height: 100%;
 	display: flex;
-	/* justify-content: center; */
 	align-items: center;
 	flex-direction: column;
-	/* border-radius: 10px;
-	background-color: #57B6C2; */
 }
 .container_grafico-conteudoDemanda{
 	width: 100%;
@@ -785,7 +771,6 @@ aside{
 	flex-direction: column;
 }
 .container_buttonsGrafico{
-	/* padding: 10px; */
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -866,11 +851,6 @@ aside{
 }
 /* DASHBOARD */
 
-/* TABELADISPOSITIVOS */
-
-/* TABELADISPOSITIVOS */
-
-
 /* GRAFICOCONSUMO */
 .grafico_consumo-texto{
 	width: 30%;
@@ -913,7 +893,6 @@ aside{
 .formSelectDashboard-select{
 	width: 100%;
 	height: 4vh;
-	/* border: none; */
 	border-radius: 5px;
 	background-color: #F8F8F8;
 }
@@ -984,11 +963,6 @@ aside{
   flex-direction: column;
   background-color: #fff;
 }
-/* @media(max-width: 640px){
-	.container_dados-itens{
-		width: 75%;
-	}
-} */
 .container_dados-paragrafo{
 	width: 100%;
 	height: 100%;
@@ -1016,11 +990,6 @@ aside{
 		height: 50%;
 	}
 }
-/* @media(max-width: 640px){
-	.container_dados-paragrafo{
-		font-size: 15px;
-	}
-} */
 /* DADOS */
 
 /* GRAPHIC DASHBOARD */
@@ -1030,7 +999,6 @@ aside{
 	height: 100%;
 	background-color: #F8F8F8;
 }
-
 /* GRAPHIC DASHBOARD */
 
 /*FILTER*/
