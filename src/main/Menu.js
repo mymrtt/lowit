@@ -52,8 +52,9 @@ export class Menu extends Component {
             <img src={LowItIMG} className="logolowitIMG" alt="Logo Low-It" />
             <div className="container_imgs-menu">
               <img src={logoLowItMobile} className="logoLowItMobile" alt="Logo Low-It Mobile" />
-              
-              <button className="btn_menuMobile"><img src={logoMenuHamburguer} className="logoMenuHamburguer" alt="Menu" /></button>
+              {/* <div className="menu_mobile">
+                <button className="btn_menuMobile"><img src={logoMenuHamburguer} className="logoMenuHamburguer" alt="Menu" /></button>
+              </div> */}
             </div>
           </div>
           <ul className="navbar_links-lista">

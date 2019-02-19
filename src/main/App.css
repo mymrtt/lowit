@@ -35,6 +35,11 @@ a{
 		height: 100%;
 	}
 }
+@media(max-width: 768px){
+  .container_app{
+    min-width: 70%;
+  }
+}
 .container_infos{
   width: 100%;
   height: 100%;
@@ -83,7 +88,8 @@ a{
 }
 @media(max-width: 768px){
   .container_header-itens{
-    width: 45%;
+		width: 55%;
+		font-size: 11px;
   }
   .header_itens{
     width: 100%;
@@ -126,11 +132,16 @@ a{
 		height: 100%;
 	}
 }
-@media(max-width: 768px){
+@media(min-width: 768px){
   .navbar{
-    width: 14%;
+    min-width: 14%;
   }
 }
+/* @media(max-width: 1440px){
+	.navbar{
+		min-width: 14%;
+	}
+} */
 aside{
 	width: 100%;
 	height: 100%;
@@ -146,6 +157,7 @@ aside{
 }
 @media(max-width: 768px){
   .container_navbar-links{
+		min-width: 100%;
     font-size: 13px;
   }
 }
@@ -169,8 +181,8 @@ aside{
 	}
 }
 .logolowitIMG{
-  width: 75%;
-  height: 70%;
+  width: 65%;
+  height: 75%;
 }
 .logoLowItMobile{
 	display: none;
@@ -206,8 +218,8 @@ aside{
 }
 @media(max-width: 768px){
   .logolowitIMG{
-    width: 80%;
-    height: 60%;
+    width: 85%;
+    height: 50%;
   }
 }
 .nav_link{
@@ -220,7 +232,7 @@ aside{
 }
 @media(max-width: 768px){
   .nav_link{
-    width: 90%;
+    min-width: 90%;
   }
 }
 .nav_link:hover{
@@ -283,10 +295,14 @@ aside{
 }
 @media(max-width: 768px){
   .nav_link-label1{
-    padding: 0 0 0;
+		min-width: 100%;
+		padding: 0 0 0;
+		font-size: 11px;
   } 
   .nav_link-label2{
-    padding: 0 0 0;
+		min-width: 100%;
+		padding: 0 0 0;
+		font-size: 11px;
   }
 }
 .nav_link-img{
@@ -325,6 +341,26 @@ aside{
     display: flex;
   }
 }
+
+.menu_mobile{
+	display: none;
+}
+@media(max-width: 640px){
+	.menu_mobile{
+		width: 70%;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		text-transform: uppercase;
+		background-color: yellow;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+}
+
 /*MENU MOBILE*/
 
 /* LEITURA */
@@ -350,7 +386,7 @@ aside{
 /* DASHBOARD */
 .container_dashboard{
 	padding: 5px;
-	width: 100%;
+	min-width: 100%;
   height: 100%;
 	display: flex;
 	justify-content: center;
@@ -396,10 +432,18 @@ aside{
 	background-color: #fff;
 }
 @media(max-width: 768px){
-  .container_info-items{
-    margin: 0 5px;
-    height: 80px;
-  }
+	.container_dashboard-conteudo{
+		min-width: 76%;
+		min-height: 100vh;
+	}
+	.container_dashboard-info{
+		min-height: 21%;
+		margin: 10px 0;
+	}
+	.container_info-items{
+		margin: 0 3px;
+		/* min-height: 85px; */
+	}
 }
 .container_info-title{
   width: 100%;
@@ -420,7 +464,7 @@ aside{
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 21px;
+  font-size: 20px;
   color: #00717F;
 }
 @media(max-width: 640px){
@@ -441,8 +485,11 @@ aside{
   }
 }
 @media(max-width: 768px){
+	.container_info-title{
+		font-size: 12px;
+	}
   .container_info-paragraph{
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -460,10 +507,16 @@ aside{
 		height: 100%;
 	}
 }
+@media(max-width: 768px){
+	.container_graficos{
+		min-height: 85%;
+	}
+}
 .grafico_consumo{
   width: 97%;
   height: 97%; 
-  display: flex; 
+	display: flex; 
+	justify-content: center;
   align-items: center; 
   flex-direction: column; 
   background-color: #fff;
@@ -476,15 +529,21 @@ aside{
     justify-content: center;
   }
 }
+@media(max-width: 768px){
+	.grafico_consumo{
+		min-width: 97%;
+		min-height: 97%;
+	}
+}
 .container_graficoConsumo{
 	padding: 5px;
-	width: 80%;
+	width: 79%;
 	height: 90%;
 	border-radius: 10px;
 	background-color: #57B6C2;
 }
 .container_graficoConsumo-info{
-  width: 18%;
+  width: 19%;
   height: 90%;
 	display: flex;
 	justify-content: space-between;
@@ -492,13 +551,22 @@ aside{
 }
 @media(max-width: 768px){
   .container_graficoConsumo{
-    width: 76%;
+    width: 74%;
     background-color: #00BCD4;
   }
   .container_graficoConsumo-info{
-    width: 22%;
+		min-width: 23%;
+		min-height: 90%;
   }
 }
+/* @media(max-width: 1440px){
+	.container_graficoConsumo{
+		width: 78%;
+	}
+	.container_graficoConsumo-info{
+		width: 20%;
+	}
+} */
 .container_grafico-consumo{
 	width: 98%;
   height: 52%;
@@ -600,23 +668,26 @@ aside{
 	align-items: center;
 	text-align: center;
 	flex-wrap: nowrap;
-	font-size: 23px;
+	font-size: 18px;
 	color: #00717F;
-}
-@media(max-width: 768px){
-  .container_graficoInfo-paragraph{
-    font-size: 18px;
-  }
 }
 @media(max-width: 640px){
   .container_graficoInfo-title{
     height: 40%;
-    font-size: 15px;
+    font-size: 13px;
 	}
 	.container_graficoInfo-paragraph{
     height: 60%;
 		font-size: 25px;
 	}
+}
+@media(max-width: 768px){
+	.container_graficoInfo-title{
+		font-size: 10px;
+	}
+  .container_graficoInfo-paragraph{
+    font-size: 18px;
+  }
 }
 .variacao_graficoInfo-consumo--items{
 	width: 90%;
@@ -656,6 +727,11 @@ aside{
 		height: 100%;
 	}
 }
+/* @media(max-width: 768px){
+	.container_tabelaDispositivos{
+		height: 88vh;
+	}
+} */
 .container_dispositivosLateral{
 	width: 20%;
 	/* height: 100%; */
@@ -686,6 +762,15 @@ aside{
 	.tabela_dispositivos-lateral{
 		width: 100%;
 		height: 55vh;
+	}
+}
+@media(max-width: 768px){
+	.container_dispositivosLateral{
+		min-width: 22%;
+		min-height: 92vh;
+	}
+	.tabela_dispositivos-lateral{
+		min-height: 88vh;
 	}
 }
 .tabela_consumo-dispositivos{
@@ -719,6 +804,9 @@ aside{
 	}
 }
 @media(max-width: 768px){
+	.tabela_consumo-dispositivos{
+		min-width: 95%;
+	}
   .tabela_dispositivos-titulo{
     font-size: 11px;
   }
@@ -726,15 +814,22 @@ aside{
 .grafico_demanda{
   width: 97%;
   height: 97%; 
-  display: flex; 
+	display: flex; 
+	justify-content: center;
   align-items: center; 
   flex-direction: column; 
   background-color: #fff;
   border-radius: 8px; 
 }
+@media(max-width: 768px){
+	.grafico_demanda{
+		min-width: 97%;
+		min-height: 97%;
+	}
+}
 .container_graficoDemanda{
 	padding: 5px;
-  width: 82%;
+  width: 81%;
   height: 98%;
 	display: flex;
 	justify-content: center;
@@ -742,7 +837,7 @@ aside{
   flex-direction: column;
 }
 .container_graficoDemanda-info{
-	width: 18%;
+	width: 19%;
 	height: 100%;
 	display: flex;
 	justify-content: space-around;
@@ -750,12 +845,20 @@ aside{
 }
 @media(max-width: 768px){
   .container_graficoDemanda{
-    width: 78%;
+    min-width: 77%;
   }
   .container_graficoDemanda-info{
-    width: 22%;
+    min-width: 23%;
   }
 }
+/* @media(max-width: 1440px){
+	.container_graficoDemanda{
+		width: 80%;
+	}
+	.container_graficoDemanda-info{
+		width: 20%;
+	}
+} */
 .container_grafico-conteudoConsumo{
 	width: 100%;
 	height: 100%;
@@ -809,10 +912,10 @@ aside{
 }
 @media(max-width: 768px){
   .container_buttons{
-    width: 52%;
+    width: 55%;
   }
   .variacao_btns-demanda{
-    width: 39%  !important; 
+    width: 41%  !important; 
   }
 }
 .btns{
@@ -827,7 +930,8 @@ aside{
 }
 @media(max-width: 768px){
   .btns{
-    width: 44px;
+		width: 44px;
+		font-size: 11px;
   }
 }
 .btns:hover {
@@ -847,6 +951,13 @@ aside{
 @media(max-width: 640px){
 	.input_grafico{
 		display: none;
+	}
+}
+@media(max-width: 768px){
+	.input_grafico{
+		min-width: 33%;
+		min-height: 50%;
+		font-size: 11px;
 	}
 }
 /* DASHBOARD */
@@ -873,6 +984,11 @@ aside{
   .grafico_textos{
     font-size: 15px;
   }
+}
+@media(max-width: 768px){
+	.grafico_textos{
+		font-size: 11px;
+	}
 }
 /* GRAFICODEMANDA */
 
@@ -1007,5 +1123,10 @@ aside{
   height: 100%;
   overflow-y: scroll;
   font-size: 13px;
+}
+@media(max-width: 768px){
+	.filter{
+		font-size: 12px;
+	}
 }
 /*FILTER*/
