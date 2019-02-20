@@ -5,10 +5,8 @@ import style from './FilterSwitch';
 var treeData = "";
 
 class Switch extends Component {
-
   constructor(props){
     super(props);
-
     this.state = {
       jsonDataSwitch: {},  
     };
@@ -60,38 +58,34 @@ class Switch extends Component {
     treeData = treeData + "}";
 
     console.log("", treeData );
-
   }
 
-    componentDidMount(){
-      fetch('https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/environments')
-      .then(res => res.json())
-      .then(json => { 
+  componentDidMount(){
+    fetch('https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/environments')
+    .then(res => res.json())
+    .then(json => { 
 
-        json.data.environments.map(item => (
-          this.recursiveData(item, treeData)
-        ));
+      json.data.environments.map(item => (
+        this.recursiveData(item, treeData)
+      ));
 
-        var data = JSON.parse(treeData);
-        this.setState({
-          jsonDataSwitch: data
-        })
-  
+      var data = JSON.parse(treeData);
+      this.setState({
+        jsonDataSwitch: data
+      })
 
-      });
-    }
+    });
+  }
 
-    render(){
-      return (
-        <Treebeard
-          data={this.state.jsonDataSwitch}
-          onToggle={this.onToggle}
-          style={style}
-        />
-      );
-    }
-
-
+  render(){
+    return (
+      <Treebeard
+        data={this.state.jsonDataSwitch}
+        onToggle={this.onToggle}
+        style={style}
+      />
+    );
+  }
 }
 
 export default Switch;

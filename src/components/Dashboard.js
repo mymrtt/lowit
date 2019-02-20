@@ -6,8 +6,7 @@ import Switch from './Switch';
 import GraficoConsumo from './GraficoConsumo';
 import GraficoDemanda from './GraficoDemanda';
 
-import ButtonsGrafico from './ButtonsGrafico'
-
+import ButtonsGrafico from './ButtonsGrafico';
 
 class Dashboard extends Component {
   render(){
@@ -45,7 +44,7 @@ class Dashboard extends Component {
                 </div>
                 <div className="container_tabelaDispositivos-consumo">
                   <div className="tabela_consumo-dispositivos">
-                    <h3 className="tabela_dispositivos-titulo">Selecione o Grupo/Dispositivo:</h3>
+                    <h3 className="tabela_dispositivos-titulo tabela_dispositivos-titulo-consumo">Selecione o Grupo/Dispositivo:</h3>
                     <div className="filter">
                       <Switch/>
                     </div>

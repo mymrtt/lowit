@@ -9,7 +9,7 @@ export default {
       padding: 0,
       color: '#9DA5AB',
       fontFamily: 'Roboto, Regular',
-      fontSize: '11px'
+      fontSize: '13px'
     },
     node: {
       base: {
@@ -22,16 +22,16 @@ export default {
         display: 'block'
       },
       activeLink: {
-          background: '#31363F'
+        background: '#31363F'
       },
       toggle: {
         base: {
-            position: 'relative',
-            display: 'inline-block',
-            verticalAlign: 'top',
-            marginLeft: '2px',
-            height: '24px',
-            width: '24px'
+          position: 'relative',
+          display: 'inline-block',
+          verticalAlign: 'top',
+          marginLeft: '2px',
+          height: '24px',
+          width: '24px'
         },
         wrapper: {
           position: 'absolute',

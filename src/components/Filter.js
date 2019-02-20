@@ -5,10 +5,8 @@ import style from './FilterTheme';
 var treeData = "";
 
 class Filter extends Component {
-
   constructor(props){
     super(props);
-
     this.state = {
       jsonData: {},  
     };
@@ -60,7 +58,6 @@ class Filter extends Component {
     treeData = treeData + "}";
 
     console.log("", treeData );
-
   }
 
   componentDidMount(){
