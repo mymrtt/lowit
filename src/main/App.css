@@ -86,7 +86,8 @@ a{
   height: 30%;
   margin-right: 5px;
 }
-@media(max-width: 768px){
+/* @media(max-width: ) */
+@media(max-width: 800px){
   .container_header-itens{
 		width: 55%;
 		font-size: 11px;
@@ -254,6 +255,7 @@ aside{
 	display: flex;
 	justify-content:	flex-start;
 	align-items: center;
+	font-size: 14px;
 }
 .nav_link-label1:hover{
 	background-color: #CCF2F7;
@@ -272,6 +274,7 @@ aside{
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	font-size: 14px;
 }
 .nav_link-label2:hover{
 	background-color: #CCF2F7;
@@ -407,6 +410,7 @@ aside{
 	font-family: 'Roboto', sans-serif;
 }
 .container_dashboard-info{
+	padding: 10px 0;
 	display: flex;
 	width: 98%;
 	height: 21%;
@@ -426,8 +430,8 @@ aside{
 }
 .container_info-items{
 	margin: 0 10px;
-	width: 70%;
-	height: 100px;
+	width: 90%;
+	height: 100%;
   border-radius: 10px;
 	background-color: #fff;
 }
@@ -464,7 +468,7 @@ aside{
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 20px;
+  font-size: 19px;
   color: #00717F;
 }
 @media(max-width: 640px){
@@ -486,10 +490,10 @@ aside{
 }
 @media(max-width: 768px){
 	.container_info-title{
-		font-size: 12px;
+		font-size: 11px;
 	}
   .container_info-paragraph{
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -555,8 +559,8 @@ aside{
     background-color: #00BCD4;
   }
   .container_graficoConsumo-info{
-		min-width: 23%;
-		min-height: 90%;
+		width: 23%;
+		height: 90%;
   }
 }
 /* @media(max-width: 1440px){
@@ -648,6 +652,12 @@ aside{
 		height: 20%;
 	}
 }
+@media(max-width: 768px){
+	.container_graficoInfo-items{
+		width: 95%;
+		height: 30%;
+	}
+}
 .container_graficoInfo-title{
 	width: 100%;
 	height: 50%;
@@ -707,6 +717,11 @@ aside{
 	.container_tabelaDispositivos-consumo{
 		height: 70%;
 		background-color: #CCF2F7;
+	}
+}
+@media(max-width: 768px){
+	.container_tabelaDispositivos-consumo{
+		height: 65%;
 	}
 }
 .container_tabela-dispositivos{
@@ -1122,11 +1137,5 @@ aside{
   width: 100%;
   height: 100%;
   overflow-y: scroll;
-  font-size: 13px;
-}
-@media(max-width: 768px){
-	.filter{
-		font-size: 12px;
-	}
 }
 /*FILTER*/

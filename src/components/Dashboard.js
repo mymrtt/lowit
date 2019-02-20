@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Filter from './Filter';
+import Switch from './Switch';
 
 import GraficoConsumo from './GraficoConsumo';
 import GraficoDemanda from './GraficoDemanda';
@@ -46,13 +47,7 @@ class Dashboard extends Component {
                   <div className="tabela_consumo-dispositivos">
                     <h3 className="tabela_dispositivos-titulo">Selecione o Grupo/Dispositivo:</h3>
                     <div className="filter">
-                      {/* <Filter /> */}
-                      <p>Prédio Inteiro</p>
-                      <p>1º Andar</p>
-                      <p>Área de Lazer</p>
-                      <p>Ar condicionado</p>
-                      <p>2º Andar</p>
-                      <p>3º Andar</p>
+                      <Switch/>
                     </div>
                   </div>
                 </div>
@@ -90,12 +85,6 @@ class Dashboard extends Component {
               <h3 className="tabela_dispositivos-titulo">Ligar ou Desligar Grupo/Dispositivo:</h3>
               <div className="filter">
                 <Filter />
-                {/* <p>Prédio Inteiro</p>
-                <p>1º Andar</p>
-                <p>Área de Lazer</p>
-                <p>Ar condicionado</p>
-                <p>2º Andar</p>
-                <p>3º Andar</p> */}
               </div>
             </div>
           </div>

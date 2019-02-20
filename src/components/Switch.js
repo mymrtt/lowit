@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import {Treebeard} from 'react-treebeard';
-import style from './FilterTheme';
+import style from './FilterSwitch';
 
 var treeData = "";
 
-class Filter extends Component {
+class Switch extends Component {
 
   constructor(props){
     super(props);
 
     this.state = {
-      jsonData: {},  
+      jsonDataSwitch: {},  
     };
 
     this.recursiveData = this.recursiveData.bind(this);
@@ -18,10 +18,10 @@ class Filter extends Component {
   }
 
   onToggle(node, toggled){
-    if(this.state.cursor){this.state.cursor.active = false;}
+    if(this.state.cursorSwitch){this.state.cursorSwitch.active = false;}
     node.active = true;
     if(node.children){ node.toggled = toggled; }
-    this.setState({ cursor: node });
+    this.setState({ cursorSwitch: node });
   }
 
   recursiveData(item, data){
@@ -63,31 +63,35 @@ class Filter extends Component {
 
   }
 
-  componentDidMount(){
-    fetch('https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/environments')
-    .then(res => res.json())
-    .then(json => { 
+    componentDidMount(){
+      fetch('https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/environments')
+      .then(res => res.json())
+      .then(json => { 
 
-      json.data.environments.map(item => (
-        this.recursiveData(item, treeData)
-      ));
+        json.data.environments.map(item => (
+          this.recursiveData(item, treeData)
+        ));
 
-      var data = JSON.parse(treeData);
-      this.setState({
-        jsonData: data
-      })
-    });
-  }
+        var data = JSON.parse(treeData);
+        this.setState({
+          jsonDataSwitch: data
+        })
+  
 
-  render(){
-    return (
-      <Treebeard
-        data={this.state.jsonData}
-        onToggle={this.onToggle}
-        style={style}
-      />
-    );
-  }
+      });
+    }
+
+    render(){
+      return (
+        <Treebeard
+          data={this.state.jsonDataSwitch}
+          onToggle={this.onToggle}
+          style={style}
+        />
+      );
+    }
+
+
 }
 
-export default Filter;
+export default Switch;
