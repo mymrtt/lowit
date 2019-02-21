@@ -6,9 +6,16 @@ import Switch from './Switch';
 import GraficoConsumo from './GraficoConsumo';
 import GraficoDemanda from './GraficoDemanda';
 
-import ButtonsGrafico from './ButtonsGrafico';
+import ButtonsGrafico from './ButtonsGrafico'
+import DemandaAtual from './DemandaAtual';
+import DemandaContratada from './DemandaContratada';
+
 
 class Dashboard extends Component {
+  constructor(props){
+    super(props);
+  }
+
   render(){
     return(
       <div className="container_dashboard">
@@ -44,7 +51,7 @@ class Dashboard extends Component {
                 </div>
                 <div className="container_tabelaDispositivos-consumo">
                   <div className="tabela_consumo-dispositivos">
-                    <h3 className="tabela_dispositivos-titulo tabela_dispositivos-titulo-consumo">Selecione o Grupo/Dispositivo:</h3>
+                    <h3 className="tabela_dispositivos-titulo">Selecione o Grupo/Dispositivo:</h3>
                     <div className="filter">
                       <Switch/>
                     </div>
@@ -56,22 +63,16 @@ class Dashboard extends Component {
             <div className="container_grafico-demanda">
               <div className="container_buttonsGrafico-demanda">
                 <div className="container_buttons variacao_btns-demanda">
-                  <ButtonsGrafico value="Hora" backgroundColor='Grey'/>
-                  <ButtonsGrafico value="Dia" backgroundColor='Grey'/>
-                  <ButtonsGrafico value="Mês" backgroundColor='Grey'/>
-                  <ButtonsGrafico value="Ano" backgroundColor='Grey'/>
+                  <ButtonsGrafico value="Hora" option='hour' backgroundColor='Grey'/>
+                  <ButtonsGrafico value="Dia" option='day' backgroundColor='Grey'/>
+                  <ButtonsGrafico value="Mês" option='month' backgroundColor='Grey'/>
+                  <ButtonsGrafico value="Ano" option='year' backgroundColor='Grey'/>
                 </div>
               </div>
               <div className="container_demanda-conteudo">
                 <div className="container_graficoDemanda-info">
-                  <div className="container_graficoInfo-items variacao_graficoInfo-consumo--items">
-                    <p className="container_graficoInfo-title variacao_graficoInfo-consumo--title">Demanda Atual</p>
-                    <p className="container_graficoInfo-paragraph variacao_graficoInfo-consumo--paragraph">2.999,65</p>
-                  </div>
-                  <div className="container_graficoInfo-items variacao_graficoInfo-consumo--items">
-                    <p className="container_graficoInfo-title variacao_graficoInfo-consumo--title">Demanda Contratada</p>
-                    <p className="container_graficoInfo-paragraph variacao_graficoInfo-consumo--paragraph">3200</p>
-                  </div>
+                  <DemandaAtual />
+                  <DemandaContratada />
                 </div>
                 <GraficoDemanda/>
               </div>
