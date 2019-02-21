@@ -73,7 +73,7 @@ class GraficoDemanda extends Component{
       console.log(chart);
 
       this.setState({
-          chartData:chart
+        chartData:chart
       })
     });
   }

@@ -895,8 +895,9 @@ aside{
 	.container_buttons{
 		width: 100%;
 		justify-content: center;
-	}	
+	}
 }
+
 .variacao_btns-demanda{
 	width: 30%;
 }
@@ -907,6 +908,16 @@ aside{
   .variacao_btns-demanda{
     width: 41%  !important; 
   }
+}
+@media(max-width: 1024px){
+	.container_buttons{
+		width: 50%;
+		justify-content: space-evenly;
+	}
+	.variacao_btns-demanda{
+		width: 38%;
+		justify-content: space-evenly;
+	}
 }
 .btns{
 	width: 58px;
@@ -922,7 +933,7 @@ aside{
   .btns{
 		width: 44px;
 		font-size: 11px;
-  }
+	}
 }
 .btns:hover {
 	background-color: #CCF2F7;
