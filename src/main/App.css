@@ -78,8 +78,9 @@ a{
 	align-items: center;
 }
 .header_itens-img{
-	width: 15%;
-  height: 30%;
+	/* width: 15%; */
+	width: 20px;
+  height: 20px;
   margin-right: 5px;
 }
 @media(max-width: 800px){
@@ -668,7 +669,8 @@ aside{
 }
 @media(max-width: 768px){
 	.container_graficoInfo-title{
-		font-size: 10px;
+		/* font-size: 10px; */
+		font-size: 11px;
 	}
   .container_graficoInfo-paragraph{
     font-size: 16px;
@@ -717,11 +719,12 @@ aside{
 		height: 100%;
 	}
 }
-/* @media(max-width: 768px){
+@media(max-width: 768px){
 	.container_tabelaDispositivos{
-		height: 88vh;
+		padding: 7px;
+		height: 100%;
 	}
-} */
+}
 .container_dispositivosLateral{
 	width: 20%;
 	/* height: 100%; */
@@ -762,6 +765,7 @@ aside{
 	}
 	.tabela_dispositivos-lateral{
 		/* min-height: 88vh; */
+		width: 100%;
 		min-height: 93vh;
 	}
 }
