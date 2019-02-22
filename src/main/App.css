@@ -124,7 +124,7 @@ a{
 }
 @media(max-width: 640px){
 	.navbar{
-		display: none;
+		/* display: none; */
 		width: 100%;
 		height: 100%;
 	}
@@ -560,7 +560,7 @@ aside{
 	.container_graficoConsumo{
 		padding: 5px 0;
 		width: 100%;
-		height: 30vh;
+		height: 34vh;
 	}
 	.container_graficoConsumo-info{
 		width: 100%;
@@ -575,7 +575,7 @@ aside{
 		background-color: #CCF2F7;
 	}
 }
-.grafico{
+.graficos{
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -583,12 +583,12 @@ aside{
 	align-items: center;
 }
 @media(max-width: 640px){
-  .grafico{
-    height: 24vh;
+  .graficos{
+    height: 26vh;
   }
 }
 @media(max-width: 768px){
-  .grafico{
+  .graficos{
     display: flex;
   }
 }
@@ -811,8 +811,8 @@ aside{
 	}
 }
 .grafico_demanda{
-  width: 97%;
-  height: 97%; 
+  width: 100%;
+  height: 100%; 
 	display: flex; 
 	justify-content: center;
   align-items: center; 
@@ -877,6 +877,13 @@ aside{
 	justify-content: space-between;
 	align-items: center;
 }
+@media(max-width: 640px){
+	.container_buttonsGrafico-consumo{
+		height: 15%;
+		display: flex;
+		justify-content: center;
+	}
+}
 .container_buttonsGrafico-demanda{
 	padding: 5px 0 0;
 	width: 98.5%;
@@ -893,8 +900,8 @@ aside{
 }
 @media(max-width: 640px){
 	.container_buttons{
-		width: 100%;
-		justify-content: center;
+		width: 70% !important;
+		justify-content: space-around;
 	}
 }
 

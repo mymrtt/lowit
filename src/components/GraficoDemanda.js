@@ -6,95 +6,120 @@ const moment = require('moment')
 class GraficoDemanda extends Component{
   constructor(props){
     super(props);
-
     this.state = {
-      chartFilterDemand : '',
-      chartDataDemand: {}, 
-      demandaContratada: 0, 
+      chartData: {},
+      //chartDataDemand: {}, 
+      contractedDemand: 0, 
+      chartFilterDemand: 'hour', 
     };
   }
 
-  static defaultProps = {
-    // displayTitle:true,
-    // displayLegend: true,
-    // legendPosition:'right',
+  mountActiveDemandTree(dataset, filter){
+    var intervalBar = [];
+    var demandedBar = [];
+    var contractedBar = [];
+    var period = filter;
+    var contracted = this.state.contractedDemand;
+
+    dataset.map(function(item, i){
+      var timeFormatted = null;
+      console.log(item);
+
+      if(period === null || period.length === 0  || period === 'hour'){
+        timeFormatted = moment(item.datetime).format('HH') + "h";
+      } else if(period === 'day'){
+        timeFormatted = moment(item.datetime).format('D');
+      } else if(period === 'month'){
+        timeFormatted = moment(item.datetime).format('MMM');
+      } else if(period === 'year'){
+        timeFormatted = moment(item.datetime).format('YYYY');
+      } 
+  
+      intervalBar.push(timeFormatted);
+      demandedBar.push(item.value);
+      contractedBar.push(contracted);
+    });
+
+    return [intervalBar, demandedBar, contractedBar];
   }
 
-  async componentDidMount(){
-    var acumuladorLabel = [];
-    var acumuladorValor = [];
-    var acumuladorContratadaValor = [];
+  async updateContractedDemandState(){
+    const apiContractedCall = await fetch('https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/demand/contracted')
+    const apiContractedJSON = await apiContractedCall.json() 
+    this.setState({contractedDemand: apiContractedJSON.data.value})
+  }
 
-    const contratada = await fetch('https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/demand/contracted')
-    const leitura = await contratada.json() 
-    this.setState({demandaContratada: leitura.data.value})
-
-    this.setState({chartFilterDemand: 'day'}) //TODO apenas para forçar a primeira visão como dia
-    
-
+  getActiveDemandGraphUrl(chartFilterDemand){
     var fetchUrl = null;
-    if(this.state.chartFilterDemand == null || this.state.chartFilterDemand.length == 0  || this.state.chartFilterDemand == 'hour'){
+
+    if(chartFilterDemand === null || chartFilterDemand.length === 0  || chartFilterDemand === 'hour'){
       fetchUrl = 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/demand/graph?interval=hour';
-    } else if(this.state.chartFilterDemand == 'day'){
+    } else if(chartFilterDemand === 'day'){
       fetchUrl = 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/demand/graph?interval=day';
-    } else if(this.state.chartFilterDemand == 'month'){
+    } else if(chartFilterDemand === 'month'){
       fetchUrl = 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/demand/graph?interval=month';
-    } else if(this.state.chartFilterDemand == 'year'){
+    } else if(chartFilterDemand === 'year'){
       fetchUrl = 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/demand/graph?interval=year';
     } 
 
-    fetch(fetchUrl)
-    .then(res => res.json())
-    .then(json => { 
-
-      json.data.map(item => (
-        this.montarGrafico(item, this.state.demandaContratada, acumuladorLabel, acumuladorValor, acumuladorContratadaValor)
-      ));
-
-//      var data = JSON.parse(treeData);
-      console.log(acumuladorLabel);
-      console.log(acumuladorValor);
-
-      var chart = {};
-      chart.labels = acumuladorLabel;
-      chart.datasets = [];
-      var level = {};
-      level.label = 'Demanda Medida';
-      level.data = acumuladorValor;
-      level.backgroundColor = '#CCF2F7';
-      chart.datasets.push(level);
-
-      var level2 = {};
-      level2.label = 'Demanda Contratada';
-      level2.data = acumuladorContratadaValor;
-      chart.datasets.push(level2);
-
-
-      console.log(chart);
-
-      this.setState({
-        chartData:chart
-      })
-    });
+    return fetchUrl;
   }
 
-  montarGrafico(item, dado, label, valor, valor2){
+  updateChartDataState(dataArray){
+    var intervalBar = dataArray[0];
+    var demandedBar = dataArray[1];
+    var contractedBar = dataArray[2];
 
-    var p = null;
+    console.log('interval: ');
+    console.log(intervalBar);
 
-    if(this.state.chartFilterDemand == null || this.state.chartFilterDemand.length == 0  || this.state.chartFilterDemand == 'hour'){
-      p = moment(item.datetime).format('HH') + "h";
-    } else if(this.state.chartFilterDemand == 'day'){
-      p = moment(item.datetime).format('DD/MM');
-    } else if(this.state.chartFilterDemand == 'month'){
-      p = moment(item.datetime).format('MM/YY');
-    } else if(this.state.chartFilterDemand == 'year'){
-      p = moment(item.datetime).format('YYYY');
-    } 
+    console.log('demanded: ');
+    console.log(demandedBar);
 
-    label.push(p);
-    valor.push(item.value);
-    valor2.push(dado);
+    console.log('contracted: ');
+    console.log(contractedBar);
+
+
+
+    var chart = {};
+    chart.labels = intervalBar;
+    chart.datasets = [];
+
+    var demandedLine = {};
+    demandedLine.label = 'Demanda Medida';
+    demandedLine.data = demandedBar;
+    demandedLine.backgroundColor = '#CCF2F7';
+    chart.datasets.push(demandedLine);
+
+    var contractedLine = {};
+    contractedLine.label = 'Demanda Contratada';
+    contractedLine.data = contractedBar;
+    contractedLine.backgroundColor = '#CCCCCC';
+    chart.datasets.push(contractedLine);
+
+    this.setState({
+      chartData:chart
+    })
+  }
+
+
+  async componentDidMount(){
+    await this.updateContractedDemandState();
+ 
+    const apiDemandCall = await fetch(this.getActiveDemandGraphUrl(this.state.chartFilterDemand));
+    const apiDemandJSON = await apiDemandCall.json();
+
+    var dataArray = this.mountActiveDemandTree(apiDemandJSON.data, this.state.chartFilterDemand);
+
+    this.updateChartDataState(dataArray);
+  }
+
+  async componentWillReceiveProps(nextProps){
+    const apiDemandUpdateCall = await fetch(this.getActiveDemandGraphUrl(nextProps.pass));
+    const apiDemandUpdateJSON = await apiDemandUpdateCall.json();
+    var dataArray = this.mountActiveDemandTree(apiDemandUpdateJSON.data, nextProps.pass);
+
+    this.updateChartDataState(dataArray);
   }
 
   render(){
@@ -103,7 +128,7 @@ class GraficoDemanda extends Component{
         <div className="container_grafico-conteudoDemanda">
           <div className="grafico">
             <div className="grafico_demanda">
-              <Line data={this.state.chartData} options={{title:{responsive: true, maintainAspectRatio: true}}} width={600} height={115} />
+              <Line data={this.state.chartData} options={{title:{responsive: true, maintainAspectRatio: false}}} width={680} height={165} />
             </div>
           </div>
         </div>

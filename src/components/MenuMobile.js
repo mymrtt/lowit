@@ -1,73 +1,73 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+// import React, {Component} from 'react';
+// import {Link} from 'react-router-dom';
 
-import LowItIMG from '../Assets/lowitlogo.png';
-import logoLowItMobile from '../Assets/lowitpqn.png';
-import logoMenuHamburguer from '../Assets/menuhamburguer.png';
+// import LowItIMG from '../Assets/lowitlogo.png';
+// import logoLowItMobile from '../Assets/lowitpqn.png';
+// import logoMenuHamburguer from '../Assets/menuhamburguer.png';
 
-const links = [
-  { route: "/leitura", label: "Leitura", className:"nav_link-label1" },
-  { route: "/dashboard", label: "Dashboard", className:"nav_link-label2" },
-  { route: "/dados", label: "Dados", className:"nav_link-label1" },
-];
+// const links = [
+//   { route: "/leitura", label: "Leitura", className:"nav_link-label1" },
+//   { route: "/dashboard", label: "Dashboard", className:"nav_link-label2" },
+//   { route: "/dados", label: "Dados", className:"nav_link-label1" },
+// ];
 
-export class Menu extends Component {
+// export class Menu extends Component {
 
-  constructor(props){
-    super(props);
-    this.state = {
-      showMenu: false
-    };
-  }
+//   constructor(props){
+//     super(props);
+//     this.state = {
+//       showMenu: false
+//     };
+//   }
 
-  openMenu(evt) {
-    evt.preventDefault();
-    this.setState({showMenu: true});
-  }
+//   openMenu(evt) {
+//     evt.preventDefault();
+//     this.setState({showMenu: true});
+//   }
   
-  closeMenu() {
-    this.setState({showMenu: false});
-  }
+//   closeMenu() {
+//     this.setState({showMenu: false});
+//   }
 
-  renderLink = () => {
-    if(this.state.showMenu){
-      return links.map( link =>
-        <Link key={link.route} close={this.closeMenu} className="nav_link" to={link.route}>
-          <span
-            className={link.label === "Dados"
-              ? "nav_link-label2"
-              : "nav_link-label1"}>
-            {link.label}  
-          </span>
-        </Link>
-      )
-    }
-    else{
-      return null;
-    }
-  }
+//   renderLink = () => {
+//     if(this.state.showMenu){
+//       return links.map( link =>
+//         <Link key={link.route} close={this.closeMenu.bind(this)} className="nav_link" to={link.route}>
+//           <span
+//             className={link.label === "Dados"
+//               ? "nav_link-label2"
+//               : "nav_link-label1"}>
+//             {link.label}  
+//           </span>
+//         </Link>
+//       )
+//     }
+//     else{
+//       return null;
+//     }
+//   }
 
-  render() {
-    return (
-      <nav className="navbar">
-        <div className="container_navbar-links">
-          <div className="container_navbar-img">
-            <img src={LowItIMG} className="logolowitIMG" alt="Logo Low-It" />
-            <div className="container_imgs-menu">
-              <img src={logoLowItMobile} className="logoLowItMobile" alt="Logo Low-It Mobile" />
-              <a href="#" className="btn_menuMobile" onClick={this.openMenu.bind(this)}><img src={logoMenuHamburguer} className="logoMenuHamburguer" alt="Menu" /></a>
-            </div>
-          </div>
-          <ul className="navbar_links-lista">
-            { this.renderLink() }
-          </ul>
-        </div>
-      </nav>
-    )
-  }
-};
+//   render() {
+//     return (
+//       <nav className="navbar">
+//         <div className="container_navbar-links">
+//           <div className="container_navbar-img">
+//             <img src={LowItIMG} className="logolowitIMG" alt="Logo Low-It" />
+//             <div className="container_imgs-menu">
+//               <img src={logoLowItMobile} className="logoLowItMobile" alt="Logo Low-It Mobile" />
+//               <a href="#" className="btn_menuMobile" onClick={this.openMenu.bind(this)}><img src={logoMenuHamburguer} className="logoMenuHamburguer" alt="Menu" /></a>
+//             </div>
+//           </div>
+//           <ul className="navbar_links-lista">
+//             { this.renderLink() }
+//           </ul>
+//         </div>
+//       </nav>
+//     )
+//   }
+// };
 
-export default Menu;
+// export default Menu;
 
 
 

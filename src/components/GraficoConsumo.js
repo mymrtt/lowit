@@ -106,7 +106,7 @@ class GraficoConsumo extends Component{
               <ButtonsGrafico value="Ano" backgroundColor='Grey'/>
             </div>
           </div>
-          <div className="grafico">
+          <div className="graficos">
             <div className="grafico_consumo">
               <h3 className="grafico_textos">Consumo</h3>
               <Line data={this.state.chartData} options={{title:{responsive: true, maintainAspectRatio: true}}} width={800} height={180} />

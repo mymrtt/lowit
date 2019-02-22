@@ -9,6 +9,7 @@ import GraficoDemanda from './GraficoDemanda';
 import ButtonsGrafico from './ButtonsGrafico'
 import DemandaAtual from './DemandaAtual';
 import DemandaContratada from './DemandaContratada';
+import ContainerDemanda from './ContainerDemanda';
 
 
 class Dashboard extends Component {
@@ -60,23 +61,7 @@ class Dashboard extends Component {
               </div>
               <GraficoConsumo/>
             </div>
-            <div className="container_grafico-demanda">
-              <div className="container_buttonsGrafico-demanda">
-                <div className="container_buttons variacao_btns-demanda">
-                  <ButtonsGrafico value="Hora" option='hour' backgroundColor='Grey'/>
-                  <ButtonsGrafico value="Dia" option='day' backgroundColor='Grey'/>
-                  <ButtonsGrafico value="Mês" option='month' backgroundColor='Grey'/>
-                  <ButtonsGrafico value="Ano" option='year' backgroundColor='Grey'/>
-                </div>
-              </div>
-              <div className="container_demanda-conteudo">
-                <div className="container_graficoDemanda-info">
-                  <DemandaAtual />
-                  <DemandaContratada />
-                </div>
-                <GraficoDemanda/>
-              </div>
-            </div>
+            <ContainerDemanda />
           </div>
         </div>
         <div className="container_dispositivosLateral">

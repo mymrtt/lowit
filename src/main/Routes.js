@@ -10,15 +10,13 @@ import NoMatch from './NoMatch';
 export class Routes extends Component {
   render() {
     return (
-      // <main className="container">
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route path='/leitura' component={Leitura}/>
-          <Route path='/dashboard' component={Dashboard}/>
-          <Route path='/dados' component={Dados}/>
-          <Route component={NoMatch} />
-        </Switch>
-      // </main>
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route path='/leitura' component={Leitura}/>
+        <Route path='/dashboard' component={Dashboard}/>
+        <Route path='/dados' component={Dados}/>
+        <Route component={NoMatch} />
+      </Switch>
     )
   }
 };

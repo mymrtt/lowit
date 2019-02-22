@@ -11,36 +11,9 @@ export class ButtonsGrafico extends Component {
     }
   }
 
-  changeState = (e) =>{
-    var newValue = 'hour';
-
-    switch(this.props.option){
-      case 'hour': 
-        newValue = 'hour';
-        break;
-      case 'day': 
-        newValue = 'day';
-      break;
-      case 'month': 
-        newValue = 'month';
-        break;
-      case 'year': 
-        newValue = 'year';
-        break;
-    }
-
-    this.setState(state => ({
-      demandFilterSelected: newValue
-    }));
-
-    console.log('clique:' + newValue);
-  }
-
-
-
   render(){
     return(
-      <button className="btns" onClick={(e) => this.changeState(e)} style={{backgroundColor: this.ChooseBackgroundColor()}}>{this.props.value}</button>
+      <button className="btns" option={this.props.option} onClick={this.props.onClick} style={{backgroundColor: this.ChooseBackgroundColor()}}>{this.props.value}</button>
     );
   }
 }
