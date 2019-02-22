@@ -126,7 +126,7 @@ class GraficoDemanda extends Component{
     return (
       <div className="container_graficoDemanda">
         <div className="container_grafico-conteudoDemanda">
-          <div className="grafico">
+          <div className="graficos">
             <div className="grafico_demanda">
               <Line data={this.state.chartData} options={{title:{responsive: true, maintainAspectRatio: false}}} width={680} height={165} />
             </div>
