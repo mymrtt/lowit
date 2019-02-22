@@ -383,6 +383,8 @@ aside{
 }
 @media(max-width: 640px){
 	.container_leitura{
+		padding: 0;
+    margin-top: 4rem;
 		display: flex;
 		width: 100%;
 		height: 80vh;
@@ -1080,7 +1082,8 @@ aside{
 }
 @media(max-width: 640px){
 	.container_dados{
-		margin-bottom: 4rem;
+    padding: 0;
+		margin-top: 4rem;
 		width: 100%;
 		height: 100vh;
 		display: flex;

@@ -64,12 +64,12 @@ export class Menu extends Component {
               <img src={logoMenuHamburguer} className="logoMenuHamburguer" alt="Menu" />
             </div>
           </div>
-          <ul onClick={this.handleCloseMenu} className="navbar_links-lista">
+          <div onClick={this.handleCloseMenu} className="navbar_links-lista">
             {this.state.showMenu && this.renderLink() }
-            <div className="renderLink-menu">
+            <ul className="renderLink-menu">
               {this.renderLink()}
-            </div>
-          </ul>
+            </ul>
+          </div>
         </div>
       </nav>
     )
