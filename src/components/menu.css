@@ -95,9 +95,9 @@ aside{
     border-color: transparent;
 	}
 	.logoMenuHamburguer{
-		width: 10%;
-		height: 10%;
-		display: flex;	
+    width: 100%;
+    height: 10%;
+    display: flex;
 	}
 }
 @media(max-width: 768px){
