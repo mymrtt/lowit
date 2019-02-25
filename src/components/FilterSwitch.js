@@ -13,11 +13,11 @@ export default {
     },
     node: {
       base: {
-        position: 'relative'
+        // position: 'relative'
       },
       link: {
         cursor: 'pointer',
-        position: 'relative',
+        // position: 'relative',
         padding: '0px 5px',
         display: 'block'
       },
@@ -26,7 +26,7 @@ export default {
       },
       toggle: {
         base: {
-          position: 'relative',
+          // position: 'relative',
           display: 'inline-block',
           verticalAlign: 'top',
           marginLeft: '0px',
@@ -58,7 +58,7 @@ export default {
           height: '12px',
           borderLeft: 'solid 2px black',
           borderBottom: 'solid 2px black',
-          position: 'absolute',
+          // position: 'absolute',
           top: '0px',
           left: '-21px'
         },

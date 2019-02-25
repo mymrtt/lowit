@@ -174,7 +174,7 @@ a{
 }
 @media(max-width: 640px){
 	.tabela_dispositivos-title{
-		height: 10%;
+		height: 13%;
 		display: flex;
 		justify-content: center;
     align-items: center;

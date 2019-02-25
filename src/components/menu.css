@@ -215,7 +215,7 @@ aside{
 }
 @media(max-width: 640px){
 	.navbar_links-lista{
-		height: 100%;
+		height: 100vh;
 		display: flex;
 		justify-content: center;
 	}
