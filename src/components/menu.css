@@ -116,7 +116,8 @@ aside{
 }
 @media(max-width: 640px){
 	.nav_link{
-		height: 34%;
+    /* height: 34%; */
+    height: 100vh;
 	}
 }
 @media(max-width: 768px){

@@ -1,5 +1,3 @@
-// 'use strict';
-
 export default {
   tree: {
     base: {
@@ -58,7 +56,7 @@ export default {
           height: '12px',
           borderLeft: 'solid 2px black',
           borderBottom: 'solid 2px black',
-          // position: 'absolute',
+          position: 'absolute',
           top: '0px',
           left: '-21px'
         },
