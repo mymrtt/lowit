@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import {Route, Switch} from 'react-router-dom';
 
 import Home from './Home';
-import Leitura from '../components/Leitura';
-import Dashboard from '../components/Dashboard';
-import Dados from '../components/Dados';
+import Leitura from '../screens/Leitura';
+import Dashboard from '../screens/Dashboard';
+import Dados from '../screens/Dados';
 import NoMatch from './NoMatch';
 
 export class Routes extends Component {

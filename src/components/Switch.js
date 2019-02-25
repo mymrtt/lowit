@@ -51,7 +51,6 @@ class Switch extends Component {
             }
           }
         }
-
         treeData = treeData + "]";
       }
 

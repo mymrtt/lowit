@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-import Switch from './Switch';
+import Switch from '../components/Switch';
 
-import GraficoConsumo from './GraficoConsumo';
-import ContainerDemanda from './ContainerDemanda';
-import DispositivosLateral from './DispositivosLateral';
+import ConsumptionChart from '../components/ConsumptionChart';
+import ContainerDemand from '../components/ContainerDemand';
+import SideDevices from '../components/SideDevices';
 
 import './dashboard.css';
 
@@ -35,28 +35,28 @@ class Dashboard extends Component {
               <p className="container_info-paragraph">47,4 w</p>
             </div>
           </div>
-          <div className="container_graficos">
-            <div className="container_grafico-consumo">
-              <div className="container_grafico-consumo--info">
-                <div className="container_grafico-info--items">
-                  <p className="container_grafico-info--title">Consumo atual (Em R$)</p>
-                  <p className="container_grafico-info--paragraph">R$ 45,36</p>
+          <div className="container_graphics">
+            <div className="container_graphic-consumo">
+              <div className="container_graphic-consumo--info">
+                <div className="container_graphic-info--items">
+                  <p className="container_graphic-info--title">Consumo atual (Em R$)</p>
+                  <p className="container_graphic-info--paragraph">R$ 45,36</p>
                 </div>
-                <div className="container_tabela-dispositivos--consumo">
-                  <div className="tabela_consumo-dispositivos">
-                    <h3 className="tabela_dispositivos-title">Selecione o Grupo/Dispositivo:</h3>
+                <div className="container_table-devices--consumption">
+                  <div className="table_consumption-devices">
+                    <h3 className="table_devices-title">Selecione o Grupo/Dispositivo:</h3>
                     <div className="filter">
                       <Switch/>
                     </div>
                   </div>
                 </div>
               </div>
-              <GraficoConsumo/>
+              <ConsumptionChart />
             </div>
-            <ContainerDemanda />
+            <ContainerDemand />
           </div>
         </div>
-        <DispositivosLateral />
+        <SideDevices />
       </div>
     )
   }

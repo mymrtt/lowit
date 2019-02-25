@@ -1,4 +1,4 @@
-.container_graficoDemanda{
+.container_graphicDemand{
 	padding: 5px;
   width: 81%;
   height: 98%;
@@ -7,14 +7,14 @@
 	align-items: center;
   flex-direction: column;
 }
-.container_grafico-conteudoDemanda{
+.container_graphicDemand-content{
 	width: 100%;
 	height: 100%;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 }
-.grafico_demanda{
+.graphicDemand{
   width: 100%;
   height: 100%; 
 	display: flex; 
@@ -25,10 +25,10 @@
   border-radius: 8px; 
 }
 @media(max-width: 768px){
-  .container_graficoDemanda{
+  .container_graphicDemand{
     min-width: 76%;
   }
-	.grafico_demanda{
+	.graphicDemand{
 		min-width: 97%;
 		min-height: 97%;
 	}

@@ -51,8 +51,8 @@ a{
 	}
 }
 
-/* GRAFICOS */
-.container_graficos{
+/* graphic */
+.container_graphics{
   width: 98%;
 	height: 85%;
 	display: flex;
@@ -61,17 +61,17 @@ a{
 	flex-direction: column;
 }
 @media(max-width: 640px){
-	.container_graficos{
+	.container_graphics{
 		width: 100%;
 		height: 100%;
 	}
 }
 @media(max-width: 768px){
-	.container_graficos{
+	.container_graphics{
 		min-height: 85%;
 	}
 }
-.graficos{
+.graphic{
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -79,19 +79,19 @@ a{
 	align-items: center;
 }
 @media(max-width: 640px){
-  .graficos{
+  .graphic{
     height: 26vh;
   }
 }
 @media(max-width: 768px){
-  .graficos{
+  .graphic{
     display: flex;
   }
 }
 /* GRAFICOS */
 
 /* DASH DEMANDA CONTRATADA E ATUAL */
-.container_grafico-info--items{
+.container_graphic-info--items{
 	width: 90%;
 	height: 26%;
 	display: flex;
@@ -102,12 +102,12 @@ a{
 	font-family: 'Roboto', sans-serif;
 }
 @media(max-width: 640px){
-	.container_grafico-info--items{
+	.container_graphic-info--items{
 		width: 85%;
 		height: 20%;
 	}
 }
-.container_grafico-info--title{
+.container_graphic-info--title{
 	width: 100%;
 	height: 50%;
 	display: flex;
@@ -119,7 +119,7 @@ a{
 	border-top-left-radius: 10px;
 	background-color: #93DEE8;
 } 
-.container_grafico-info--paragraph{
+.container_graphic-info--paragraph{
 	width: 100%;
 	height: 70%;
 	display: flex;
@@ -131,35 +131,35 @@ a{
 	color: #00717F;
 }
 @media(max-width: 640px){
-  .container_grafico-info--title{
+  .container_graphic-info--title{
     height: 40%;
     font-size: 13px;
 	}
-	.container_grafico-info--paragraph{
+	.container_graphic-info--paragraph{
     height: 60%;
 		font-size: 25px;
 	}
 }
 @media(max-width: 768px){
-	.container_grafico-info--title{
+	.container_graphic-info--title{
 		font-size: 11px;
 	}
-  .container_grafico-info--paragraph{
+  .container_graphic-info--paragraph{
     font-size: 16px;
   }
 }
-.variacao_graficoInfo-items{
+.variation_graphic-info--items{
 	width: 90%;
 	height: 42%;
 }
 /* DEMANDA CONTRATADA E ATUAL */
 
 /* TABELA DISPOSITIVOS */
-.container_tabela-dispositivos{
+/* .container_tabela-dispositivos{
   width: 100%;
   height: 50%;
-}
-.container_tabelaDispositivos{
+} */
+/* .container_table-devices{
 	width: 95%;
 	height: 82vh;
 	display: flex;
@@ -167,18 +167,18 @@ a{
 	align-items: center;
 }
 @media(max-width: 640px){
-	.container_tabelaDispositivos{
+	.container_table-devices{
 		padding: 15px;
 		height: 100%;
 	}
 }
 @media(max-width: 768px){
-	.container_tabelaDispositivos{
+	.container_table-devices{
 		padding: 7px;
 		height: 100%;
 	}
-}
-.tabela_dispositivos-title{
+} */
+.table_devices-title{
   width: 100%;
   text-align: center;
   font-size: 13px;
@@ -187,7 +187,7 @@ a{
 	border-top-left-radius: 10px;
 }
 @media(max-width: 640px){
-	.tabela_dispositivos-title{
+	.table_devices-title{
 		height: 13%;
 		display: flex;
 		justify-content: center;
@@ -196,7 +196,7 @@ a{
 	}
 } 
 @media(max-width: 768px){
-  .tabela_dispositivos-title{
+  .table_devices-title{
     font-size: 11px;
 	} 
 	/* .tabela_dispositivos-titulo-consumo{
@@ -206,13 +206,6 @@ a{
 /* TABELA DISPOSITIVOS */
 
 /* GRAFICO */
-.container_grafico-conteudoConsumo{
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-}
 .container_buttonsGrafico{
 	width: 100%;
 	height: 100%;
@@ -261,45 +254,6 @@ a{
 }
 .btns:hover {
 	background-color: #CCF2F7;
-}
-.input_grafico{
-	width: 30%;
-	height: 65%;
-	text-align: center;
-	color: #00717F;
-	border: none;
-  border-radius: 6px;
-	outline: none;
-	background-color: #F8F8F8;
-	font-family: 'Roboto', sans-serif;
-}
-@media(max-width: 640px){
-	.input_grafico{
-		display: none;
-	}
-}
-@media(max-width: 768px){
-	.input_grafico{
-		min-width: 33%;
-		min-height: 50%;
-		font-size: 11px;
-	}
-}
-.grafico_textos{
-	display: flex;
-	justify-content: center;
-	font-size: 13px;
-	font-family: 'Roboto', sans-serif;
-}
-@media(max-width: 640px){
-  .grafico_textos{
-    font-size: 15px;
-  }
-}
-@media(max-width: 768px){
-	.grafico_textos{
-		font-size: 11px;
-	}
 }
 /* GRAFICO */
 

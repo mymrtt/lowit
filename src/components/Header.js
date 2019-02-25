@@ -10,18 +10,18 @@ class Header extends Component {
   render() {
     return(
       <header className="container_header">
-        <div className="container_header-conteudo">
-          <div className="container_header-itens">
-            <div className="header_itens">
-              <img src={ConfigpqnIMG} className="header_itens-img" alt="Configuração" />
+        <div className="container_header-content">
+          <div className="container_header-items">
+            <div className="header_items">
+              <img src={ConfigpqnIMG} className="header_items-img" alt="Configuração" />
               <a href="/" className="a_header">configuração</a>
             </div>
-            <div className="header_itens">
-              <img src={ProfilepqnIMG} className="header_itens-img" alt="Profile" />
+            <div className="header_items">
+              <img src={ProfilepqnIMG} className="header_items-img" alt="Profile" />
               <a href="/" className="a_header">profile</a>
             </div>
-            <div className="header_itens">
-              <img src={LogoutpqnIMG} className="header_itens-img" alt="Logout" />
+            <div className="header_items">
+              <img src={LogoutpqnIMG} className="header_items-img" alt="Logout" />
               <a href ="/" className="a_header">logout</a>
             </div>
           </div>

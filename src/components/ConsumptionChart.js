@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
 
-import ButtonsGrafico from './ButtonsGrafico';
+import ButtonsGraphic from './ButtonsGraphic';
 
-import './graficoconsumo.css';
+import './consumptionchart.css';
 
-class GraficoConsumo extends Component{
+class ConsumptionChart extends Component{
   constructor(props){
     super(props);
     this.state = {
@@ -91,22 +91,22 @@ class GraficoConsumo extends Component{
 
   render(){
     return (
-      <div className="container_graficoConsumo">
-        <div className="container_grafico-conteudoConsumo">
-          <div className="container_buttonsGrafico-consumo">
-            <input className="input_grafico" type="text" value="Sala de vídeo"/>
+      <div className="container_graphic-consumption">
+        <div className="container_graphic-consumption--content">
+          <div className="container_graphic-consumption--buttons">
+            <input className="input_graphic" type="text" value="Sala de vídeo"/>
             <div className="container_buttons">
-              <ButtonsGrafico value="Hora" backgroundColor='Grey'/>
-              <ButtonsGrafico value="Dia" backgroundColor='Grey'/>
-              <ButtonsGrafico value="Mês" backgroundColor='Grey'/>
-              <ButtonsGrafico value="Ano" backgroundColor='Grey'/>
+              <ButtonsGraphic value="Hora" backgroundColor='Grey'/>
+              <ButtonsGraphic value="Dia" backgroundColor='Grey'/>
+              <ButtonsGraphic value="Mês" backgroundColor='Grey'/>
+              <ButtonsGraphic value="Ano" backgroundColor='Grey'/>
             </div>
           </div>
-          <div className="graficos">
-            <div className="grafico_consumo">
-              <h3 className="grafico_textos">Consumo</h3>
+          <div className="graphic">
+            <div className="graphic_comsumption">
+              <h3 className="graphic_texts">Consumo</h3>
               <Line data={this.state.chartData} options={{title:{responsive: true, maintainAspectRatio: true}}} width={800} height={180} />
-              <p className="grafico_textos">Mês</p>
+              <p className="graphic_texts">Mês</p>
             </div>
           </div>
         </div>
@@ -115,4 +115,4 @@ class GraficoConsumo extends Component{
   }
 }
 
-export default GraficoConsumo;
+export default ConsumptionChart;

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
 
-import './graficodemanda.css';
+import './demandchart.css';
 
 const moment = require('moment')
 
-class GraficoDemanda extends Component{
+class DemandChart extends Component{
   constructor(props){
     super(props);
     this.state = {
@@ -123,10 +123,10 @@ class GraficoDemanda extends Component{
 
   render(){
     return (
-      <div className="container_graficoDemanda">
-        <div className="container_grafico-conteudoDemanda">
-          <div className="graficos">
-            <div className="grafico_demanda">
+      <div className="container_graphicDemand">
+        <div className="container_graphicDemand-content">
+          <div className="graphic">
+            <div className="graphicDemand">
               <Line data={this.state.chartData} options={{title:{responsive: true, maintainAspectRatio: false}}} width={680} height={165} />
             </div>
           </div>
@@ -136,4 +136,4 @@ class GraficoDemanda extends Component{
   }
 }
 
-export default GraficoDemanda;
+export default DemandChart;

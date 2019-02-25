@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class DemandaAtual extends Component {
+class CurrentDemand extends Component {
   
   constructor(props){
     super(props);
@@ -24,12 +24,12 @@ class DemandaAtual extends Component {
 
   render(){
     return (
-      <div className="container_grafico-info--items variacao_graficoInfo-items">
-        <p className="container_grafico-info--title">Demanda Atual</p>
-        <p className="container_grafico-info--paragraph">{this.state.demandaAtual}</p>
+      <div className="container_graphic-info--items variation_graphic-info--items">
+        <p className="container_graphic-info--title">Demanda Atual</p>
+        <p className="container_graphic-info--paragraph">{this.state.demandaAtual}</p>
       </div>
     );
   }
 }
 
-export default DemandaAtual;
+export default CurrentDemand;

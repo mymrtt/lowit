@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class DemandaContratada extends Component {
+class ContractedDemand extends Component {
   
   constructor(props){
     super(props);
@@ -24,12 +24,12 @@ class DemandaContratada extends Component {
 
   render(){
     return (
-      <div className="container_grafico-info--items variacao_graficoInfo-items">
-        <p className="container_grafico-info--title">Demanda Contratada</p>
-        <p className="container_grafico-info--paragraph">{this.state.demandaContratada}</p>
+      <div className="container_graphic-info--items variation_graphic-info--items">
+        <p className="container_graphic-info--title">Demanda Contratada</p>
+        <p className="container_graphic-info--paragraph">{this.state.demandaContratada}</p>
       </div>
     );
   }
 }
 
-export default DemandaContratada;
+export default ContractedDemand;

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class ButtonsGrafico extends Component {
+class ButtonsGraphic extends Component {
 
   ChooseBackgroundColor = () =>{
     switch(this.props.backgroundColor){
@@ -18,4 +18,4 @@ class ButtonsGrafico extends Component {
   }
 }
 
-export default ButtonsGrafico;
+export default ButtonsGraphic;
