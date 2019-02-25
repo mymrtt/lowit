@@ -1,14 +1,14 @@
 {
-  "main.css": "/lowitproject/static/css/main.4c60efe3.chunk.css",
-  "main.js": "/lowitproject/static/js/main.fdc3e701.chunk.js",
-  "main.js.map": "/lowitproject/static/js/main.fdc3e701.chunk.js.map",
+  "main.css": "/lowitproject/static/css/main.d72d8a78.chunk.css",
+  "main.js": "/lowitproject/static/js/main.632be806.chunk.js",
+  "main.js.map": "/lowitproject/static/js/main.632be806.chunk.js.map",
   "runtime~main.js": "/lowitproject/static/js/runtime~main.5a0a00ec.js",
   "runtime~main.js.map": "/lowitproject/static/js/runtime~main.5a0a00ec.js.map",
   "static/js/2.87d7e2ac.chunk.js": "/lowitproject/static/js/2.87d7e2ac.chunk.js",
   "static/js/2.87d7e2ac.chunk.js.map": "/lowitproject/static/js/2.87d7e2ac.chunk.js.map",
   "index.html": "/lowitproject/index.html",
-  "precache-manifest.a3c93a2409183f6295bb65d232d1a6f0.js": "/lowitproject/precache-manifest.a3c93a2409183f6295bb65d232d1a6f0.js",
+  "precache-manifest.47e99a53c01df2515bf65af2e8f51b63.js": "/lowitproject/precache-manifest.47e99a53c01df2515bf65af2e8f51b63.js",
   "service-worker.js": "/lowitproject/service-worker.js",
-  "static/css/main.4c60efe3.chunk.css.map": "/lowitproject/static/css/main.4c60efe3.chunk.css.map",
+  "static/css/main.d72d8a78.chunk.css.map": "/lowitproject/static/css/main.d72d8a78.chunk.css.map",
   "static/media/lowitlogo.png": "/lowitproject/static/media/lowitlogo.ad06ac91.png"
 }
