@@ -3,6 +3,8 @@ import { Line } from 'react-chartjs-2';
 
 import ButtonsGrafico from './ButtonsGrafico';
 
+import './graficoconsumo.css';
+
 class GraficoConsumo extends Component{
   constructor(props){
     super(props);
@@ -85,12 +87,6 @@ class GraficoConsumo extends Component{
         ]
       }
     }
-  }
-
-  static defaultProps = {
-    // displayTitle:true,
-    // displayLegend: true,
-    // legendPosition:'right',
   }
 
   render(){

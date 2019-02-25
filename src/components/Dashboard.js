@@ -1,26 +1,18 @@
 import React, { Component } from 'react';
 
-import Filter from './Filter';
 import Switch from './Switch';
 
 import GraficoConsumo from './GraficoConsumo';
-import GraficoDemanda from './GraficoDemanda';
-
-import ButtonsGrafico from './ButtonsGrafico'
-import DemandaAtual from './DemandaAtual';
-import DemandaContratada from './DemandaContratada';
 import ContainerDemanda from './ContainerDemanda';
+import DispositivosLateral from './DispositivosLateral';
 
+import './dashboard.css';
 
 class Dashboard extends Component {
-  constructor(props){
-    super(props);
-  }
-
   render(){
     return(
       <div className="container_dashboard">
-        <div className="container_dashboard-conteudo">
+        <div className="container_dashboard-content">
           <div className="container_dashboard-info">
             <div className="container_info-items">
               <p className="container_info-title">Última atualização</p>
@@ -45,14 +37,14 @@ class Dashboard extends Component {
           </div>
           <div className="container_graficos">
             <div className="container_grafico-consumo">
-              <div className="container_graficoConsumo-info">
-                <div className="container_graficoInfo-items">
-                  <p className="container_graficoInfo-title">Consumo atual (Em R$)</p>
-                  <p className="container_graficoInfo-paragraph">R$ 45,36</p>
+              <div className="container_grafico-consumo--info">
+                <div className="container_grafico-info--items">
+                  <p className="container_grafico-info--title">Consumo atual (Em R$)</p>
+                  <p className="container_grafico-info--paragraph">R$ 45,36</p>
                 </div>
-                <div className="container_tabelaDispositivos-consumo">
+                <div className="container_tabela-dispositivos--consumo">
                   <div className="tabela_consumo-dispositivos">
-                    <h3 className="tabela_dispositivos-titulo">Selecione o Grupo/Dispositivo:</h3>
+                    <h3 className="tabela_dispositivos-title">Selecione o Grupo/Dispositivo:</h3>
                     <div className="filter">
                       <Switch/>
                     </div>
@@ -64,16 +56,7 @@ class Dashboard extends Component {
             <ContainerDemanda />
           </div>
         </div>
-        <div className="container_dispositivosLateral">
-          <div className="container_tabelaDispositivos">
-            <div className="tabela_dispositivos-lateral">
-              <h3 className="tabela_dispositivos-titulo">Ligar ou Desligar Grupo/Dispositivo:</h3>
-              <div className="filter">
-                <Filter />
-              </div>
-            </div>
-          </div>
-        </div>
+        <DispositivosLateral />
       </div>
     )
   }

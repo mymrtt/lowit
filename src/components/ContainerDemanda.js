@@ -1,65 +1,58 @@
 import React, { Component } from 'react';
 
-import Filter from './Filter';
-import Switch from './Switch';
-
-import GraficoConsumo from './GraficoConsumo';
+import ButtonsGrafico from './ButtonsGrafico';
 import GraficoDemanda from './GraficoDemanda';
-
-import ButtonsGrafico from './ButtonsGrafico'
 import DemandaAtual from './DemandaAtual';
 import DemandaContratada from './DemandaContratada';
 
+import './containerdemanda.css';
 
 class ContainerDemanda extends Component {
   constructor(props){
     super(props);
-
     this.state = {
-        chartFilterDemand: 'hour', 
+      chartFilterDemand: 'hour', 
     };
 
     this.handleHour = this.handleHour.bind(this);
     this.handleDay = this.handleDay.bind(this);
     this.handleMonth = this.handleMonth.bind(this);
     this.handleYear = this.handleYear.bind(this);
-
   }
 
   handleHour = (event) => {
     console.log("hour");
     this.setState({
-        chartFilterDemand: 'hour'
+      chartFilterDemand: 'hour'
     })
   }
 
   handleDay = (event) => {
     console.log("day");
     this.setState({
-        chartFilterDemand: 'day'
+      chartFilterDemand: 'day'
     })
   }
 
   handleMonth = (event) => {
     console.log("month");
     this.setState({
-        chartFilterDemand: 'month'
+      chartFilterDemand: 'month'
     })
   }
 
   handleYear = (event) => {
     console.log("year");
     this.setState({
-        chartFilterDemand: 'year'
+      chartFilterDemand: 'year'
     })
   }
 
 
   render(){
     return(
-
-        <div className="container_grafico-demanda">
-        <div className="container_buttonsGrafico-demanda">
+      <div className="container_grafico-demanda">
+        <div className="container_buttons-grafico--demanda">
           <div className="container_buttons variacao_btns-demanda">
             <ButtonsGrafico value="Hora" backgroundColor='Grey' onClick={() => this.handleHour()} />
             <ButtonsGrafico value="Dia" backgroundColor='Grey' onClick={() => this.handleDay()} />
@@ -68,16 +61,14 @@ class ContainerDemanda extends Component {
           </div>
         </div>
         <div className="container_demanda-conteudo">
-          <div className="container_graficoDemanda-info">
+          <div className="container_grafico-demanda--info">
             <DemandaAtual />
             <DemandaContratada />
           </div>
           <GraficoDemanda pass={this.state.chartFilterDemand} />
         </div>
       </div>
-
-
-        )
+    )
   }
 }
   

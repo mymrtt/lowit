@@ -4,6 +4,8 @@ import ConfigpqnIMG from '../Assets/configuracaogrande.png';
 import ProfilepqnIMG from '../Assets/profilegrande.png';
 import LogoutpqnIMG from '../Assets/logoutpqn.png';
 
+import './header.css';
+
 class Header extends Component {
   render() {
     return(

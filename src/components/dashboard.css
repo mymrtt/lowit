@@ -1,0 +1,187 @@
+.container_dashboard{
+	padding: 5px;
+	min-width: 100%;
+  height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container_dashboard-content{
+	width: 78%;
+	height: 87vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Roboto', sans-serif;
+}
+.container_dashboard-info{
+	padding: 10px 0;
+	display: flex;
+	width: 98%;
+	height: 21%;
+	align-items: center;
+}
+@media(max-width: 640px){
+	.container_dashboard{
+		padding: 0;
+		margin-top: 4rem;
+		flex-direction: column;
+	}
+	.container_dashboard-content{
+		width: 100%;
+		height: 100%;
+	}
+	.container_dashboard-info{
+		width: 100%;
+		height: 100vh;
+		justify-content: space-evenly;
+		flex-direction: column;
+  }
+}
+.container_info-items{
+	margin: 0 10px;
+	width: 90%;
+	height: 100%;
+  border-radius: 10px;
+	background-color: #fff;
+}
+@media(max-width: 640px){
+  .container_info-items{
+		margin: 9px;
+		width: 85%;
+		height: 110px;
+		display: flex;
+		flex-direction: column;
+	}
+}
+@media(max-width: 768px){
+	.container_dashboard-content{
+		min-width: 76%;
+		min-height: 100vh;
+	}
+	.container_dashboard-info{
+		margin: 8px 0;
+		padding: 0;
+		min-height: 14%;
+	}
+	.container_info-items{
+		margin: 0 3px;
+	}
+}
+.container_info-title{
+  width: 100%;
+  height: 40%;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+  text-align: center;
+  font-size: 13px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: #57B6C2;
+}
+.container_info-paragraph{
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 19px;
+  color: #00717F;
+}
+@media(max-width: 640px){
+	.container_info-title{
+		height: 50%;
+		font-size: 15px;
+	}
+	.container_info-paragraph{
+		height: 90%;
+    font-size: 25px;
+  }
+}
+@media(max-width: 768px){
+	.container_info-title{
+		font-size: 11px;
+	}
+  .container_info-paragraph{
+    font-size: 14px;
+  }
+}
+.container_grafico-consumo{
+	width: 98%;
+  height: 52%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+  background-color: #00717F;
+}
+.container_grafico-consumo--info{
+  width: 19%;
+  height: 90%;
+	display: flex;
+	justify-content: space-between;
+  flex-direction: column;
+}
+@media(max-width: 640px){
+	.container_grafico-consumo{
+		width: 100%;
+		height: 100%;
+		flex-direction: column;
+		background-color: #CCF2F7;
+  }
+  .container_grafico-consumo--info{
+		width: 100% !important;
+		height: 80vh !important;
+		justify-content: space-evenly;
+		flex-direction: column-reverse;
+	}
+}
+@media(max-width: 768px){
+  .container_grafico-consumo--info{
+		width: 24%;
+		height: 90%;
+  }
+}
+.container_tabela-dispositivos--consumo{
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #00717F;
+  border-radius: 10px;
+}
+@media(max-width: 640px){
+	.container_tabela-dispositivos--consumo{
+		height: 70%;
+		background-color: #CCF2F7;
+	}
+}
+@media(max-width: 768px){
+	.container_tabela-dispositivos--consumo{
+		height: 65%;
+	}
+}
+.tabela_consumo-dispositivos{
+  width: 90%;
+	height: 100%;
+  display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+  border-bottom: 10px solid #57B6C2;
+  background-color: #F8F8F8;
+}
+@media(max-width: 640px){
+	.tabela_consumo-dispositivos{
+		width: 100%;
+		border-bottom: 20px solid #57B6C2;
+	}
+}
+@media(max-width: 768px){
+	.tabela_consumo-dispositivos{
+		min-width: 95%;
+	}
+}

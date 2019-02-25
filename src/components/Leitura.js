@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './leitura.css';
+
 class Leitura extends Component {
   render(){
     return(

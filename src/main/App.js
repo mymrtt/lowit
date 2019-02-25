@@ -3,10 +3,8 @@ import {BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 
 import Routes from './Routes';
-import Menu from './Menu';
+import Menu from '../components/Menu';
 import Header from '../components/Header';
-// import NavMobile from '../components/NavMobile';
-// import HeaderMobile from '../components/HeaderMobile';
 
 class App extends Component {
   render() {

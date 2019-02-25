@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Route, Switch} from 'react-router-dom';
 
-import Home from '../components/Home';
+import Home from './Home';
 import Leitura from '../components/Leitura';
 import Dashboard from '../components/Dashboard';
 import Dados from '../components/Dados';

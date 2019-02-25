@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
 
+import './graficodemanda.css';
+
 const moment = require('moment')
 
 class GraficoDemanda extends Component{
@@ -79,8 +81,6 @@ class GraficoDemanda extends Component{
     console.log('contracted: ');
     console.log(contractedBar);
 
-
-
     var chart = {};
     chart.labels = intervalBar;
     chart.datasets = [];
@@ -101,7 +101,6 @@ class GraficoDemanda extends Component{
       chartData:chart
     })
   }
-
 
   async componentDidMount(){
     await this.updateContractedDemandState();

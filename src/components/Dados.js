@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './dados.css';
+
 class Dados extends Component {
   render(){
     return(
