@@ -48,6 +48,12 @@
     min-width: 24%;
 	}
 }
+@media(max-width: 990px){
+	.container_buttons-graphic--demand{
+		margin: 3px;
+		width: 98.5%;
+	}
+}
 @media(max-width: 1024px){
 	.variation_btns-demand{
 		width: 38%;

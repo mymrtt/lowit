@@ -44,6 +44,11 @@
 		margin: 2px;
 	}
 }
+@media(max-width: 990px){
+	.container_graphic-consumption--buttons{
+		margin: 2px;
+	}
+}
 .graphic_comsumption{
   width: 97%;
   height: 97%; 
@@ -88,6 +93,11 @@
 		width: 33%;
 		height: 50%;
 		font-size: 11px;
+	}
+}
+@media(max-width: 990px){
+	.input_graphic{
+		height: 100%;
 	}
 }
 .graphic_texts{

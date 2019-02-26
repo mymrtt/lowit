@@ -19,7 +19,7 @@
 }
 @media(max-width: 640px){
 	.container_devices-side{
-    margin: 20px 0 0;
+    margin: 50px 0 0;
 		width: 100%;
 		min-height: 90vh !important;
 		border-radius: 0;
@@ -58,6 +58,3 @@
 		height: 100%;
 	}
 }
-/* .variation_side-devices--title{
-  font-size: 13px !important;
-} */
