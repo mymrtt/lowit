@@ -59,6 +59,7 @@ aside{
 @media(max-width: 640px){
 	.container_navbar-items-imgs{
 		width: 90%;
+		height: 100%;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -83,7 +84,7 @@ aside{
 	}
 	.logoLowItMobile{
 		width: 11%;
-		height: 55%;
+		height: 55% !important;
 		display: flex;
 	}
 	.btn_menuMobile{
@@ -96,7 +97,7 @@ aside{
 	}
 	.logoMenuHamburguer{
     width: 100%;
-    height: 10%;
+    height: 35%;
     display: flex;
 	}
 }
