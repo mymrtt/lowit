@@ -48,7 +48,7 @@
 }
 @media(max-width: 640px){
   .container_info-items{
-		margin: 0 0 15px !important;
+		margin: 0 0 18px !important;
 		width: 85%;
 		height: 110px;
 		display: flex;
