@@ -24,7 +24,7 @@
 @media(max-width: 640px){
 	.container_dashboard{
 		padding: 0;
-		margin-top: 5rem;
+		margin-top: 6rem;
 		flex-direction: column;
 	}
 	.container_dashboard-content{
@@ -48,7 +48,7 @@
 }
 @media(max-width: 640px){
   .container_info-items{
-		margin: 0 0 18px !important;
+		margin: 0 0 30px !important;
 		width: 85%;
 		height: 110px;
 		display: flex;
