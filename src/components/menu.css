@@ -144,7 +144,7 @@ aside{
 	display: flex;
 	justify-content:	flex-start;
 	align-items: center;
-	font-size: 14px;
+	font-size: 13px;
 }
 .nav_link-label1:hover{
 	background-color: #CCF2F7;
@@ -163,7 +163,7 @@ aside{
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	font-size: 14px;
+	font-size: 13px;
 }
 .nav_link-label2:hover{
 	background-color: #CCF2F7;
@@ -191,13 +191,15 @@ aside{
 }
 @media(max-width: 768px){
   .nav_link-label1{
+    margin: 6px !important;
+    padding: 0 0 0;
 		min-width: 100%;
-		padding: 0 0 0;
 		font-size: 11px;
   } 
   .nav_link-label2{
+    margin: 6px !important;
+    padding: 0 0 0;
 		min-width: 100%;
-		padding: 0 0 0;
 		font-size: 11px;
   }
 }

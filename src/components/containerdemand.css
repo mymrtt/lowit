@@ -36,12 +36,17 @@
 	flex-direction: column;
 }
 @media(max-width: 768px){
+	.container_buttons-graphic--demand{
+		padding: 0;
+		margin: 3px 0;
+		width: 98.5%;
+	}
   .variation_btns-demand{
     width: 41%  !important; 
   }
   .container_graphic-demand--info{
     min-width: 24%;
-  }
+	}
 }
 @media(max-width: 1024px){
 	.variation_btns-demand{

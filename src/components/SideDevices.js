@@ -9,7 +9,7 @@ class SideDevices extends Component {
       <div className="container_devices-side">
         <div className="container_table-devices">
           <div className="table_devices-side-content">
-            <h3 className="table_devices-title">Ligar ou Desligar Grupo/Dispositivo:</h3>
+            <h3 className="table_devices-title variation_side-devices--title">Ligar ou Desligar Grupo/Dispositivo:</h3>
             <div className="filter">
               <Filter />
             </div>
