@@ -62,6 +62,7 @@ a{
 }
 @media(max-width: 640px){
 	.container_graphics{
+		margin: -10px;
 		width: 100%;
 		height: 100%;
 	}
@@ -133,11 +134,11 @@ a{
 @media(max-width: 640px){
   .container_graphic-info--title{
     height: 40%;
-    font-size: 13px;
+		font-size: 14px !important;
 	}
 	.container_graphic-info--paragraph{
     height: 60%;
-		font-size: 25px;
+		font-size: 18px !important;
 	}
 }
 @media(max-width: 768px){
@@ -153,31 +154,6 @@ a{
 	height: 42%;
 }
 /* DEMANDA CONTRATADA E ATUAL */
-
-/* TABELA DISPOSITIVOS */
-/* .container_tabela-dispositivos{
-  width: 100%;
-  height: 50%;
-} */
-/* .container_table-devices{
-	width: 95%;
-	height: 82vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-@media(max-width: 640px){
-	.container_table-devices{
-		padding: 15px;
-		height: 100%;
-	}
-}
-@media(max-width: 768px){
-	.container_table-devices{
-		padding: 7px;
-		height: 100%;
-	}
-} */
 .table_devices-title{
   width: 100%;
   text-align: center;
@@ -192,7 +168,7 @@ a{
 		display: flex;
 		justify-content: center;
     align-items: center;
-    font-size: 15px;
+		font-size: 14px !important;
 	}
 } 
 @media(max-width: 768px){
@@ -245,6 +221,11 @@ a{
 	cursor: pointer;
 	background-color: #F8F8F8;
 	font-family: 'Roboto', sans-serif;
+}
+@media(max-width: 640px){
+	.btns{
+		font-size: 13px !important;
+	}
 }
 @media(max-width: 768px){
   .btns{
