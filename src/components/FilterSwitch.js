@@ -7,7 +7,7 @@ export default {
       padding: 0,
       color: '#9DA5AB',
       fontFamily: 'Roboto, Regular',
-      fontSize: '13px'
+      fontSize: '11px'
     },
     node: {
       base: {

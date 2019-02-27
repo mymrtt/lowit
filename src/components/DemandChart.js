@@ -25,7 +25,7 @@ class DemandChart extends Component{
 
     dataset.map(function(item, i){
       var timeFormatted = null;
-      console.log(item);
+//      console.log(item);
 
       if(period === null || period.length === 0  || period === 'hour'){
         timeFormatted = moment(item.datetime).format('HH') + "h";
@@ -72,14 +72,14 @@ class DemandChart extends Component{
     var demandedBar = dataArray[1];
     var contractedBar = dataArray[2];
 
-    console.log('interval: ');
-    console.log(intervalBar);
+//    console.log('interval: ');
+//    console.log(intervalBar);
 
-    console.log('demanded: ');
-    console.log(demandedBar);
+//    console.log('demanded: ');
+//    console.log(demandedBar);
 
-    console.log('contracted: ');
-    console.log(contractedBar);
+//    console.log('contracted: ');
+//    console.log(contractedBar);
 
     var chart = {};
     chart.labels = intervalBar;

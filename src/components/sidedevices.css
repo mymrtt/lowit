@@ -58,3 +58,26 @@
 		height: 100%;
 	}
 }
+.side_filter-imgs{
+  width: 60%;
+  height: 60%;
+}
+.container_filter{
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+@media(max-width: 768px){
+  .container_filter{
+  }
+}
+.container_filter-buttons{
+  display: flex;
+  align-items: center;
+}
+.buttons{
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

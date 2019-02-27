@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 import Switch from '../components/Switch';
 
-import ConsumptionChart from '../components/ConsumptionChart';
 import ContainerDemand from '../components/ContainerDemand';
+import ContainerConsumption from '../components/ContainerConsumption';
 import SideDevices from '../components/SideDevices';
 
 import './dashboard.css';
@@ -36,23 +36,7 @@ class Dashboard extends Component {
             </div>
           </div>
           <div className="container_graphics">
-            <div className="container_graphic-consumo">
-              <div className="container_graphic-consumo--info">
-                <div className="container_graphic-info--items">
-                  <p className="container_graphic-info--title">Consumo atual (Em R$)</p>
-                  <p className="container_graphic-info--paragraph">R$ 45,36</p>
-                </div>
-                <div className="container_table-devices--consumption">
-                  <div className="table_consumption-devices">
-                    <h3 className="table_devices-title">Selecione o Grupo/Dispositivo:</h3>
-                    <div className="filter">
-                      <Switch/>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <ConsumptionChart />
-            </div>
+            <ContainerConsumption />
             <ContainerDemand />
           </div>
         </div>

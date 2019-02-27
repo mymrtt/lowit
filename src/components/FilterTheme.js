@@ -7,7 +7,7 @@ export default {
       padding: 0,
       color: '#9DA5AB',
       fontFamily: 'Roboto, Regular',
-      fontSize: '13px'
+      fontSize: '12px'
     },
     node: {
       base: {
@@ -20,7 +20,7 @@ export default {
         display: 'block'
       },
       activeLink: {
-        background: '#31363F'
+        background: '#31363F',
       },
       toggle: {
         base: {

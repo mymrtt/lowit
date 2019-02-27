@@ -20,11 +20,29 @@ class Switch extends Component {
     node.active = true;
     if(node.children){ node.toggled = toggled; }
     this.setState({ cursorSwitch: node });
+
+    var tmp = {    
+      id : node.id,
+      name : node.name
+    }
+
+    this.props.action(tmp);
   }
 
   recursiveData(item, data){
     treeData = treeData + "{";
-    treeData = treeData + "\"id\":" + "\"" + item.id + "\", ";
+
+    var tmpId = '';
+
+    if(typeof item.device_id !== 'undefined'){
+      tmpId = tmpId + item.device_id; 
+    };
+
+    tmpId = tmpId + '-' + item.id;
+    treeData = treeData + "\"id\":" + "\"" + tmpId + "\", ";
+
+    tmpId = '';
+
     treeData = treeData + "\"name\":" + "\"" + item.name + "\"";
       if(item.hasOwnProperty("children") || item.hasOwnProperty("devices") ){
         treeData = treeData + ", \"children\":" + "[";
@@ -55,8 +73,6 @@ class Switch extends Component {
       }
 
     treeData = treeData + "}";
-
-    console.log("", treeData );
   }
 
   componentDidMount(){
