@@ -59,21 +59,20 @@
 	}
 }
 .side_filter-imgs{
-  width: 60%;
-  height: 60%;
+  width: 65%;
+  height: 65%;
 }
 .container_filter{
   display: flex;
   width: 100%;
-  align-items: center;
-}
-@media(max-width: 768px){
-  .container_filter{
-  }
+	align-items: center;
+	font-size: 11px;
 }
 .container_filter-buttons{
-  display: flex;
-  align-items: center;
+	width: 68%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .buttons{
   width: 40%;
