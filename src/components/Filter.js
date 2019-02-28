@@ -140,7 +140,7 @@ class Filter extends Component {
     fetch('https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/environments?connectable_only=true')
     .then(res => res.json())
     .then(json => { 
-
+      treeData = "";
       json.data.environments.map(item => (
         this.recursiveData(item, treeData)
       ));
