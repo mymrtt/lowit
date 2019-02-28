@@ -1,7 +1,6 @@
 export default {
   tree: {
     base: {
-      width: '100%',
       listStyle: 'none',
       backgroundColor: '#F8F8F8',
       margin: 0,
@@ -12,7 +11,7 @@ export default {
     },
     node: {
       base: {
-        position: 'relative'
+        // position: 'relative'
       },
       link: {
         cursor: 'pointer',
@@ -48,7 +47,6 @@ export default {
       },
       header: {
         base: {
-          width: '100%',
           display: 'inline-block',
           verticalAlign: 'top',
           color: '#000000'
@@ -69,7 +67,7 @@ export default {
       },
       subtree: {
         listStyle: 'none',
-        paddingLeft: '10px'
+        paddingLeft: '11px'
       },
       loading: {
         color: '#E2C089'
