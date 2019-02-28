@@ -81,6 +81,7 @@ class Switch extends Component {
     .then(json => { 
 
       treeData = "";
+
       json.data.environments.map(item => (
         this.recursiveData(item, treeData)
       ));

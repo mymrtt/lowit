@@ -73,7 +73,7 @@ class ContainerConsumption extends Component {
                   </div>
                   <div className="container_table-devices--consumption">
                     <div className="table_consumption-devices">
-                      <h3 className="table_devices-title">Selecione o Grupo/Dispositivo:</h3>
+                      <h3 className="table_devices-title">Filtro</h3>
                       <div className="filter">
                         <Switch action={this.childHandler}/>
                       </div>

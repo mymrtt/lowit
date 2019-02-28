@@ -86,6 +86,7 @@ class DemandChart extends Component{
     chart.datasets = [];
 
     var demandedLine = {};
+    
     demandedLine.label = 'Demanda Medida';
     demandedLine.data = demandedBar;
     demandedLine.backgroundColor = '#CCF2F7';
@@ -94,7 +95,9 @@ class DemandChart extends Component{
     var contractedLine = {};
     contractedLine.label = 'Demanda Contratada';
     contractedLine.data = contractedBar;
-    contractedLine.backgroundColor = '#CCCCCC';
+    contractedLine.fill = false;
+    contractedLine.borderColor = '#FF0000';
+    contractedLine.backgroundColor = '#FF0000';
     chart.datasets.push(contractedLine);
 
     this.setState({
@@ -127,7 +130,7 @@ class DemandChart extends Component{
         <div className="container_graphicDemand-content">
           <div className="graphic">
             <div className="graphicDemand">
-              <Line data={this.state.chartData} options={{title:{responsive: true, maintainAspectRatio: false}}} width={680} height={165} />
+              <Line data={this.state.chartData} options={{title:{responsive: true, maintainAspectRatio: true}}} width={680} height={165} />
             </div>
           </div>
         </div>
