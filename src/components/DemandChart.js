@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
 
+import ButtonsGraphic from './ButtonsGraphic';
+
 import './demandchart.css';
 
 const moment = require('moment')
@@ -127,6 +129,12 @@ class DemandChart extends Component{
   render(){
     return (
       <div className="container_graphicDemand">
+        <div className="container_buttons container_buttons-mobile">
+          <ButtonsGraphic value="Hora" backgroundColor='Grey' onClick={() => this.handleHour()} />
+          <ButtonsGraphic value="Dia" backgroundColor='Grey' onClick={() => this.handleDay()} />
+          <ButtonsGraphic value="Mês" backgroundColor='Grey' onClick={() => this.handleMonth()} />
+          <ButtonsGraphic value="Ano" backgroundColor='Grey' onClick={() => this.handleYear()} />
+        </div>
         <div className="container_graphicDemand-content">
           <div className="graphic">
             <div className="graphicDemand">
