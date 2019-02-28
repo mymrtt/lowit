@@ -62,7 +62,7 @@ export default {
         },
         title: {
           lineHeight: '24px',
-          verticalAlign: 'middle'
+          verticalAlign: 'middle',
         }
       },
       subtree: {

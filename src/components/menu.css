@@ -83,8 +83,10 @@ aside{
 		display: none;
 	}
 	.logoLowItMobile{
-		width: 11%;
-		height: 55% !important;
+		/* width: 11%;
+		height: 55% !important; */
+		width: 40px;
+		height: 40px !important;
 		display: flex;
 	}
 	.btn_menuMobile{
@@ -236,4 +238,8 @@ aside{
 	.renderLink-menu{
 		display: none;
 	}
+}
+
+.teste{
+	display: flex;
 }
