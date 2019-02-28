@@ -11,6 +11,8 @@ export function updateOnOff(nome, id, position) {
 
   var url = 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/devices/'+ id;
 
+
+
   (async () => {
     const rawResponse = await fetch(url, {
       method: 'PATCH',
@@ -46,11 +48,9 @@ var modifiedDecorators = Object.assign({},decorators, { Header: (props) => {
     return (
       <div style={props.style.base}>
         <div style={props.style.title} className="container_filter">
-          {props.node.name}
-          <div className="container_filter-buttons">
-            <a href='#' className="buttons" onClick={() => updateOnOff(props.node.name, props.node.id, 1)}><img src={BtnOn} className="side_filter-imgs" alt="ligar"/></a>
-            <a href='#' className="buttons" onClick={() => updateOnOff(props.node.name, props.node.id, 0)}><img src={BtnOff} className="side_filter-imgs" alt="desligar"/></a>
-          </div>
+        {props.node.name}
+            <a href='#' className="buttons" onClick={() => updateOnOff(props.node.name, props.node.id, 1)}> (L) </a>
+            <a href='#' className="buttons" onClick={() => updateOnOff(props.node.name, props.node.id, 0)}>(D)</a>
         </div>
       </div>
     );
@@ -140,7 +140,7 @@ class Filter extends Component {
     fetch('https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/environments?connectable_only=true')
     .then(res => res.json())
     .then(json => { 
-      treeData = "";
+
       json.data.environments.map(item => (
         this.recursiveData(item, treeData)
       ));

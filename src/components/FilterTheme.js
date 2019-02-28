@@ -12,7 +12,7 @@ export default {
     },
     node: {
       base: {
-        // position: 'relative'
+        position: 'relative'
       },
       link: {
         cursor: 'pointer',
