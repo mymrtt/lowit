@@ -66,9 +66,7 @@ export class Menu extends Component {
             </div>
           </div>
           <div onClick={this.handleCloseMenu} className="navbar_links-list">
-            <div className="teste">
-              {this.state.showMenu && this.renderLink() }
-            </div>
+            {this.state.showMenu && this.renderLink() }
             <ul className="renderLink-menu">
               {this.renderLink()}
             </ul>
