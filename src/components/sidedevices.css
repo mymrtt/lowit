@@ -64,12 +64,13 @@
 }
 .container_filter{
   display: flex;
-  width: 100%;
+  /* width: 100%; */
 	align-items: center;
 	font-size: 11px;
 }
 .container_filter-buttons{
 	width: 68%;
+	height: 50%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
