@@ -149,9 +149,11 @@
 	}
 }
 @media(max-width: 768px){
+	.container_consumption-content{
+		justify-content: space-evenly;
+	}
   .container_consumption--info{
-		width: 24%;
-		height: 90%;
+		width: 20%;
   }
 }
 .container_table-devices--consumption{

@@ -141,7 +141,7 @@ aside{
 	}
 }
 .nav_link-label1{
-	padding: 0 10px 0;
+	margin-left: 40px;
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -160,7 +160,7 @@ aside{
 	content:url('../Assets/dashpqnhover.png');
 }
 .nav_link-label2{
-	padding: 0 10px 0;
+	margin-left: 40px;
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -194,12 +194,12 @@ aside{
 }
 @media(max-width: 768px){
   .nav_link-label1{
-    padding: 0 0 0;
+		margin-left: 10px;
 		min-width: 100%;
 		font-size: 11px;
   } 
   .nav_link-label2{
-    padding: 0 0 0;
+		margin-left: 10px;
 		min-width: 100%;
 		font-size: 11px;
   }
@@ -211,7 +211,7 @@ aside{
 .navbar_links-list{
 	display: flex;
 	width: 100%;
-	height: 50%;
+	height: 55%;
 	justify-content: space-evenly;
 	flex-direction: column;
 	align-items: center;

@@ -7,7 +7,7 @@
 }
 @media(max-width: 768px){
   .container_graphic-consumption{
-    width: 73%;
+    width: 75%;
     /* background-color: #00BCD4; */
   }
 }
@@ -80,7 +80,7 @@
 	}
 }
 .input_graphic{
-	width: 30%;
+	width: 23%;
 	height: 70% !important;
 	text-align: center;
 	color: #00717F;
