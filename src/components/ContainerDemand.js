@@ -52,20 +52,22 @@ class ContainerDemand extends Component {
   render(){
     return(
       <div className="container_graphic-demand">
-        <div className="container_buttons-graphic--demand">
-          <div className="container_buttons variation_btns-demand">
-            <ButtonsGraphic value="Hora" backgroundColor='Grey' onClick={() => this.handleHour()} />
-            <ButtonsGraphic value="Dia" backgroundColor='Grey' onClick={() => this.handleDay()} />
-            <ButtonsGraphic value="Mês" backgroundColor='Grey' onClick={() => this.handleMonth()} />
-            <ButtonsGraphic value="Ano" backgroundColor='Grey' onClick={() => this.handleYear()} />
-          </div>
-        </div>
         <div className="container_demand-content">
           <div className="container_graphic-demand--info">
             <CurrentDemand />
             <ContractedDemand />
           </div>
-          <DemandChart pass={this.state.chartFilterDemand} />
+          <div className="container_graphic-demand-content">
+            <div className="container_graphic-demand--buttons">
+              <div className="container_buttons variation_btns-demand">
+                <ButtonsGraphic value="Hora" backgroundColor='Grey' onClick={() => this.handleHour()} />
+                <ButtonsGraphic value="Dia" backgroundColor='Grey' onClick={() => this.handleDay()} />
+                <ButtonsGraphic value="Mês" backgroundColor='Grey' onClick={() => this.handleMonth()} />
+                <ButtonsGraphic value="Ano" backgroundColor='Grey' onClick={() => this.handleYear()} />
+              </div>
+            </div>
+            <DemandChart pass={this.state.chartFilterDemand} />
+          </div>
         </div>
       </div>
     )

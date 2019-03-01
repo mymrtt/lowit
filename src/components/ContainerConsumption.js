@@ -65,36 +65,42 @@ class ContainerConsumption extends Component {
 
   render(){
     return(
-              <div className="container_graphic-consumo">
-                <div className="container_graphic-consumo--info">
-                  <div className="container_graphic-info--items">
-                    <p className="container_graphic-info--title">Consumo atual (Em R$)</p>
-                    <p className="container_graphic-info--paragraph">R$ 45,36</p>
-                  </div>
-                  <div className="container_table-devices--consumption">
-                    <div className="table_consumption-devices">
-                      <h3 className="table_devices-title">Filtro</h3>
-                      <div className="filter">
-                        <Switch action={this.childHandler}/>
-                      </div>
-                    </div>
-                  </div>
+      <div className="container_consumption">
+        <div className="container_consumption-content">
+          <div className="container_consumption--info">
+            <div className="container_graphic-info--items">
+              <p className="container_graphic-info--title">Consumo atual (Em R$)</p>
+              <p className="container_graphic-info--paragraph">R$ 45,36</p>
+            </div>
+            <div className="container_table-devices--consumption">
+              <div className="table_consumption-devices">
+                <h3 className="table_devices-title">Filtro</h3>
+                <div className="filter">
+                  <Switch action={this.childHandler}/>
                 </div>
-                <div className="container_graphic-consumption">
-                  <div className="container_graphic-consumption--content">
-                    <div className="container_graphic-consumption--buttons">
-                      <input className="input_graphic" type="text" value={this.state.data.name}/>
-                      <div className="container_buttons">
-                        <ButtonsGraphic value="Hora" backgroundColor='Grey' onClick={() => this.handleHour()}/>
-                        <ButtonsGraphic value="Dia" backgroundColor='Grey' onClick={() => this.handleDay()}/>
-                        <ButtonsGraphic value="Mês" backgroundColor='Grey' onClick={() => this.handleMonth()}/>
-                        <ButtonsGraphic value="Ano" backgroundColor='Grey' onClick={() => this.handleYear()}/>
-                      </div>
-                    </div>
-                    <ConsumptionChart pass={this.state.chartFilterConsumption} filtered={this.state.data} />
-                  </div>
-                </div> 
               </div>
+            </div>
+          </div>
+          <div className="container_graphic-consumption">
+            <div className="container_graphic-consumption--content">
+              <div className="container_graphic-consumption--buttons">
+                <input className="input_graphic" type="text" value={this.state.data.name}/>
+                <div className="container_graphic-consumption--buttons-centro">
+                  <button className="btns">kW/h</button>
+                  <button className="btns">R$</button>
+                </div>
+                <div className="container_buttons">
+                  <ButtonsGraphic value="Hora" backgroundColor='Grey' onClick={() => this.handleHour()}/>
+                  <ButtonsGraphic value="Dia" backgroundColor='Grey' onClick={() => this.handleDay()}/>
+                  <ButtonsGraphic value="Mês" backgroundColor='Grey' onClick={() => this.handleMonth()}/>
+                  <ButtonsGraphic value="Ano" backgroundColor='Grey' onClick={() => this.handleYear()}/>
+                </div>
+              </div>
+              <ConsumptionChart pass={this.state.chartFilterConsumption} filtered={this.state.data} />
+            </div>
+          </div> 
+        </div>
+      </div>
     )
   }
 }

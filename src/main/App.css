@@ -197,25 +197,26 @@ a{
 }
 @media(max-width: 640px){
 	.container_buttons{
-		width: 70% !important;
+		width: 80% !important;
 		justify-content: space-around;
 	}
 }
-@media(max-width: 768px){
+/* @media(max-width: 768px){
   .container_buttons{
     width: 56% !important;
   }
-}
-@media(max-width: 1024px){
+} */
+/* @media(max-width: 1024px){
 	.container_buttons{
 		width: 50%;
 		justify-content: space-evenly;
 	}
-}
+} */
 .btns{
+	margin-left: 3px;
 	width: 58px;
 	height: 20px;
-	border: none;
+	border: 1px solid #AC9FBA;
 	border-radius: 6px;
 	outline: none;
 	cursor: pointer;

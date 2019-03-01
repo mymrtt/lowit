@@ -17,7 +17,7 @@ class DemandChart extends Component{
       chartFilterDemand: 'hour', 
     };
   }
-
+  
   mountActiveDemandTree(dataset, filter){
     var intervalBar = [];
     var demandedBar = [];
@@ -129,19 +129,13 @@ class DemandChart extends Component{
   render(){
     return (
       <div className="container_graphicDemand">
-        <div className="container_buttons container_buttons-mobile">
-          <ButtonsGraphic value="Hora" backgroundColor='Grey' onClick={() => this.handleHour()} />
-          <ButtonsGraphic value="Dia" backgroundColor='Grey' onClick={() => this.handleDay()} />
-          <ButtonsGraphic value="Mês" backgroundColor='Grey' onClick={() => this.handleMonth()} />
-          <ButtonsGraphic value="Ano" backgroundColor='Grey' onClick={() => this.handleYear()} />
-        </div>
-        <div className="container_graphicDemand-content">
+        {/* <div className="container_graphicDemand-content"> */}
           <div className="graphic">
             <div className="graphicDemand">
               <Line data={this.state.chartData} options={{title:{responsive: true, maintainAspectRatio: true}}} width={680} height={165} />
             </div>
           </div>
-        </div>
+        {/* </div> */}
       </div>
     )
   }

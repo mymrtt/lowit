@@ -1,25 +1,25 @@
 
 .container_graphic-consumption{
-	padding: 5px;
-	width: 79%;
+	width: 79.5%;
 	height: 90%;
 	border-radius: 10px;
-	background-color: #57B6C2;
+	background-color: #fff;
 }
 @media(max-width: 768px){
   .container_graphic-consumption{
     width: 73%;
-    background-color: #00BCD4;
+    /* background-color: #00BCD4; */
   }
 }
 @media(max-width: 640px){
 	.container_graphic-consumption{
-		padding: 5px 0;
+		/* padding: 5px 0; */
 		width: 100%;
 		height: 34vh;
 	}
 }
 .container_graphic-consumption--content{
+	padding: 5px;
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -27,7 +27,7 @@
 	flex-direction: column;
 }
 .container_graphic-consumption--buttons{
-  width: 97%;	
+  width: 100%;	
   height: 13%;
   display: flex;
 	justify-content: space-between;
@@ -49,6 +49,11 @@
 	.container_graphic-consumption--buttons{
 		margin: 2px;
 	}
+}
+.container_graphic-consumption--buttons-centro{
+	width: 25%;
+	display: flex;
+	justify-content: space-evenly
 }
 .graphic_comsumption{
   width: 97%;
@@ -75,11 +80,11 @@
 }
 .input_graphic{
 	width: 30%;
-	height: 65%;
+	height: 70% !important;
 	text-align: center;
 	color: #00717F;
-	border: none;
-  border-radius: 6px;
+	border: 1px solid #AC9FBA;
+	border-radius: 6px;
 	outline: none;
 	background-color: #F8F8F8;
 	font-family: 'Roboto', sans-serif;
@@ -92,13 +97,18 @@
 @media(max-width: 768px){
 	.input_graphic{
 		width: 33%;
-		height: 50%;
+		height: 70% !important;
 		font-size: 11px;
 	}
 }
 @media(max-width: 990px){
 	.input_graphic{
 		height: 100%;
+	}
+}
+@media(max-width: 1440px){
+	.input_graphic{
+		height: 50%;
 	}
 }
 .graphic_texts{
