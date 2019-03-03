@@ -16,7 +16,7 @@
   text-transform: uppercase;
 }
 .container_header-items{
-	width: 40%;
+	width: 35%;
 	height: 100%;
 	display: flex;
 	justify-content: space-evenly;
@@ -36,7 +36,7 @@
   height: 20px;
   margin-right: 5px;
 }
-@media(max-width: 800px){
+@media(max-width: 990px){
   .container_header-items{
 		width: 55%;
 		font-size: 11px;

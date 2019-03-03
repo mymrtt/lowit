@@ -50,7 +50,7 @@
   .container_info-items{
 		margin: 0 0 30px !important;
 		width: 85%;
-		height: 110px;
+		height: 110px !important;
 		display: flex;
 		flex-direction: column;
 	}
@@ -132,6 +132,20 @@
 		font-size: 13px;
 	}
 }
+@media(max-width: 990px){
+	.container_info-items{
+		height: 100%;
+	}
+	.container_info-paragraphs--att{
+		height: 60%;
+	}
+	.container_info-title{
+		height: 50%;
+	}
+	.container_info-paragraph{
+		height: 50%;
+	}
+}
 .container_consumption{
 	width: 98%;
   height: 52%;
@@ -196,6 +210,11 @@
 @media(max-width: 768px){
 	.container_table-devices--consumption{
 		height: 65%;
+	}
+}
+@media(max-width: 990px){
+	.container_table-devices--consumption{
+		height: 60%;
 	}
 }
 .table_consumption-devices{

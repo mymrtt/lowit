@@ -57,6 +57,11 @@
 	display: flex;
 	justify-content: space-evenly
 }
+@media(max-width: 640px){
+	.container_graphic-consumption--buttons-centro{
+		width: 40%;
+	}
+}
 .graphic_comsumption{
   width: 97%;
   height: 97%; 
