@@ -103,7 +103,7 @@ a{
 }
 @media(max-width: 640px){
 	.container_graphic-info--items{
-		width: 85%;
+		width: 85% !important;
 		height: 20%;
 	}
 }
@@ -184,7 +184,7 @@ a{
 }
 @media(max-width: 640px){
 	.table_devices-title{
-		height: 13%;
+		height: 10%;
 		display: flex;
 		justify-content: center;
     align-items: center;
