@@ -137,13 +137,17 @@
 		height: 100%;
 	}
 	.container_info-paragraphs--att{
-		height: 60%;
+		height: 55%;
 	}
 	.container_info-title{
 		height: 50%;
 	}
 	.container_info-paragraph{
 		height: 50%;
+		font-size: 14px;
+	}
+	.container_info-paragraph--hour{
+		font-size: 14px;
 	}
 }
 .container_consumption{

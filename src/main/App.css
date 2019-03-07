@@ -162,6 +162,11 @@ a{
     font-size: 16px;
   }
 }
+@media(max-width: 990px){
+	.container_graphic-info--paragraph{
+		font-size: 14px;
+	}
+}
 .variation_graphic-info--items{
 	width: 90%;
 	height: 42%;
