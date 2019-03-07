@@ -62,7 +62,6 @@ a{
 }
 @media(max-width: 640px){
 	.container_graphics{
-		margin: -20px;
 		width: 100%;
 		height: 100%;
 	}

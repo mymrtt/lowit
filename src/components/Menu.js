@@ -70,7 +70,7 @@ export class Menu extends Component {
         <div className="navbar_mobile">
           <div className="navbar_mobile-imgs">
             <img src={LowItIMG} className="logoLowItMobile" alt="Logo Low-It Mobile" />
-            <div style={{width: '35px', height: '65px', display: 'flex', justifyContent: 'flex-end', alignItems: 'center'}} onClick={() => this.handleMenu()}>
+            <div className="navbar_mobile-menuHamburguer" onClick={() => this.handleMenu()}>
               <img src={logoMenuHamburguer} className="logoMenuHamburguer" alt="Menu" />
             </div>
           </div>
