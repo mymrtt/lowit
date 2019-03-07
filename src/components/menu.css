@@ -92,6 +92,7 @@ aside{
 	.navbar_mobile-links{
 		width: 100%;
 		height: 100%;
+		/* height: 100vh; */
 		display: flex;
 		flex-direction: column;
 		background-color: #fff;
@@ -150,7 +151,8 @@ aside{
 }
 @media(max-width: 640px){
 	.nav_link{
-    height: 34vh;	
+		/* height: 34vh;	 */
+		height: 15vh;
   }
 }
 @media(max-width: 768px){
@@ -165,8 +167,8 @@ aside{
 }
 @media(max-width: 640px){
 	.nav_link:hover{
-		width: 100%;
-		height: 23vh;
+		width: 90%;
+		height: 15vh;
 		border-left: 8px solid #00717F;
 	}
 }

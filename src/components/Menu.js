@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 import LowItIMG from '../Assets/lowitlogo.png';
-import logoLowItMobile from '../Assets/lowitpqn.png';
 import logoMenuHamburguer from '../Assets/menuhamburguer.png';
 
 import './menu.css';
