@@ -20,16 +20,25 @@
 }
 @media(max-width: 640px){
 	.navbar{
-		position: fixed;
+		/* position: fixed;
 		width: 100%;
 		height: 100%;
-		background-color: transparent;
+		background-color: transparent; */
+		display: none;
 	}
 }
 @media(max-width: 990px){
   .navbar{
     width: 15%;
   }
+}
+.navbar_mobile{
+	display: none;
+}
+@media(max-width: 640px){
+	.navbar_mobile{
+		display: flex;
+	}
 }
 aside{
 	width: 100%;
@@ -58,25 +67,46 @@ aside{
 	align-items: center;
 	background-color: #00717F;
 }
-.container_navbar-items-imgs{
+.navbar_mobile{
+	display: none;
+}
+.navbar_mobile-imgs{
+	display: none;
+}
+.navbar_mobile-links{
 	display: none;
 }
 @media(max-width: 640px){
-	.container_navbar-items-imgs{
-		width: 90%;
+	.navbar_mobile{
+		width: 100%;
 		height: 100%;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		background-color: #00717F;
+	}
+	.navbar_mobile-imgs{
+		width: 95%;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
+	.navbar_mobile-links{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		background-color: #fff;
+	}
 }
+
 .logolowitIMG{
   width: 65%;
-  height: 75%;
+  height: 70%;
 }
-.logoLowItMobile{
+/* .logoLowItMobile{
 	display: none;
-}
+} */
 .btn_menuMobile{
 	display: none;
 }
@@ -88,10 +118,10 @@ aside{
 		display: none;
 	}
 	.logoLowItMobile{
-		/* width: 11%;
-		height: 55% !important; */
-		width: 40px;
-		height: 40px !important;
+		width: 35%;
+		/* height: 55% !important; */
+		/* width: 90px;
+		height: 45px !important; */
 		display: flex;
 	}
 	.btn_menuMobile{
@@ -124,7 +154,6 @@ aside{
 }
 @media(max-width: 640px){
 	.nav_link{
-    /* height: 34%; */
     height: 34vh;	
   }
 }
@@ -141,8 +170,8 @@ aside{
 @media(max-width: 640px){
 	.nav_link:hover{
 		width: 100%;
-		height: 25%;
-		border-left: 6px solid #00717F;
+		height: 23vh;
+		border-left: 8px solid #00717F;
 	}
 }
 .nav_link-label1{
@@ -188,13 +217,13 @@ aside{
 		display: flex;
 		justify-content: center;
 		font-size: 13px !important;
-		background-color: #fff;
+		/* background-color: #fff; */
 	}
 	.nav_link-label2{
 		display: flex;
 		font-size: 13px !important;
 		justify-content: center;
-		background-color: #fff;
+		/* background-color: #fff; */
 	}
 }
 @media(max-width: 768px){

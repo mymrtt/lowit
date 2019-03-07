@@ -54,25 +54,31 @@ export class Menu extends Component {
 
   render() {
     return (
-      <nav className="navbar">
-        <div className="container_navbar-links">
-          <div className="container_navbar-items">
-            <img src={LowItIMG} className="logolowitIMG" alt="Logo Low-It" />
-            <div className="container_navbar-items-imgs">
-              <img src={logoLowItMobile} className="logoLowItMobile" alt="Logo Low-It Mobile" />
-              <div style={{width: '35px', height: '65px', display: 'flex', justifyContent: 'flex-end', alignItems: 'center'}} onClick={() => this.handleMenu()}>
-                <img src={logoMenuHamburguer} className="logoMenuHamburguer" alt="Menu" />
-              </div>
+      <div>
+        <nav className="navbar">
+          <div className="container_navbar-links">
+            <div className="container_navbar-items">
+              <img src={LowItIMG} className="logolowitIMG" alt="Logo Low-It" />
+            </div>
+            <div className="navbar_links-list">
+              <ul className="renderLink-menu">
+                {this.renderLink()}
+              </ul>
             </div>
           </div>
-          <div onClick={this.handleCloseMenu} className="navbar_links-list">
+        </nav>
+        <div className="navbar_mobile">
+          <div className="navbar_mobile-imgs">
+            <img src={LowItIMG} className="logoLowItMobile" alt="Logo Low-It Mobile" />
+            <div style={{width: '35px', height: '65px', display: 'flex', justifyContent: 'flex-end', alignItems: 'center'}} onClick={() => this.handleMenu()}>
+              <img src={logoMenuHamburguer} className="logoMenuHamburguer" alt="Menu" />
+            </div>
+          </div>
+          <div onClick={this.handleCloseMenu} className="navbar_mobile-links">
             {this.state.showMenu && this.renderLink() }
-            <ul className="renderLink-menu">
-              {this.renderLink()}
-            </ul>
           </div>
         </div>
-      </nav>
+      </div>
     )
   }
 };

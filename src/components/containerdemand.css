@@ -9,10 +9,10 @@
 }
 @media(max-width: 640px){
 	.container_graphic-demand{
+		margin-top: 2rem;
     padding: 5px 0;
     width: 100%;
 		height: 65vh;
-		background-color: #CCF2F7;
 	}
 }
 .container_graphic-demand-content{
