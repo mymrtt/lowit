@@ -104,7 +104,7 @@
 @media(max-width: 768px){
 	.input_graphic{
 		width: 33%;
-		height: 70% !important;
+		height: 60% !important;
 		font-size: 11px;
 	}
 }
