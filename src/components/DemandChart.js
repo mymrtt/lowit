@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
 
-import ButtonsGraphic from './ButtonsGraphic';
+// import ButtonsGraphic from './ButtonsGraphic';
 
 import './demandchart.css';
 

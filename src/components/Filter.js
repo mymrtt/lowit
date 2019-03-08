@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {Treebeard, decorators} from 'react-treebeard';
 import style from './FilterTheme';
-import BtnOn from '../Assets/btnonpqn.png';
-import BtnOff from '../Assets/btnoffpqn.png';
+// import BtnOn from '../Assets/btnonpqn.png';
+// import BtnOff from '../Assets/btnoffpqn.png';
 
 
 var treeData = "";

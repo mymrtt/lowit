@@ -104,7 +104,7 @@ a{
 @media(max-width: 640px){
 	.container_graphic-info--items{
 		width: 85% !important;
-		height: 20%;
+		height: 20% !important;
 	}
 }
 @media(max-width: 768px){
@@ -170,6 +170,12 @@ a{
 .variation_graphic-info--items{
 	width: 90%;
 	height: 42%;
+}
+@media(max-width: 640px){
+	.variation_graphic-info--items{
+		width: 90% !important;
+		height: 45% !important;
+	}
 }
 /* DEMANDA CONTRATADA E ATUAL */
 

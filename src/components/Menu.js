@@ -29,15 +29,6 @@ export class Menu extends Component {
     })
   };
 
-  handleCloseMenu = () => {
-    this.setState(prevState => {
-      return {
-        showMenu: false
-      }
-    })
-    console.log(this.state.showMenu)
-  }
-
   renderLink = () => {
     return links.map( link =>
       <Link key={link.route} className="nav_link" to={link.route}>
@@ -66,14 +57,14 @@ export class Menu extends Component {
             </div>
           </div>
         </nav>
-        <div className="navbar_mobile">
+        <div className="navbar_mobile" onClick={() => this.handleMenu()}>
           <div className="navbar_mobile-imgs">
-            <img src={LowItIMG} className="logoLowItMobile" alt="Logo Low-It Mobile" />
-            <div className="navbar_mobile-menuHamburguer" onClick={() => this.handleMenu()}>
+            <img src={LowItIMG} className="logoLowItMobile" alt="Logo Low-It" />
+            <div className="navbar_mobile-menuHamburguer">
               <img src={logoMenuHamburguer} className="logoMenuHamburguer" alt="Menu" />
             </div>
           </div>
-          <div onClick={this.handleCloseMenu} className="navbar_mobile-links">
+          <div className="navbar_mobile-links">
             {this.state.showMenu && this.renderLink() }
           </div>
         </div>
