@@ -25,12 +25,6 @@ class Dashboard extends Component {
   }
 
   getApiData = () => {
-
-    // axios
-    // .get('https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/realtime')
-    // .then(response => (this.info = response))
-    // console.log(this.info);
-
     axios({
       url: 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/realtime',
       method: 'get',

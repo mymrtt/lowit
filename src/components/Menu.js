@@ -57,10 +57,10 @@ export class Menu extends Component {
             </div>
           </div>
         </nav>
-        <div className="navbar_mobile" onClick={() => this.handleMenu()}>
+        <div className="navbar_mobile">
           <div className="navbar_mobile-imgs">
             <img src={LowItIMG} className="logoLowItMobile" alt="Logo Low-It" />
-            <div className="navbar_mobile-menuHamburguer">
+            <div className="navbar_mobile-menuHamburguer" onClick={() => this.handleMenu()}>
               <img src={logoMenuHamburguer} className="logoMenuHamburguer" alt="Menu" />
             </div>
           </div>

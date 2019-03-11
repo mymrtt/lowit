@@ -16,7 +16,7 @@ class Switch extends Component {
   }
 
   onToggle(node, toggled){
-    if(this.state.cursorSwitch){this.state.cursorSwitch.active = false;}
+    if(this.state.cursorSwitch){this.setate.cursorSwitch.active = false;}
     node.active = true;
     if(node.children){ node.toggled = toggled; }
     this.setState({ cursorSwitch: node });

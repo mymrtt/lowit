@@ -20,10 +20,6 @@
 }
 @media(max-width: 640px){
 	.navbar{
-		/* position: fixed;
-		width: 100%;
-		height: 100%;
-		background-color: transparent; */
 		display: none;
 	}
 }
@@ -284,8 +280,4 @@ aside{
 	.renderLink-menu{
 		display: none;
 	}
-}
-
-.teste{
-	display: flex;
 }

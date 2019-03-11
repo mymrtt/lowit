@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
 
-// import ButtonsGraphic from './ButtonsGraphic';
-
 import './demandchart.css';
 
 const moment = require('moment')
@@ -17,34 +15,70 @@ class DemandChart extends Component{
       chartFilterDemand: 'hour', 
     };
   }
-  
+
   mountActiveDemandTree(dataset, filter){
-    var intervalBar = [];
-    var demandedBar = [];
-    var contractedBar = [];
     var period = filter;
-    var contracted = this.state.contractedDemand;
+    var intervalCreated = false;
+    var interval = [];
+    var colors = ['#F00000', '#F000CC', '#F0CC00', '#CCCCCC', '#AAAAAA', '#0000FF', '#F000FF', '#F0FF00', '#00CCCC', '#AA00AA', '#F0F0F0'];
+    var colorIndex = 0;
 
-    dataset.map(function(item, i){
-      var timeFormatted = null;
-//      console.log(item);
+    var chart = {};
+    chart.datasets = [];
 
-      if(period === null || period.length === 0  || period === 'hour'){
-        timeFormatted = moment(item.datetime).format('HH') + "h";
-      } else if(period === 'day'){
-        timeFormatted = moment(item.datetime).format('D');
-      } else if(period === 'month'){
-        timeFormatted = moment(item.datetime).format('MMM');
-      } else if(period === 'year'){
-        timeFormatted = moment(item.datetime).format('YYYY');
-      } 
-  
-      intervalBar.push(timeFormatted);
-      demandedBar.push(item.value);
-      contractedBar.push(contracted);
-    });
+    for (const [key, value] of Object.entries(dataset)) {
+      console.log(key, value);
 
-    return [intervalBar, demandedBar, contractedBar];
+      if(key == "contracted_demand"){
+        var lineContracted = {};
+        lineContracted.label = 'Demanda Contratada';
+        lineContracted.data = value.value;
+        lineContracted.borderColor = '#FF0000';
+        lineContracted.backgroundColor = '#FF0000';
+        lineContracted.fill = false;
+//        chart.datasets.push(lineContracted);
+      } else {
+        var lineItem = {};
+        lineItem.label = key;
+
+        var lista = [];
+        for (const [chave, valor] of Object.entries(value)) {
+          lista.push(valor.value);
+
+          if(intervalCreated === false){
+            var timeFormatted = null;
+            if(period === null || period.length === 0  || period === 'hour'){
+              timeFormatted = moment(valor.datetime).format('HH') + "h";
+            } else if(period === 'day'){
+              timeFormatted = moment(valor.datetime).format('D');
+            } else if(period === 'month'){
+              timeFormatted = moment(valor.datetime).format('MMM');
+            } else if(period === 'year'){
+              timeFormatted = moment(valor.datetime).format('YYYY');
+            } 
+            interval.push(timeFormatted);
+          }
+
+        }
+
+        intervalCreated = true; //Só monta o intervalo uma vez 
+
+        lineItem.data = lista;
+        lineItem.backgroundColor = colors[colorIndex];
+        colorIndex = colorIndex + 1;
+        chart.datasets.push(lineItem);
+      }
+
+    }
+
+    chart.labels = interval;
+
+    this.setState({
+      chartData:chart
+    })
+
+    console.log("xxxxxxxx", chart);
+
   }
 
   async updateContractedDemandState(){
@@ -69,73 +103,32 @@ class DemandChart extends Component{
     return fetchUrl;
   }
 
-  updateChartDataState(dataArray){
-    var intervalBar = dataArray[0];
-    var demandedBar = dataArray[1];
-    var contractedBar = dataArray[2];
-
-//    console.log('interval: ');
-//    console.log(intervalBar);
-
-//    console.log('demanded: ');
-//    console.log(demandedBar);
-
-//    console.log('contracted: ');
-//    console.log(contractedBar);
-
-    var chart = {};
-    chart.labels = intervalBar;
-    chart.datasets = [];
-
-    var demandedLine = {};
-    
-    demandedLine.label = 'Demanda Medida';
-    demandedLine.data = demandedBar;
-    demandedLine.backgroundColor = '#CCF2F7';
-    chart.datasets.push(demandedLine);
-
-    var contractedLine = {};
-    contractedLine.label = 'Demanda Contratada';
-    contractedLine.data = contractedBar;
-    contractedLine.fill = false;
-    contractedLine.borderColor = '#FF0000';
-    contractedLine.backgroundColor = '#FF0000';
-    chart.datasets.push(contractedLine);
-
-    this.setState({
-      chartData:chart
-    })
-  }
-
   async componentDidMount(){
-    await this.updateContractedDemandState();
+    //await this.updateContractedDemandState();
  
     const apiDemandCall = await fetch(this.getActiveDemandGraphUrl(this.state.chartFilterDemand));
     const apiDemandJSON = await apiDemandCall.json();
+    this.mountActiveDemandTree(apiDemandJSON.data, this.state.chartFilterDemand);
 
-    var dataArray = this.mountActiveDemandTree(apiDemandJSON.data, this.state.chartFilterDemand);
-
-    this.updateChartDataState(dataArray);
   }
 
   async componentWillReceiveProps(nextProps){
     const apiDemandUpdateCall = await fetch(this.getActiveDemandGraphUrl(nextProps.pass));
     const apiDemandUpdateJSON = await apiDemandUpdateCall.json();
-    var dataArray = this.mountActiveDemandTree(apiDemandUpdateJSON.data, nextProps.pass);
+    this.mountActiveDemandTree(apiDemandUpdateJSON.data, nextProps.pass);
 
-    this.updateChartDataState(dataArray);
   }
 
   render(){
     return (
       <div className="container_graphicDemand">
-        {/* <div className="container_graphicDemand-content"> */}
+        <div className="container_graphicDemand-content">
           <div className="graphic">
             <div className="graphicDemand">
               <Line data={this.state.chartData} options={{title:{responsive: true, maintainAspectRatio: true}}} width={680} height={165} />
             </div>
           </div>
-        {/* </div> */}
+        </div>
       </div>
     )
   }
