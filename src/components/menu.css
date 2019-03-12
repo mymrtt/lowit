@@ -180,9 +180,9 @@ aside{
 }
 @media(max-width: 640px){
 	.nav_link:hover{
-		width: 90%;
+		width: 98%;
 		height: 10vh;
-		border-left: 8px solid #00717F;
+		border-left: 7px solid #00717F;
 	}
 }
 .nav_link-label1{
