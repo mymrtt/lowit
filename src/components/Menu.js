@@ -31,7 +31,7 @@ export class Menu extends Component {
 
   renderLink = () => {
     return links.map( link =>
-      <div style={{height: '20vh', display: 'flex', alignItems: 'center'}}>
+      // <div className="container_nav-link">
         <Link key={link.route} className="nav_link" to={link.route}>
           <span
             className={link.label === "Dados"
@@ -40,7 +40,7 @@ export class Menu extends Component {
             {link.label}  
           </span>
         </Link>
-      </div>
+      // </div>
     )
   }
 
