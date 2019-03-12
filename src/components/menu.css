@@ -144,13 +144,13 @@ aside{
   }
 }
 /* .container_nav-link{
-
+	height: 10vh;
 }
 @media(max-width: 640px){
 	.container_nav-link{
-		height: 20vh; 
+		height: 15vh; 
 		display: flex; 
-		align-items: center;
+		align-items: flex-end;
 	}
 } */
 
@@ -227,18 +227,18 @@ aside{
 }
 @media(max-width: 640px){
 	.nav_link-label1{
-		margin-left: 40% !important;
+		margin-left: 20% !important;
 		width: 50% !important;
 		display: flex;
 		justify-content: flex-start;
-		font-size: 13px !important;
+		font-size: 14px !important;
 		/* background-color: #fff; */
 	}
 	.nav_link-label2{
-		margin-left: 40% !important;
+		margin-left: 20% !important;
 		width: 50% !important;
 		display: flex;
-		font-size: 13px !important;
+		font-size: 14px !important;
 		justify-content: flex-start;
 		/* background-color: #fff; */
 	}

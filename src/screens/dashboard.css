@@ -186,7 +186,7 @@
   .container_consumption--info{
 		width: 100% !important;
 		height: 80vh !important;
-		justify-content: space-evenly;
+		justify-content: space-around;
 		flex-direction: column-reverse;
 	}
 }
