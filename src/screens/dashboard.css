@@ -177,6 +177,7 @@
 	.container_consumption{
 		width: 100%;
 		height: 100%;
+		justify-content: space-around;
 		flex-direction: column;
 	}
 	.container_consumption-content{
