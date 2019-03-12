@@ -66,9 +66,11 @@ export class Menu extends Component {
               <img src={logoMenuHamburguer} className="logoMenuHamburguer" alt="Menu" />
             </div>
           </div>
-          <div className="navbar_mobile-links">
-            { this.state.showMenu && this.renderLink() }
-          </div>
+          {this.state.showMenu &&
+            <div className="navbar_mobile-links">
+              {this.renderLink()}
+            </div>
+          }
         </div>
       </div>
     )

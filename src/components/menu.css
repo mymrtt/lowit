@@ -70,9 +70,9 @@ aside{
 }
 @media(max-width: 640px){
 	.navbar_mobile{
-		position: relative;
+		position: fixed;
 		width: 100%;
-		height: 100%;
+		height: 4rem;
 		display: flex;
 		align-items: center;
 		flex-direction: column;
@@ -91,12 +91,12 @@ aside{
 		align-items: center;
 	}
 	.navbar_mobile-links{
-		position: absolute;
-		top: 100%;
+		position: fixed;
+		top: 4rem;
 		width: 100%;
-		height: min-content;
-		/* height: 100vh; */
+		height: 100vh;
 		display: flex;
+		justify-content: center;
 		flex-direction: column;
 		background-color: #fff;
 	}
@@ -164,8 +164,7 @@ aside{
 }
 @media(max-width: 640px){
 	.nav_link{
-		/* height: 34vh;	 */
-		height: 10vh;
+		height: 14vh;
   }
 }
 @media(max-width: 768px){
@@ -231,14 +230,14 @@ aside{
 		width: 50% !important;
 		display: flex;
 		justify-content: flex-start;
-		font-size: 14px !important;
+		font-size: 13px !important;
 		/* background-color: #fff; */
 	}
 	.nav_link-label2{
 		margin-left: 20% !important;
 		width: 50% !important;
 		display: flex;
-		font-size: 14px !important;
+		font-size: 13px !important;
 		justify-content: flex-start;
 		/* background-color: #fff; */
 	}
