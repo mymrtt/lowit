@@ -31,16 +31,14 @@ export class Menu extends Component {
 
   renderLink = () => {
     return links.map( link =>
-      // <div className="container_nav-link">
-        <Link key={link.route} className="nav_link" to={link.route}>
-          <span
-            className={link.label === "Dados"
-              ? "nav_link-label2"
-              : "nav_link-label1"}>
-            {link.label}  
-          </span>
-        </Link>
-      // </div>
+      <Link key={link.route} className="nav_link" to={link.route}>
+        <span
+          className={link.label === "Dados"
+            ? "nav_link-label2"
+            : "nav_link-label1"}>
+          {link.label}  
+        </span>
+      </Link>
     )
   }
 
@@ -59,10 +57,10 @@ export class Menu extends Component {
             </div>
           </div>
         </nav>
-        <div className="navbar_mobile">
+        <div className="navbar_mobile" onClick={() => this.handleMenu()}>
           <div className="navbar_mobile-imgs">
             <img src={LowItIMG} className="logoLowItMobile" alt="Logo Low-It" />
-            <div className="navbar_mobile-menuHamburguer" onClick={() => this.handleMenu()}>
+            <div className="navbar_mobile-menuHamburguer">
               <img src={logoMenuHamburguer} className="logoMenuHamburguer" alt="Menu" />
             </div>
           </div>
