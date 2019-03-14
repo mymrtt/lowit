@@ -37,7 +37,6 @@
 	}
 }
 .container_graphic-demand--buttons{
-	/* padding: 5px 0 0; */
 	width: 99.5%;
 	height: 15%;
 	display: flex;
@@ -95,11 +94,8 @@
 	.container_graphic-demand--buttons{
 		padding: 0;
 		margin: 3px 0;
-		width: 98.5%;
+		width: 97.5% !important;
 	}
-  /* .variation_btns-demand{
-    width: 41%  !important; 
-  } */
   .container_graphic-demand--info{
     width: 20%;
 	}

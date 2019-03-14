@@ -4,7 +4,8 @@
 	height: 90%;
 	border: 1px solid #707070;
 	border-radius: 10px;
-	background-color: #fff;
+	/* background-color: #fff; */
+	background-color: #F6F6F6;
 }
 @media(max-width: 768px){
   .container_graphic-consumption{
@@ -29,7 +30,7 @@
 	flex-direction: column;
 }
 .container_graphic-consumption--buttons{
-  width: 100%;	
+  width: 97%;	
   height: 13%;
   display: flex;
 	justify-content: space-between;
@@ -60,6 +61,11 @@
 @media(max-width: 640px){
 	.container_graphic-consumption--buttons-centro{
 		width: 40%;
+	}
+}
+@media(max-width: 768px){
+	.container_graphic-consumption--buttons-centro{
+		width: 23%;
 	}
 }
 .graphic_comsumption{
@@ -103,7 +109,7 @@
 }
 @media(max-width: 768px){
 	.input_graphic{
-		width: 33%;
+		width: 27%;
 		height: 60% !important;
 		font-size: 11px;
 	}

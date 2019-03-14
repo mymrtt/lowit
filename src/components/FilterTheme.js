@@ -7,14 +7,15 @@ export default {
       padding: 0,
       color: '#9DA5AB',
       fontFamily: 'Roboto, Regular',
-      fontSize: '12px'
+      fontSize: '12px',
+      cursor: 'pointer'
     },
     node: {
       base: {
         // position: 'relative'
       },
       link: {
-        cursor: 'pointer',
+        // cursor: 'pointer',
         // position: 'relative',
         padding: '0px 5px',
         display: 'block'
