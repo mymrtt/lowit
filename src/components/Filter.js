@@ -36,11 +36,7 @@ export function updateOnOff(nome, id, position) {
     }
 
   })();
-
-
-
 }
-
 
 var modifiedDecorators = Object.assign({},decorators, { Header: (props) => {
 
@@ -66,8 +62,6 @@ var modifiedDecorators = Object.assign({},decorators, { Header: (props) => {
 
 }});
 
- 
-
 class Filter extends Component {
 
   constructor(props){
@@ -79,7 +73,6 @@ class Filter extends Component {
     this.recursiveData = this.recursiveData.bind(this);
     this.onToggle = this.onToggle.bind(this);
   }
-
 
   onToggle(node, toggled){
     if(this.state.cursor){this.state.cursor.active = false;}

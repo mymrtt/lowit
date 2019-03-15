@@ -13,8 +13,8 @@ class Header extends Component {
         <div className="container_header-content">
           <div className="container_header-items">
             <div className="header_items">
-              <img src={ConfigIMG} className="header_items-img" alt="Configuração" />
-              <a href="/" className="a_header">configuração</a>
+              <img src={ConfigIMG} className="header_items-img" alt="Configuration" />
+              <a href="/" className="a_header">configuration</a>
             </div>
             <div className="header_items">
               <img src={ProfileIMG} className="header_items-img" alt="Profile" />
