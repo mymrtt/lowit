@@ -27,7 +27,7 @@ class ContainerConsumption extends Component {
     // log our state before and after we updated it
     console.log('%cPrevious Parent State: ' + JSON.stringify(this.state), "color:orange");
     this.setState({
-        data: dataFromChild
+      data: dataFromChild
     },() => console.log('Updated Parent State:', this.state));
   }
 
@@ -86,10 +86,10 @@ class ContainerConsumption extends Component {
                   <button className="btns">R$</button>
                 </div>
                 <div className="container_buttons">
-                  <ButtonsGraphic value="Hora" backgroundColor='Grey' onClick={() => this.handleHour()}/>
-                  <ButtonsGraphic value="Dia" backgroundColor='Grey' onClick={() => this.handleDay()}/>
-                  <ButtonsGraphic value="Mês" backgroundColor='Grey' onClick={() => this.handleMonth()}/>
-                  <ButtonsGraphic value="Ano" backgroundColor='Grey' onClick={() => this.handleYear()}/>
+                  <ButtonsGraphic value="Hora" onClick={() => this.handleHour()}/>
+                  <ButtonsGraphic value="Dia" onClick={() => this.handleDay()}/>
+                  <ButtonsGraphic value="Mês" onClick={() => this.handleMonth()}/>
+                  <ButtonsGraphic value="Ano" onClick={() => this.handleYear()}/>
                 </div>
               </div>
               <ConsumptionChart pass={this.state.chartFilterConsumption} filtered={this.state.data} />
