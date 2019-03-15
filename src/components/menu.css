@@ -20,10 +20,6 @@
 }
 @media(max-width: 640px){
 	.navbar{
-		/* position: fixed;
-		width: 100%;
-		height: 100%;
-		background-color: transparent; */
 		display: none;
 	}
 }
@@ -103,11 +99,8 @@ aside{
 }
 .logolowitIMG{
   width: 65%;
-  height: 70%;
+  height: 65%;
 }
-/* .logoLowItMobile{
-	display: none;
-} */
 .btn_menuMobile{
 	display: none;
 }
@@ -143,17 +136,6 @@ aside{
 		height: 50%;
   }
 }
-/* .container_nav-link{
-	height: 10vh;
-}
-@media(max-width: 640px){
-	.container_nav-link{
-		height: 15vh; 
-		display: flex; 
-		align-items: flex-end;
-	}
-} */
-
 .nav_link{
 	width: 100%;
 	height: 20%;
@@ -193,10 +175,6 @@ aside{
 	align-items: center;
 	font-size: 13px;
 }
-/* .nav_link-label1:hover{
-	width: 50%;
-	background-color: #CCF2F7;
-} */
 .nav_link-label1:before{
 	margin-right: 10px;
 	content:url('../Assets/dashpqn.png');
@@ -213,10 +191,6 @@ aside{
 	align-items: center;
 	font-size: 13px;
 }
-/* .nav_link-label2:hover{
-	width: 50%;
-	background-color: #CCF2F7;
-} */
 .nav_link-label2:before{
 	margin-right: 10px;
 	content:url('../Assets/dashpqn2.png');
@@ -231,7 +205,6 @@ aside{
 		display: flex;
 		justify-content: flex-start;
 		font-size: 13px !important;
-		/* background-color: #fff; */
 	}
 	.nav_link-label2{
 		margin-left: 20% !important;
@@ -239,7 +212,6 @@ aside{
 		display: flex;
 		font-size: 13px !important;
 		justify-content: flex-start;
-		/* background-color: #fff; */
 	}
 }
 @media(max-width: 768px){
