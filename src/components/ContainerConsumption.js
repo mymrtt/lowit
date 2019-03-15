@@ -4,8 +4,6 @@ import ButtonsGraphic from './ButtonsGraphic';
 import ConsumptionChart from './ConsumptionChart';
 import Switch from './Switch';
 
-//import './containerdemand.css';
-
 class ContainerConsumption extends Component {
   constructor(props){
     super(props);
@@ -20,7 +18,6 @@ class ContainerConsumption extends Component {
     this.handleYear = this.handleYear.bind(this);
     this.childHandler = this.childHandler.bind(this)
   }
-
 
    /*
     Function that gets called when
@@ -62,7 +59,6 @@ class ContainerConsumption extends Component {
     })
   }
 
-
   render(){
     return(
       <div className="container_consumption">
@@ -84,7 +80,7 @@ class ContainerConsumption extends Component {
           <div className="container_graphic-consumption">
             <div className="container_graphic-consumption--content">
               <div className="container_graphic-consumption--buttons">
-                <input className="input_graphic" type="text" value={this.state.data.name}/>
+                <input className="input_graphic-comsumption" type="text" value={this.state.data.name}/>
                 <div className="container_graphic-consumption--buttons-centro">
                   <button className="btns">kW/h</button>
                   <button className="btns">R$</button>

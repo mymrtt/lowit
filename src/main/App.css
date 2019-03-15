@@ -220,20 +220,20 @@ a{
 }
 @media(max-width: 640px){
 	.container_buttons{
-		width: 80% !important;
+		width: 55% !important;
 		justify-content: space-around;
 	}
 }
 @media(max-width: 768px){
 	.container_buttons{
-		width: 42% !important;
+		width: 45%;
 	}
 }
 .btns{
 	margin-left: 3px;
 	width: 58px;
 	height: 20px;
-	border: 1px solid #AC9FBA;
+	border: 1px solid #707070;
 	border-radius: 6px;
 	outline: none;
 	cursor: pointer;
