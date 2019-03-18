@@ -12,7 +12,7 @@ class App extends Component {
       <Router>
         <div className="container_app">
           <Header />
-          <Menu/>
+          {/* <Menu/> */}
           <Routes/>
         </div>
       </Router>

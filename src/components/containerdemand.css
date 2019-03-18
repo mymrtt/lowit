@@ -20,7 +20,7 @@
 	height: 95%;
 	border: 1px solid #707070;
 	border-radius: 10px;
-	background-color: #fff;
+	background-color: #F6F6F6;
 }
 @media(max-width: 640px){
   .container_graphic-demand-content{
@@ -28,7 +28,6 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #00BCD4;
   }
 }
 @media(max-width: 768px){
@@ -84,7 +83,7 @@
 	}
   .container_graphic-demand--buttons{
     width: 100%;
-    height: 12%;
+    height: 13%;
     justify-content: center;
 	}
 	.container_graphic-demand--info{

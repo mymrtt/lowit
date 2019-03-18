@@ -220,7 +220,7 @@ a{
 }
 @media(max-width: 640px){
 	.container_buttons{
-		width: 55% !important;
+		width: 60% !important;
 		justify-content: space-around;
 	}
 }

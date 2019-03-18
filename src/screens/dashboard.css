@@ -14,6 +14,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-family: 'Roboto', sans-serif;
 }
 .container_dashboard-content{
 	width: 78%;
@@ -21,7 +22,6 @@
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	font-family: 'Roboto', sans-serif;
 }
 .container_dashboard-info{
 	padding: 10px 0;
@@ -33,10 +33,11 @@
 @media(max-width: 640px){
 	.container_dashboard{
 		padding: 0;
-		margin-top: 5rem;
+		/* margin-top: 5rem; */
 		flex-direction: column;
 	}
 	.container_dashboard-content{
+		margin-top: 5rem;
 		width: 100%;
 		height: 100%;
 	}
@@ -191,7 +192,7 @@
 		flex-direction: column;
 	}
   .container_consumption--info{
-		width: 100% !important;
+		width: 90% !important;
 		height: 80vh !important;
 		justify-content: space-around;
 		flex-direction: column-reverse;

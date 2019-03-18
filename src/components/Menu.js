@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 import LowItIMG from '../Assets/lowitlogo.png';
+import LowItMobile from '../Assets/lowitmobile.png';
 import logoMenuHamburguer from '../Assets/menuhamburguer.png';
 
 import './menu.css';
@@ -44,7 +45,7 @@ export class Menu extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container_menu">
         <nav className="navbar">
           <div className="container_navbar-links">
             <div className="container_navbar-items">
@@ -57,9 +58,17 @@ export class Menu extends Component {
             </div>
           </div>
         </nav>
+
+        {/* NAV MOBILE */}
         <div className="navbar_mobile" onClick={() => this.handleMenu()}>
           <div className="navbar_mobile-imgs">
-            <img src={LowItIMG} className="logoLowItMobile" alt="Logo Low-It" />
+            <img src={LowItMobile} className="logoLowItMobile" alt="Logo Low-It" />
+            {/* MANIPULACAO DA HEADER */}
+            <div className="container_manipulationHeader">
+              <img src={this.props.src} />
+              <p>{this.props.text}</p>
+            </div>
+            {/* MANIPULACAO DA HEADER */}
             <div className="navbar_mobile-menuHamburguer">
               <img src={logoMenuHamburguer} className="logoMenuHamburguer" alt="Menu" />
             </div>
