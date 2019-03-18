@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import { Line } from 'react-chartjs-2';
+import { Line, defaults } from 'react-chartjs-2';
 
 import './demandchart.css';
 
 const moment = require('moment')
+
+defaults.global.maintainAspectRatio = false
 
 class DemandChart extends Component{
   constructor(props){
@@ -125,7 +127,11 @@ class DemandChart extends Component{
         <div className="container_graphicDemand-content">
           <div className="graphic">
             <div className="graphicDemand">
-              <Line data={this.state.chartData} options={{title:{responsive: true, maintainAspectRatio: true}}} width={680} height={165} />
+              <Line 
+                data={this.state.chartData} 
+                options={{title:{responsive: true, maintainAspectRatio: false}}} 
+                width={680} height={165} 
+              />
             </div>
           </div>
         </div>

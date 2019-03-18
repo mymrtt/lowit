@@ -3,7 +3,7 @@ import {BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 
 import Routes from './Routes';
-import Menu from '../components/Menu';
+// import Menu from '../components/Menu';
 import Header from '../components/Header';
 
 class App extends Component {

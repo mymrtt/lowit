@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import { Line } from 'react-chartjs-2';
+import { Line, defaults } from 'react-chartjs-2';
 
 import './consumptionchart.css';
 
 const moment = require('moment')
+
+defaults.global.maintainAspectRatio = false
 
 class ConsumptionChart extends Component{
 
@@ -103,12 +105,20 @@ class ConsumptionChart extends Component{
 
     this.updateChartDataState(dataArray);
   }
+  
+  canvasGraphic = (canvas) => {
+    const ctx = canvas.getContext('2d');
+  }
 
   render(){
     return (
       <div className="graphic">
         <div className="graphic_comsumption">
-          <Line data={this.state.chartData} options={{title:{responsive: true, maintainAspectRatio: true}}} width={800} height={180} />
+          <Line 
+            data={this.state.chartData} 
+            options={{title:{responsive: true, maintainAspectRatio: false}}}
+            width={800} height={180} 
+          />
         </div>
       </div>
     )
