@@ -1,3 +1,12 @@
+.header_dashboard-mobile{
+	display: none;
+}
+@media(max-width: 640px){
+	.header_dashboard-mobile{
+		display: flex;
+	}
+}
+
 .container_dashboard{
 	padding: 5px;
 	min-width: 100%;

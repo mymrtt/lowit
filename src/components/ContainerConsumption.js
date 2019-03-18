@@ -65,7 +65,7 @@ class ContainerConsumption extends Component {
         <div className="container_consumption-content">
           <div className="container_consumption--info">
             <div className="container_graphic-info--items">
-              <p className="container_graphic-info--title">Consumo atual (Em R$)</p>
+              <p className="container_graphic-info--title">Consumo Atual (Em R$)</p>
               <p className="container_graphic-info--paragraph">R$ 45,36</p>
             </div>
             <div className="container_table-devices--consumption">

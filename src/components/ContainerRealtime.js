@@ -60,7 +60,7 @@ class ContainerRealtime extends Component {
     return(
         <div className="container_dashboard-info">
         <div className="container_info-items">
-          <h3 className="container_info-title">Última atualização</h3>
+          <h3 className="container_info-title">Última Atualização</h3>
           <div className="container_info-paragraphs--att">
             <p className="container_info-paragraph">{this.state.lastReadDate}</p>
             <p className="container_info-paragraph--hour">{this.state.lastReadHour}</p>
@@ -75,7 +75,7 @@ class ContainerRealtime extends Component {
           <p className="container_info-paragraph">{this.state.umidity}</p>
         </div>
         <div className="container_info-items">
-          <h3 className="container_info-title">Dispositivos conectados</h3>
+          <h3 className="container_info-title">Dispositivos Conectados</h3>
           <p className="container_info-paragraph">{this.state.connectedDevices}</p>
         </div>
         <div className="container_info-items">
