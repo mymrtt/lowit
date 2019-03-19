@@ -65,7 +65,7 @@ export class Menu extends Component {
             <img src={LowItMobile} className="logoLowItMobile" alt="Logo Low-It" />
             {/* MANIPULACAO DA HEADER */}
             <div className="container_manipulationHeader">
-              <img src={this.props.src} />
+              <img src={this.props.src} alt="Icon Header" />
               <p>{this.props.text}</p>
             </div>
             {/* MANIPULACAO DA HEADER */}

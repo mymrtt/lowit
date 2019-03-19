@@ -106,10 +106,6 @@ class ConsumptionChart extends Component{
     this.updateChartDataState(dataArray);
   }
   
-  canvasGraphic = (canvas) => {
-    const ctx = canvas.getContext('2d');
-  }
-
   render(){
     return (
       <div className="graphic">

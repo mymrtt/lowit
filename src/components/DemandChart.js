@@ -118,7 +118,6 @@ class DemandChart extends Component{
     const apiDemandUpdateCall = await fetch(this.getActiveDemandGraphUrl(nextProps.pass));
     const apiDemandUpdateJSON = await apiDemandUpdateCall.json();
     this.mountActiveDemandTree(apiDemandUpdateJSON.data, nextProps.pass);
-
   }
 
   render(){
