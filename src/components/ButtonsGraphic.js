@@ -13,7 +13,9 @@ class ButtonsGraphic extends Component {
   
   render(){
     return(
-      <button className="btns" option={this.props.option} onClick={this.props.onClick}>{this.props.value}</button>
+      <button className="btns" option={this.props.option} onClick={this.props.onClick}>
+        {this.props.value}
+      </button>
     );
   }
 }

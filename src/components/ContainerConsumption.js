@@ -63,7 +63,7 @@ class ContainerConsumption extends Component {
     return(
       <div className="container_consumption">
         <div className="container_consumption-content">
-          <div className="container_consumption--info">
+          <div className="container_consumption-info">
             <div className="container_graphic-info--items">
               <p className="container_graphic-info--title">Consumo Atual (Em R$)</p>
               <p className="container_graphic-info--paragraph">R$ 45,36</p>
@@ -81,7 +81,7 @@ class ContainerConsumption extends Component {
             <div className="container_graphic-consumption--content">
               <div className="container_graphic-consumption--buttons">
                 <input className="input_graphic-comsumption" type="text" value={this.state.data.name}/>
-                <div className="container_graphic-consumption--buttons-centro">
+                <div className="container_graphic-consumption--buttons-center">
                   <button className="btns">kW/h</button>
                   <button className="btns">R$</button>
                 </div>

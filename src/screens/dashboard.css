@@ -174,7 +174,7 @@
 	display: flex;
 	align-items: center;
 }
-.container_consumption--info{
+.container_consumption-info{
   width: 19%;
   height: 90%;
 	display: flex;
@@ -191,7 +191,7 @@
 	.container_consumption-content{
 		flex-direction: column;
 	}
-  .container_consumption--info{
+  .container_consumption-info{
 		width: 90% !important;
 		height: 80vh !important;
 		justify-content: space-around;
@@ -202,7 +202,7 @@
 	.container_consumption-content{
 		justify-content: space-evenly;
 	}
-  .container_consumption--info{
+  .container_consumption-info{
 		width: 20%;
   }
 }

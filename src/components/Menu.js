@@ -24,7 +24,7 @@ export class Menu extends Component {
   
   handleMenu = () => {
     this.setState(prevState => {
-      return {
+      return{
         showMenu: !prevState.showMenu
       }
     })
@@ -60,7 +60,7 @@ export class Menu extends Component {
         </nav>
 
         {/* NAV MOBILE */}
-        <div className="navbar_mobile" onClick={() => this.handleMenu()}>
+        <div className="navbar_mobile">
           <div className="navbar_mobile-imgs">
             <img src={LowItMobile} className="logoLowItMobile" alt="Logo Low-It" />
             {/* MANIPULACAO DA HEADER */}
@@ -69,7 +69,7 @@ export class Menu extends Component {
               <p>{this.props.text}</p>
             </div>
             {/* MANIPULACAO DA HEADER */}
-            <div className="navbar_mobile-menuHamburguer">
+            <div className="navbar_mobile-menuHamburguer" onClick={() => this.handleMenu()}>
               <img src={logoMenuHamburguer} className="logoMenuHamburguer" alt="Menu" />
             </div>
           </div>

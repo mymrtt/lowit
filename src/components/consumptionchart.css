@@ -54,7 +54,7 @@
 		margin: 2px;
 	}
 }
-.container_graphic-consumption--buttons-centro{
+.container_graphic-consumption--buttons-center{
 	width: 25%;
 	height: 100%;
 	display: flex;
@@ -62,12 +62,12 @@
 	align-items: center;
 }
 @media(max-width: 640px){
-	.container_graphic-consumption--buttons-centro{
+	.container_graphic-consumption--buttons-center{
 		width: 33% !important;
 	}
 }
 @media(max-width: 768px){
-	.container_graphic-consumption--buttons-centro{
+	.container_graphic-consumption--buttons-center{
 		width: 23%;
 	}
 }
