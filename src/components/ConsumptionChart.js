@@ -17,10 +17,11 @@ class ConsumptionChart extends Component{
       activeFilterId : '-1',
       activeFilterName : 'Prédio',
       chartFilterConsumption: 'hour', 
+      chartFilterConsumptionType: false, 
     };
   }
 
-  mountActiveDemandTree(dataset, filter){
+  mountActiveDemandTree(dataset, filter, type){
     var intervalBar = [];
     var demandedBar = [];
     var period = filter;
@@ -39,7 +40,13 @@ class ConsumptionChart extends Component{
       } 
   
       intervalBar.push(timeFormatted);
-      demandedBar.push(item.value);
+
+      if(type === true){
+        demandedBar.push(item.value.toFixed(2));        
+      } else {
+        demandedBar.push(item.value);
+      }
+
     });
 
     return [intervalBar, demandedBar];
@@ -51,7 +58,7 @@ class ConsumptionChart extends Component{
 //    this.setState({contractedDemand: apiContractedJSON.data.value})
 //  }
 
-  getActiveDemandGraphUrl(chartFilterConsumption, filtered){
+  getActiveDemandGraphUrl(chartFilterConsumptionType, chartFilterConsumption, filtered){
     var fetchUrl = null;
     if(chartFilterConsumption === null || chartFilterConsumption.length === 0  || chartFilterConsumption === 'hour'){
       fetchUrl = 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/consumption/graph?interval=hour';
@@ -65,12 +72,16 @@ class ConsumptionChart extends Component{
 
     if(typeof filtered !== 'undefined' && filtered !== null){
       fetchUrl = fetchUrl + '&device_group=' + filtered;
+      if(chartFilterConsumptionType === true){
+        fetchUrl = fetchUrl + '&money=true';
+      }
     }
 
+    console.log('URL: ', fetchUrl);
     return fetchUrl;
   }
 
-  updateChartDataState(dataArray){
+  updateChartDataState(dataArray, type){
     var intervalBar = dataArray[0];
     var demandedBar = dataArray[1];
 
@@ -79,7 +90,11 @@ class ConsumptionChart extends Component{
     chart.datasets = [];
 
     var demandedLine = {};
-    demandedLine.label = 'Consumo em kW/h';
+    if(type === true){
+      demandedLine.label = 'Consumo em R$';
+    } else {
+      demandedLine.label = 'Consumo em kW/h';
+    }
     demandedLine.data = demandedBar;
     demandedLine.backgroundColor = '#CCF2F7';
     chart.datasets.push(demandedLine);
@@ -92,18 +107,19 @@ class ConsumptionChart extends Component{
   async componentDidMount(){
     //await this.updateContractedDemandState();
  
-    const apiDemandCall = await fetch(this.getActiveDemandGraphUrl(this.state.chartFilterConsumption, this.state.activeFilterId));
+    const apiDemandCall = await fetch(this.getActiveDemandGraphUrl(this.state.chartFilterConsumptionType, this.state.chartFilterConsumption, this.state.activeFilterId));
     const apiDemandJSON = await apiDemandCall.json();
-    var dataArray = this.mountActiveDemandTree(apiDemandJSON.data, this.state.chartFilterConsumption);
-    this.updateChartDataState(dataArray);
+    var dataArray = this.mountActiveDemandTree(apiDemandJSON.data, this.state.chartFilterConsumption, this.state.chartFilterConsumptionType);
+    this.updateChartDataState(dataArray, this.state.chartFilterConsumptionType);
   }
 
   async componentWillReceiveProps(nextProps){
-    const apiDemandUpdateCall = await fetch(this.getActiveDemandGraphUrl(nextProps.pass, nextProps.filtered.id));
+    console.log('nexprops', nextProps.type);
+    const apiDemandUpdateCall = await fetch(this.getActiveDemandGraphUrl(nextProps.type, nextProps.pass, nextProps.filtered.id));
     const apiDemandUpdateJSON = await apiDemandUpdateCall.json();
-    var dataArray = this.mountActiveDemandTree(apiDemandUpdateJSON.data, nextProps.pass);
+    var dataArray = this.mountActiveDemandTree(apiDemandUpdateJSON.data, nextProps.pass, nextProps.type);
 
-    this.updateChartDataState(dataArray);
+    this.updateChartDataState(dataArray, nextProps.type);
   }
   
   render(){

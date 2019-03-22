@@ -5,6 +5,7 @@ const moment = require('moment')
 class ContainerRealtime extends Component {
   constructor(props){
     super(props);
+
     this.state = {
       time: new Date().toLocaleString(),
       lastReadDate: '-', 
@@ -14,6 +15,7 @@ class ContainerRealtime extends Component {
       connectedDevices: '-', 
       power: '-' 
     };
+
   }
 
   async componentDidMount(){
@@ -28,6 +30,7 @@ class ContainerRealtime extends Component {
   }
 
   async tick() {
+
     const apiRealtimeCall = await fetch('https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/realtime');
     const apiRealtimeJSON = await apiRealtimeCall.json();
     this.processResult(apiRealtimeJSON.data);
@@ -43,7 +46,7 @@ class ContainerRealtime extends Component {
       var activeTemperature = dataset.temperature + " º";
       var activeUmidity = dataset.umidity + " %";
       var activeConnectedDevices = dataset.connected_devices;
-      var activePower = dataset.power + " w";
+      var activePower = dataset.power.toFixed(2) + " kW";
 
       this.setState({
         lastReadDate: activeDate, 
@@ -55,12 +58,12 @@ class ContainerRealtime extends Component {
       })
     }
   }
-
+  
   render(){
     return(
-        <div className="container_dashboard-info">
+      <div className="container_dashboard-info">
         <div className="container_info-items">
-          <h3 className="container_info-title">Última Atualização</h3>
+          <h3 className="container_info-title">Última atualização</h3>
           <div className="container_info-paragraphs--att">
             <p className="container_info-paragraph">{this.state.lastReadDate}</p>
             <p className="container_info-paragraph--hour">{this.state.lastReadHour}</p>
@@ -75,7 +78,7 @@ class ContainerRealtime extends Component {
           <p className="container_info-paragraph">{this.state.umidity}</p>
         </div>
         <div className="container_info-items">
-          <h3 className="container_info-title">Dispositivos Conectados</h3>
+          <h3 className="container_info-title">Dispositivos conectados</h3>
           <p className="container_info-paragraph">{this.state.connectedDevices}</p>
         </div>
         <div className="container_info-items">

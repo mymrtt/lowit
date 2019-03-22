@@ -60,10 +60,10 @@ class ContainerDemand extends Component {
           <div className="container_graphic-demand-content">
             <div className="container_graphic-demand--buttons">
               <div className="container_buttons variation_btns-demand">
-                <ButtonsGraphic value="Hora" backgroundColor='Grey' onClick={() => this.handleHour()} />
-                <ButtonsGraphic value="Dia" backgroundColor='Grey' onClick={() => this.handleDay()} />
-                <ButtonsGraphic value="Mês" backgroundColor='Grey' onClick={() => this.handleMonth()} />
-                <ButtonsGraphic value="Ano" backgroundColor='Grey' onClick={() => this.handleYear()} />
+                <ButtonsGraphic value="Hora" onClick={() => this.handleHour()} />
+                <ButtonsGraphic value="Dia" onClick={() => this.handleDay()} />
+                <ButtonsGraphic value="Mês" onClick={() => this.handleMonth()} />
+                <ButtonsGraphic value="Ano" onClick={() => this.handleYear()} />
               </div>
             </div>
             <DemandChart pass={this.state.chartFilterDemand} />
