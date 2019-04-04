@@ -7,6 +7,26 @@ const moment = require('moment')
 
 defaults.global.maintainAspectRatio = false
 
+const options = {
+  legend:{display: true,labels:{fontSize:8, boxWidth:20}},
+  scales: {
+       xAxes: [{
+           stacked: true,
+           ticks: {
+            fontSize: 7
+           }
+
+       }],
+       yAxes: [{
+           stacked: true,
+           ticks: {
+            fontSize: 7
+           }
+       }]
+   }
+}
+
+
 class ConsumptionChart extends Component{
 
   constructor(props){
@@ -30,15 +50,15 @@ class ConsumptionChart extends Component{
       var timeFormatted = null;
 
       if(period === null || period.length === 0  || period === 'hour'){
-        timeFormatted = moment(item.datetime).format('HH') + "h";
+        timeFormatted = moment(item.datetime).format('HH') + "h" + "/" + moment(item.datetime).format('D');
       } else if(period === 'day'){
-        timeFormatted = moment(item.datetime).format('D');
+        timeFormatted = moment(item.datetime).format('D') + "/" + moment(item.datetime).format('MMM') ;
       } else if(period === 'month'){
-        timeFormatted = moment(item.datetime).format('MMM');
+        timeFormatted = moment(item.datetime).format('MMM') + "/" + moment(item.datetime).format('YYYY');
       } else if(period === 'year'){
         timeFormatted = moment(item.datetime).format('YYYY');
       } 
-  
+
       intervalBar.push(timeFormatted);
 
       if(type === true){
@@ -128,7 +148,7 @@ class ConsumptionChart extends Component{
         <div className="graphic_comsumption">
           <Line 
             data={this.state.chartData} 
-            options={{title:{responsive: true, maintainAspectRatio: false}}}
+            options={options} 
             width={800} height={180} 
           />
         </div>

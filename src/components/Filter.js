@@ -45,8 +45,8 @@ var modifiedDecorators = Object.assign({},decorators, { Header: (props) => {
       <div style={props.style.base}>
         <div style={props.style.title} className="container_filter">
         {props.node.name}
-            <a href='#' className="buttons" onClick={() => updateOnOff(props.node.name, props.node.id, 1)}> (L) </a>
-            <a href='#' className="buttons" onClick={() => updateOnOff(props.node.name, props.node.id, 0)}>(D)</a>
+            <a href='#' className="buttonoff" onClick={() => updateOnOff(props.node.name, props.node.id, 1)}> ● </a>
+            <a href='#' className="buttonon" onClick={() => updateOnOff(props.node.name, props.node.id, 0)}>●</a>
         </div>
       </div>
     );

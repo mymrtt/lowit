@@ -7,6 +7,35 @@ const moment = require('moment')
 
 defaults.global.maintainAspectRatio = false
 
+const options = {
+  legend:{display: true,labels:{fontSize:8, boxWidth:20}},
+  scales: {
+      tooltips: {
+        mode: 'index',
+        intersect: true
+      },
+       xAxes: [{
+           stacked: false,
+           ticks: {
+            fontSize: 7
+           }
+
+       }],
+       yAxes: [{
+           stacked: true,
+           ticks: {
+            fontSize: 7
+           },
+           scaleLabel: {
+            display: true,
+            labelString: 'kW',
+            fontSize: 7
+          }
+       }]
+   }
+}
+
+
 class DemandChart extends Component{
   constructor(props){
     super(props);
@@ -37,24 +66,27 @@ class DemandChart extends Component{
         lineContracted.data = value.value;
         lineContracted.borderColor = '#FF0000';
         lineContracted.backgroundColor = '#FF0000';
-        lineContracted.fill = false;
+        //lineContracted.fill = false;
 //        chart.datasets.push(lineContracted);
       } else {
         var lineItem = {};
         lineItem.label = key;
+        //lineItem.fill = '1';
 
         var lista = [];
         for (const [chave, valor] of Object.entries(value)) {
+          console.log("xxxxxxxxxxxxxxxx", chave);
+
           lista.push(valor.value);
 
           if(intervalCreated === false){
             var timeFormatted = null;
             if(period === null || period.length === 0  || period === 'hour'){
-              timeFormatted = moment(valor.datetime).format('HH') + "h";
+              timeFormatted = moment(valor.datetime).format('HH') + "h" + "/" + moment(valor.datetime).format('D');
             } else if(period === 'day'){
-              timeFormatted = moment(valor.datetime).format('D');
+              timeFormatted = moment(valor.datetime).format('D') + "/" + moment(valor.datetime).format('MMM') ;
             } else if(period === 'month'){
-              timeFormatted = moment(valor.datetime).format('MMM');
+              timeFormatted = moment(valor.datetime).format('MMM') + "/" + moment(valor.datetime).format('YYYY');
             } else if(period === 'year'){
               timeFormatted = moment(valor.datetime).format('YYYY');
             } 
@@ -67,10 +99,18 @@ class DemandChart extends Component{
 
         lineItem.data = lista;
         lineItem.backgroundColor = colors[colorIndex];
+        lineItem.radius = 2;
         colorIndex = colorIndex + 1;
-        chart.datasets.push(lineItem);
-      }
+        if(lineItem.label !== 'Demanda Total'){
+          lineItem.stack = "Stack 0";
+          chart.datasets.push(lineItem);
+        } else {
+         // lineItem.fill = false;
+         // chart.datasets.push(lineItem);
+        }
 
+
+      }
     }
 
     chart.labels = interval;
@@ -79,7 +119,6 @@ class DemandChart extends Component{
       chartData:chart
     })
 
-    console.log("xxxxxxxx", chart);
 
   }
 
@@ -128,7 +167,7 @@ class DemandChart extends Component{
             <div className="graphicDemand">
               <Line 
                 data={this.state.chartData} 
-                options={{title:{responsive: true, maintainAspectRatio: false}}} 
+                options={options} 
                 width={680} height={165} 
               />
             </div>

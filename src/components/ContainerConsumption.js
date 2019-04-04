@@ -9,7 +9,9 @@ class ContainerConsumption extends Component {
     super(props);
     this.state = {
       chartFilterConsumption: 'hour', 
-      chartFilterConsumptionType: false, 
+      chartFilterConsumptionType: false,
+      consumptionTitle: 'Consumo Atual (kW/h)',
+      consumptionValue: '-',
       data: {id: -1, name: 'Prédio'}
     };
 
@@ -22,6 +24,24 @@ class ContainerConsumption extends Component {
     this.handleYear = this.handleYear.bind(this);
     this.childHandler = this.childHandler.bind(this)
   }
+
+  componentDidMount(){
+
+    var consulta = 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/consumption/current'
+    var precision = 3;
+
+    fetch(consulta, {mode: 'cors'})
+    .then(res => res.json())
+    .then(json => { 
+    
+      var leitura = JSON.parse(json.data);
+      console.log(leitura);
+      this.setState({
+        consumptionValue : leitura.toFixed(precision)
+      })
+    });
+  }
+
 
 
    /*
@@ -39,15 +59,49 @@ class ContainerConsumption extends Component {
   handleKw = (event) => {
     console.log("kw");
     this.setState({
-      chartFilterConsumptionType: false
+      chartFilterConsumptionType: false,
+      consumptionTitle: 'Consumo Atual (kW/h)'
     })
+
+    var consulta = 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/consumption/current'
+    var precision = 3;
+
+    fetch(consulta, {mode: 'cors'})
+    .then(res => res.json())
+    .then(json => { 
+    
+      var leitura = JSON.parse(json.data);
+      console.log(leitura);
+      this.setState({
+        consumptionValue : leitura.toFixed(precision)
+      })
+    });
+
+
   }
 
   handleRs = (event) => {
     console.log("r$");
     this.setState({
-      chartFilterConsumptionType: true
+      chartFilterConsumptionType: true,
+      consumptionTitle: 'Consumo Atual (R$)'
     })
+
+    var consulta = 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/consumption/current?money=true'
+    var precision = 2;
+
+    fetch(consulta, {mode: 'cors'})
+    .then(res => res.json())
+    .then(json => { 
+    
+      var leitura = JSON.parse(json.data);
+      console.log(leitura);
+      this.setState({
+        consumptionValue : leitura.toFixed(precision)
+      })
+    });
+
+
   }
 
 
@@ -85,8 +139,8 @@ class ContainerConsumption extends Component {
         <div className="container_consumption-content">
           <div className="container_consumption-info">
             <div className="container_graphic-info--items">
-              <p className="container_graphic-info--title">Consumo Atual (Em R$)</p>
-              <p className="container_graphic-info--paragraph">R$ 45,36</p>
+              <p className="container_graphic-info--title">{this.state.consumptionTitle}</p>
+              <p className="container_graphic-info--paragraph">{this.state.consumptionValue}</p>
             </div>
             <div className="container_table-devices--consumption">
               <div className="table_consumption-devices">
