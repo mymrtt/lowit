@@ -7,14 +7,18 @@ import Dashboard from '../screens/Dashboard';
 import Dados from '../screens/Dados';
 import NoMatch from './NoMatch';
 
+import { PrivateRoute } from '../_components';
+import { LoginPage } from '../LoginPage';
+
 export class Routes extends Component {
   render() {
     return (
       <Switch>
-        <Route exact path='/' component={Dashboard} />
-        <Route path='/leitura' component={Leitura}/>
-        <Route path='/dashboard' component={Dashboard}/>
-        <Route path='/dados' component={Dados}/>
+        <PrivateRoute exact path='/' component={Dashboard} />
+        <Route path="/login" component={LoginPage} />
+        <PrivateRoute path='/leitura' component={Leitura}/>
+        <PrivateRoute path='/dashboard' component={Dashboard}/>
+        <PrivateRoute path='/dados' component={Dados}/>
         <Route component={NoMatch} />
       </Switch>
     )

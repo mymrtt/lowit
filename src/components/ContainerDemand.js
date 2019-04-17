@@ -20,6 +20,28 @@ class ContainerDemand extends Component {
     this.handleYear = this.handleYear.bind(this);
   }
 
+  async componentDidMount(){
+
+    this.intervalID = setInterval(
+      () => this.tick(),
+      60000
+    );
+
+
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.intervalID);
+  }
+
+  async tick() {
+    this.setState({
+      time: new Date().toLocaleString()
+    });
+    console.log('DEMANDA', 'Demanda Atualizada');
+  }
+
+
   handleHour = (event) => {
     console.log("hour");
     this.setState({

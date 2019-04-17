@@ -22,7 +22,7 @@ class Header extends Component {
             </div>
             <div className="header_items">
               <img src={LogoutIMG} className="header_items-img" alt="Logout" />
-              <a href ="/" className="a_header">logout</a>
+              <a href ="/login/" className="a_header">logout</a>
             </div>
           </div>
         </div>

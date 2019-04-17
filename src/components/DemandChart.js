@@ -15,23 +15,46 @@ const options = {
         intersect: true
       },
        xAxes: [{
-           stacked: false,
+//           stacked: false,
            ticks: {
             fontSize: 7
            }
 
        }],
+
        yAxes: [{
+           id: 'A',
            stacked: true,
            ticks: {
-            fontSize: 7
+            fontSize: 7,
+            beginAtZero:true,
+            min: 0,
+            suggestedMax: 1500   
            },
            scaleLabel: {
             display: true,
-            labelString: 'kW',
+            labelString: 'W',
             fontSize: 7
-          }
-       }]
+          },
+          display: false,
+       }, {
+        id: 'B',
+        stacked: false,
+        ticks: {
+          fontSize: 7,
+          beginAtZero:true,
+          min: 0,
+          suggestedMax: 1500   
+         },
+         scaleLabel: {
+          display: true,
+          labelString: 'W',
+          fontSize: 7
+        },
+
+        display: true,
+
+      }]
    }
 }
 
@@ -58,8 +81,6 @@ class DemandChart extends Component{
     chart.datasets = [];
 
     for (const [key, value] of Object.entries(dataset)) {
-      console.log(key, value);
-
       if(key == "contracted_demand"){
         var lineContracted = {};
         lineContracted.label = 'Demanda Contratada';
@@ -75,14 +96,12 @@ class DemandChart extends Component{
 
         var lista = [];
         for (const [chave, valor] of Object.entries(value)) {
-          console.log("xxxxxxxxxxxxxxxx", chave);
-
           lista.push(valor.value);
 
           if(intervalCreated === false){
             var timeFormatted = null;
             if(period === null || period.length === 0  || period === 'hour'){
-              timeFormatted = moment(valor.datetime).format('HH') + "h" + "/" + moment(valor.datetime).format('D');
+              timeFormatted = moment(valor.datetime).format('HH') + ":00" + "-" + moment(valor.datetime).format('D') + "/" + moment(valor.datetime).format('MM');
             } else if(period === 'day'){
               timeFormatted = moment(valor.datetime).format('D') + "/" + moment(valor.datetime).format('MMM') ;
             } else if(period === 'month'){
@@ -102,11 +121,14 @@ class DemandChart extends Component{
         lineItem.radius = 2;
         colorIndex = colorIndex + 1;
         if(lineItem.label !== 'Demanda Total'){
-          lineItem.stack = "Stack 0";
+          lineItem.yAxisID = "A";
           chart.datasets.push(lineItem);
         } else {
-         // lineItem.fill = false;
-         // chart.datasets.push(lineItem);
+          lineItem.yAxisID = "B";
+          lineItem.borderColor = '#FF0000';
+          lineItem.fill = false;
+          lineItem.backgroundColor = "rgba(255, 0, 0, 1)";
+          chart.datasets.push(lineItem);
         }
 
 
@@ -119,6 +141,8 @@ class DemandChart extends Component{
       chartData:chart
     })
 
+    console.log('ccccc', options);
+    console.log('ddddd', chart);
 
   }
 

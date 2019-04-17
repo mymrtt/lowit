@@ -50,7 +50,7 @@ class ConsumptionChart extends Component{
       var timeFormatted = null;
 
       if(period === null || period.length === 0  || period === 'hour'){
-        timeFormatted = moment(item.datetime).format('HH') + "h" + "/" + moment(item.datetime).format('D');
+        timeFormatted = moment(item.datetime).format('HH') + ":00" + "-" + moment(item.datetime).format('D') + "/" + moment(item.datetime).format('MM');
       } else if(period === 'day'){
         timeFormatted = moment(item.datetime).format('D') + "/" + moment(item.datetime).format('MMM') ;
       } else if(period === 'month'){
@@ -113,7 +113,7 @@ class ConsumptionChart extends Component{
     if(type === true){
       demandedLine.label = 'Consumo em R$';
     } else {
-      demandedLine.label = 'Consumo em kW/h';
+      demandedLine.label = 'Consumo em kWh';
     }
     demandedLine.data = demandedBar;
     demandedLine.backgroundColor = '#CCF2F7';

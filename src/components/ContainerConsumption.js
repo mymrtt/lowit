@@ -10,7 +10,7 @@ class ContainerConsumption extends Component {
     this.state = {
       chartFilterConsumption: 'hour', 
       chartFilterConsumptionType: false,
-      consumptionTitle: 'Consumo Atual (kW/h)',
+      consumptionTitle: 'Consumo mês atual (kWh)',
       consumptionValue: '-',
       data: {id: -1, name: 'Prédio'}
     };
@@ -25,7 +25,12 @@ class ContainerConsumption extends Component {
     this.childHandler = this.childHandler.bind(this)
   }
 
-  componentDidMount(){
+  async componentDidMount(){
+
+    this.intervalID = setInterval(
+      () => this.tick(),
+      60000
+    );
 
     var consulta = 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/consumption/current'
     var precision = 3;
@@ -35,22 +40,42 @@ class ContainerConsumption extends Component {
     .then(json => { 
     
       var leitura = JSON.parse(json.data);
-      console.log(leitura);
       this.setState({
         consumptionValue : leitura.toFixed(precision)
       })
     });
+
+
   }
 
+  componentWillUnmount() {
+    clearInterval(this.intervalID);
+  }
 
+  async tick() {
 
-   /*
-    Function that gets called when
-    we bubble up our `return` from Child 
-  */
+    var consulta = 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/consumption/current'
+    var precision = 3;
+
+    fetch(consulta, {mode: 'cors'})
+    .then(res => res.json())
+    .then(json => { 
+    
+      var leitura = JSON.parse(json.data);
+      this.setState({
+        consumptionValue : leitura.toFixed(precision)
+      })
+    });
+
+    this.setState({
+      time: new Date().toLocaleString()
+    });
+
+    console.log('CONSUMO', 'Consumo Atualizado');
+
+  }
+
   childHandler(dataFromChild) {
-    // log our state before and after we updated it
-    console.log('%cPrevious Parent State: ' + JSON.stringify(this.state), "color:orange");
     this.setState({
         data: dataFromChild
     },() => console.log('Updated Parent State:', this.state));
@@ -60,7 +85,7 @@ class ContainerConsumption extends Component {
     console.log("kw");
     this.setState({
       chartFilterConsumptionType: false,
-      consumptionTitle: 'Consumo Atual (kW/h)'
+      consumptionTitle: 'Consumo mês atual (kWh)'
     })
 
     var consulta = 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/consumption/current'
@@ -71,7 +96,6 @@ class ContainerConsumption extends Component {
     .then(json => { 
     
       var leitura = JSON.parse(json.data);
-      console.log(leitura);
       this.setState({
         consumptionValue : leitura.toFixed(precision)
       })
@@ -84,7 +108,7 @@ class ContainerConsumption extends Component {
     console.log("r$");
     this.setState({
       chartFilterConsumptionType: true,
-      consumptionTitle: 'Consumo Atual (R$)'
+      consumptionTitle: 'Consumo mês atual (R$)'
     })
 
     var consulta = 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/consumption/current?money=true'
@@ -95,7 +119,6 @@ class ContainerConsumption extends Component {
     .then(json => { 
     
       var leitura = JSON.parse(json.data);
-      console.log(leitura);
       this.setState({
         consumptionValue : leitura.toFixed(precision)
       })
@@ -156,7 +179,7 @@ class ContainerConsumption extends Component {
               <div className="container_graphic-consumption--buttons">
                 <input className="input_graphic-comsumption" type="text" value={this.state.data.name}/>
                 <div className="container_graphic-consumption--buttons-center">
-                  <ButtonsGraphic value="kW/h" onClick={() => this.handleKw()}/>
+                  <ButtonsGraphic value="kWh" onClick={() => this.handleKw()}/>
                   <ButtonsGraphic value="R$" onClick={() => this.handleRs()}/>
                 </div>
                 <div className="container_buttons">
