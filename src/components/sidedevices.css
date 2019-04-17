@@ -1,4 +1,5 @@
 .container_devices-side{
+	margin: 10px 0;		
 	width: 20%;
 	height: 85vh;
 	display: flex;

@@ -3,12 +3,15 @@ import React, { Component } from 'react';
 import DashPQNHover from '../Assets/dashmobile.png';
 import Menu from '../components/Menu';
 
+import Header from '../components/Header';
+
 import './leitura.css';
 
 class Leitura extends Component {
   render(){
     return(
       <div className="container_leitura">
+        <Header />
         <Menu src={DashPQNHover} text="Leitura" />
         <div className="container_leitura-content">
           {/* <div className="container_leitura-itens">
