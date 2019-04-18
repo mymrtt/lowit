@@ -10,8 +10,10 @@
 }
 .login_title{
   width: 100%;
+  height: 10%;
   display: flex;
   justify-content: center;
+  align-items: flex-end;
   color: #000;
 }
 .login_form{
@@ -55,10 +57,10 @@
     height: 50%;
   }
   .form-control{
-    height: 40%;
+    height: 35%;
   }
   .form-group--btn{
-    width: 90% !important;
+    width: 90%;
   }
 }
 @media(max-width: 768px){
@@ -66,20 +68,21 @@
     width: 40%;
   }
   .form-group--btn{
-    width: 92%;
+    margin-left: 15px;
+    width: 90%;
   }
 }
-@media(max-width: 990px){
+@media(max-width: 1000px){
   .login_form{
     width: 38%;
   }
   .form-group--btn{
-    width: 93%;
+    width: 90%;
   }
 }
 @media(max-width: 1024px){
   .form-group--btn{
-    width: 90%;
+    width: 97%;
   }
 }
 @media(max-width: 1440px){
