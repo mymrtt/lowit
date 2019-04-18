@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
 import DashPQNHover from '../Assets/dashmobile.png';
+
 import Menu from '../components/Menu';
+import Header from '../components/Header';
 
 import './dados.css';
 
@@ -9,6 +11,7 @@ class Dados extends Component {
   render(){
     return(
       <div className="container_dados">
+        <Header />
         <Menu src={DashPQNHover} text="Dados"/>
         <div className="container_dados-content">
           <div className="container_dados-row">

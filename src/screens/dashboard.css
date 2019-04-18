@@ -7,16 +7,26 @@
 	}
 }
 
-.container_dashboard{
+.Dashboard{
 	/* padding: 5px; */
-	min-width: 100%;
+	width: 86%;
   height: 100%;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: center;
 	font-family: 'Roboto', sans-serif;
 	flex-direction: column;
 }
+.container_dashboard{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+/* @media(max-width: 640px){
+	.container_dashboard{
+
+	}
+} */
 .container_dashboard-content{
 	width: 78%;
 	height: 87vh;

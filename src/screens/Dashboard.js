@@ -15,10 +15,10 @@ class Dashboard extends Component {
 
   render(){
     return(
-      <div className="container_dashboard">
+      <div className="Dashboard">
         <Header />
         <Menu src={DashPQNHover} text="Dashboard"/>
-        <div style={{display: 'flex', width: '100%'}}>
+        <div className="container_dashboard">
           <div className="container_dashboard-content">
             <ContainerRealtime />
             <div className="container_graphics">

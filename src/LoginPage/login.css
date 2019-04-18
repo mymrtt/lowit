@@ -22,7 +22,8 @@
   flex-direction: column;
 }
 .form-control{
-  height: 35%;
+  height: 40%;
+  outline: none;
   border: .5px solid #707070;
   border-radius: 6px;
 }
@@ -37,6 +38,8 @@
   width: 80%;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  outline: none;
 }
 .btn{
   width: 80px;
@@ -48,47 +51,39 @@
 }
 @media(max-width: 640px){
   .login_form{
-    width: 100% !important;
+    width: 88% !important;
+    height: 50%;
   }
   .form-control{
-    height: 40% !important;
+    height: 40%;
   }
   .form-group--btn{
-    width: 88% !important;
+    width: 90% !important;
   }
 }
 @media(max-width: 768px){
-  .col-md-6{
-    font-size: 18px;
-  }
   .login_form{
-    width: 50%;
+    width: 40%;
   }
-  .form-control{
-    height: 25%;
+  .form-group--btn{
+    width: 92%;
   }
-  /* .form-group--btn{
-    width: 90%;
-  } */
 }
 @media(max-width: 990px){
   .login_form{
-    width: 35%;
-  }
-  /* .form-group--btn{
-    width: 95%;
-  } */
-}
-@media(max-width: 1024px){
-  .login_form{
-    width: 35%;
+    width: 38%;
   }
   .form-group--btn{
+    width: 93%;
+  }
+}
+@media(max-width: 1024px){
+  .form-group--btn{
     width: 90%;
-  } 
+  }
 }
 @media(max-width: 1440px){
   .form-group--btn{
-    width: 90%;
+    width: 88%;
   }
 }
