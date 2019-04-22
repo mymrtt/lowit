@@ -1,0 +1,118 @@
+.ContainerRealTime{
+	padding: 10px 0;
+	display: flex;
+	width: 98%;
+	height: 21%;
+	align-items: center;
+}
+.ContainerRealTime-items{
+	margin: 0 10px;
+	width: 90%;
+	height: 100%;
+  border-radius: 10px;
+	background-color: #fff;
+}
+.ContainerRealTime-title{
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: #68CF6C;
+}
+.ContainerRealTime-paragraph{
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  color: #00717F;
+}
+.ContainerRealTime-paragraphs--att{
+	width: 100%;
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.ContainerRealTime-paragraph--hour{
+	width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  color: #00717F;
+}
+@media(max-width: 640px){
+  .ContainerRealTime{
+		margin: 0 !important;
+		width: 100%;
+		height: 100vh;
+		justify-content: space-evenly;
+		flex-direction: column;
+	}
+	.ContainerRealTime-items{
+		margin: 0 0 30px !important;
+		width: 85%;
+		height: 110px !important;
+		display: flex;
+		flex-direction: column;
+	}
+	.ContainerRealTime-title{
+		height: 50%;
+		font-size: 14px !important;
+	}
+	.ContainerRealTime-paragraph{
+		height: 90%;
+    font-size: 18px !important;
+	}
+	.ContainerRealTime-paragraph--hour{
+		font-size: 18px !important;
+	}
+}
+@media(max-width: 768px){
+  .ContainerRealTime{
+		margin: 8px 0;
+		padding: 0;
+		width: 97%;
+		height: 10%;
+	}
+	.ContainerRealTime-items{
+		margin: 0 3px;
+	}
+	.ContainerRealTime-title{
+		font-size: 10px;
+	}
+  .ContainerRealTime-paragraph{
+    font-size: 13px;
+	}
+	.ContainerRealTime-paragraph--hour{
+		font-size: 13px;
+	}
+}
+@media(max-width: 990px){
+	.ContainerRealTime-items{
+		height: 100%;
+	}
+	.ContainerRealTime-paragraphs--att{
+		height: 55%;
+	}
+	.ContainerRealTime-title{
+		height: 50%;
+	}
+	.ContainerRealTime-paragraph{
+		height: 50%;
+		font-size: 14px;
+	}
+	.ContainerRealTime-paragraph--hour{
+		font-size: 14px;
+	}
+}

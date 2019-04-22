@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './Container_Realtime.css';
+
 const moment = require('moment')
 
 class ContainerRealtime extends Component {
@@ -61,29 +63,29 @@ class ContainerRealtime extends Component {
   
   render(){
     return(
-      <div className="container_dashboard-info">
-        <div className="container_info-items">
-          <h3 className="container_info-title">Última atualização</h3>
-          <div className="container_info-paragraphs--att">
-            <p className="container_info-paragraph">{this.state.lastReadDate}</p>
-            <p className="container_info-paragraph--hour">{this.state.lastReadHour}</p>
+      <div className="ContainerRealTime">
+        <div className="ContainerRealTime-items">
+          <h3 className="ContainerRealTime-title">Última Atualização</h3>
+          <div className="ContainerRealTime-paragraphs--att">
+            <p className="ContainerRealTime-paragraph">{this.state.lastReadDate}</p>
+            <p className="ContainerRealTime-paragraph--hour">{this.state.lastReadHour}</p>
           </div>
         </div>
-        <div className="container_info-items">
-          <h3 className="container_info-title">Temperatura</h3>
-          <p className="container_info-paragraph">{this.state.temperature}</p>
+        <div className="ContainerRealTime-items">
+          <h3 className="ContainerRealTime-title">Temperatura</h3>
+          <p className="ContainerRealTime-paragraph">{this.state.temperature}</p>
         </div>
-        <div className="container_info-items">
-          <h3 className="container_info-title">Umidade</h3>
-          <p className="container_info-paragraph">{this.state.umidity}</p>
+        <div className="ContainerRealTime-items">
+          <h3 className="ContainerRealTime-title">Umidade</h3>
+          <p className="ContainerRealTime-paragraph">{this.state.umidity}</p>
         </div>
-        <div className="container_info-items">
-          <h3 className="container_info-title">Dispositivos conectados</h3>
-          <p className="container_info-paragraph">{this.state.connectedDevices}</p>
+        <div className="ContainerRealTime-items">
+          <h3 className="ContainerRealTime-title">Dispositivos Conectados</h3>
+          <p className="ContainerRealTime-paragraph">{this.state.connectedDevices}</p>
         </div>
-        <div className="container_info-items">
-          <h3 className="container_info-title">Potência</h3>
-          <p className="container_info-paragraph">{this.state.power}</p>
+        <div className="ContainerRealTime-items">
+          <h3 className="ContainerRealTime-title">Potência</h3>
+          <p className="ContainerRealTime-paragraph">{this.state.power}</p>
         </div>
       </div>
     )

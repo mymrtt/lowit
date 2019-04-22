@@ -144,8 +144,8 @@ class ConsumptionChart extends Component{
   
   render(){
     return (
-      <div className="graphic">
-        <div className="graphic_comsumption">
+      <div className="graphics">
+        <div className="ConsumptionChart">
           <Line 
             data={this.state.chartData} 
             options={options} 

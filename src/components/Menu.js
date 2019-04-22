@@ -45,7 +45,7 @@ export class Menu extends Component {
 
   render() {
     return (
-      <div className="container_menu">
+      <div className="Menu">
         <nav className="navbar">
           <div className="container_navbar-links">
             <div className="container_navbar-items">

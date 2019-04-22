@@ -185,10 +185,10 @@ class DemandChart extends Component{
 
   render(){
     return (
-      <div className="container_graphicDemand">
-        <div className="container_graphicDemand-content">
-          <div className="graphic">
-            <div className="graphicDemand">
+      <div className="DemandChart">
+        <div className="DemandChart-content">
+          <div className="graphics">
+            <div className="container_DemandChart">
               <Line 
                 data={this.state.chartData} 
                 options={options} 

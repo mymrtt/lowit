@@ -26,8 +26,6 @@ class ContainerDemand extends Component {
       () => this.tick(),
       60000
     );
-
-
   }
 
   componentWillUnmount() {
@@ -73,14 +71,14 @@ class ContainerDemand extends Component {
 
   render(){
     return(
-      <div className="container_graphic-demand">
-        <div className="container_demand-content">
-          <div className="container_graphic-demand--info">
+      <div className="ContainerDemand">
+        <div className="container_demand">
+          <div className="container_demand--info">
             <CurrentDemand />
             <ContractedDemand />
           </div>
-          <div className="container_graphic-demand-content">
-            <div className="container_graphic-demand--buttons">
+          <div className="container_demand-content">
+            <div className="container_demand-content--buttons">
               <div className="container_buttons variation_btns-demand">
                 <ButtonsGraphic value="Hora" onClick={() => this.handleHour()} />
                 <ButtonsGraphic value="Dia" onClick={() => this.handleDay()} />

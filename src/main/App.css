@@ -37,21 +37,8 @@ a{
 }
 /* APP */
 
-.nomatch{
-	margin-top: 4rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #00717F;
-	font-size: 25px;
-}
-@media(max-width: 640px){
-	.nomatch{
-		margin-top: 10rem;
-	}
-}
 
-/* graphic */
+/* graphics */
 .container_graphics{
   width: 98%;
 	height: 85%;
@@ -71,7 +58,7 @@ a{
 		min-height: 85%;
 	}
 }
-.graphic{
+.graphics{
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -79,19 +66,19 @@ a{
 	align-items: center;
 }
 @media(max-width: 640px){
-  .graphic{
+  .graphics{
     height: 27vh;
   }
 }
 @media(max-width: 768px){
-  .graphic{
+  .graphics{
     display: flex;
   }
 }
-/* GRAFICOS */
+/* graphics */
 
 /* DASH DEMANDA CONTRATADA E ATUAL */
-.container_graphic-info--items{
+.container_graphics-info--items{
 	width: 90%;
 	height: 26%;
 	display: flex;
@@ -102,18 +89,18 @@ a{
 	font-family: 'Roboto', sans-serif;
 }
 @media(max-width: 640px){
-	.container_graphic-info--items{
+	.container_graphics-info--items{
 		width: 85% !important;
 		height: 20% !important;
 	}
 }
 @media(max-width: 768px){
-	.container_graphic-info--items{
+	.container_graphics-info--items{
 		width: 100%;
 		/* height: 30%; */
 	}
 }
-.container_graphic-info--title{
+.container_graphics-info--title{
 	width: 100%;
 	height: 70%;
 	display: flex;
@@ -126,14 +113,14 @@ a{
 	background-color: #93DEE8;
 } 
 @media(max-width: 990px){
-	.container_graphic-info--items{
+	.container_graphics-info--items{
 		height: 30%;	
 	}
-	.container_graphic-info--title{
+	.container_graphics-info--title{
 		height: 70%;
 	}
 }
-.container_graphic-info--paragraph{
+.container_graphics-info--paragraph{
 	width: 100%;
 	height: 70%;
 	display: flex;
@@ -145,25 +132,25 @@ a{
 	color: #00717F;
 }
 @media(max-width: 640px){
-  .container_graphic-info--title{
+  .container_graphics-info--title{
     height: 40%;
 		font-size: 14px !important;
 	}
-	.container_graphic-info--paragraph{
+	.container_graphics-info--paragraph{
     height: 60%;
 		font-size: 18px !important;
 	}
 }
 @media(max-width: 768px){
-	.container_graphic-info--title{
+	.container_graphics-info--title{
 		font-size: 10px;
 	}
-  .container_graphic-info--paragraph{
+  .container_graphics-info--paragraph{
     font-size: 16px;
   }
 }
 @media(max-width: 990px){
-	.container_graphic-info--paragraph{
+	.container_graphics-info--paragraph{
 		font-size: 14px;
 	}
 }

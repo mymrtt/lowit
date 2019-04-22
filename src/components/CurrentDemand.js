@@ -24,9 +24,9 @@ class CurrentDemand extends Component {
 
   render(){
     return (
-      <div className="container_graphic-info--items variation_graphic-info--items">
-        <p className="container_graphic-info--title">Demanda Atual</p>
-        <p className="container_graphic-info--paragraph">{this.state.demandaAtual}</p>
+      <div className="container_graphics-info--items variation_graphic-info--items">
+        <p className="container_graphics-info--title">Demanda Atual</p>
+        <p className="container_graphics-info--paragraph">{this.state.demandaAtual}</p>
       </div>
     );
   }

@@ -10,10 +10,10 @@ import './dados.css';
 class Dados extends Component {
   render(){
     return(
-      <div className="container_dados">
+      <div className="Dados">
         <Header />
         <Menu src={DashPQNHover} text="Dados"/>
-        <div className="container_dados-content">
+        <div className="container_dados">
           <div className="container_dados-row">
             <div className="container_dados-items">
               <p className="container_dados-title">Grupo</p>

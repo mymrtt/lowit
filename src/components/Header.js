@@ -9,8 +9,8 @@ import './header.css';
 class Header extends Component {
   render() {
     return(
-      <header className="container_header">
-        <div className="container_header-content">
+      <header className="Header">
+        <div className="container_header">
           <div className="container_header-items">
             <div className="header_items">
               <img src={ConfigIMG} className="header_items-img" alt="Configuration" />

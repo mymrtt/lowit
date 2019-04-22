@@ -4,6 +4,8 @@ import ButtonsGraphic from './ButtonsGraphic';
 import ConsumptionChart from './ConsumptionChart';
 import Switch from './Switch';
 
+import './ContainerConsumption.css';
+
 class ContainerConsumption extends Component {
   constructor(props){
     super(props);
@@ -161,9 +163,9 @@ class ContainerConsumption extends Component {
       <div className="container_consumption">
         <div className="container_consumption-content">
           <div className="container_consumption-info">
-            <div className="container_graphic-info--items">
-              <p className="container_graphic-info--title">{this.state.consumptionTitle}</p>
-              <p className="container_graphic-info--paragraph">{this.state.consumptionValue}</p>
+            <div className="container_graphics-info--items">
+              <p className="container_graphics-info--title">{this.state.consumptionTitle}</p>
+              <p className="container_graphics-info--paragraph">{this.state.consumptionValue}</p>
             </div>
             <div className="container_table-devices--consumption">
               <div className="table_consumption-devices">

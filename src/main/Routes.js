@@ -4,7 +4,7 @@ import {Route, Switch} from 'react-router-dom';
 import Leitura from '../screens/Leitura';
 import Dashboard from '../screens/Dashboard';
 import Dados from '../screens/Dados';
-import NoMatch from './NoMatch';
+import NoMatch from './noMatch/NoMatch';
 
 import { PrivateRoute } from '../_components';
 import { LoginPage } from '../LoginPage';

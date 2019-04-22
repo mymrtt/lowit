@@ -10,10 +10,10 @@ import './leitura.css';
 class Leitura extends Component {
   render(){
     return(
-      <div className="container_leitura">
+      <div className="Leitura">
         <Header />
         <Menu src={DashPQNHover} text="Leitura" />
-        <div>
+        <div className="container_leitura">
           {/* <div className="container_leitura-content">
             <div className="container_leitura-itens">
             <p className="container_leitura-titulo">Demanda Atual</p>
