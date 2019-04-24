@@ -72,7 +72,8 @@
     height: 35%;
   }
   .form-group--btn{
-    width: 90%;
+    margin-left: 0 !important;
+    width: 90% !important;
   }
 }
 @media(max-width: 768px){
