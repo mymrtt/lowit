@@ -26,7 +26,7 @@
 .form-control{
   height: 40%;
   outline: none;
-  border: .5px solid #707070;
+  border: .5px solid #00717F;
   border-radius: 6px;
 }
 .form-group{
@@ -53,7 +53,7 @@
   width: 80px;
   height: 25px;
   color: #00717F;
-  border: .5px solid;
+  border: .5px solid #00717F;
   border-radius: 6px;
   background-color: #F8F8F8;
   outline: none;
@@ -79,6 +79,9 @@
 @media(max-width: 768px){
   .login_form{
     width: 40%;
+  }
+  .form-control{
+    height: 45%;
   }
   .form-group--btn{
     margin-left: 15px;
