@@ -72,12 +72,12 @@ class ContainerDemand extends Component {
   render(){
     return(
       <div className="ContainerDemand">
-        <div className="container_demand">
-          <div className="container_demand--info">
+        <div className="container_demand-content">
+          <div className="container_demand-content--info">
             <CurrentDemand />
             <ContractedDemand />
           </div>
-          <div className="container_demand-content">
+          <div className="container_demand-content--chart">
             <div className="container_demand-content--buttons">
               <div className="container_buttons variation_btns-demand">
                 <ButtonsGraphic value="Hora" onClick={() => this.handleHour()} />

@@ -6,7 +6,7 @@ import './sidedevices.css';
 class SideDevices extends Component {
   render(){
     return(
-      <div className="container_devices-side">
+      <div className="SideDevices">
         <div className="container_table-devices">
           <div className="table_devices-side-content">
             <h3 className="table_devices-title variation_side-devices--title">Automação</h3>

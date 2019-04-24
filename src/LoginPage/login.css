@@ -36,6 +36,12 @@
   justify-content: space-evenly;
   align-items: center;
 }
+/* .has-error{
+  width: 100%;
+}
+.help-block{
+  width: 100%;
+} */
 .form-group--btn{
   width: 80%;
   display: flex;
