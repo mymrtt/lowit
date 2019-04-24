@@ -24,19 +24,19 @@ self.__precacheManifest = [
     "url": "/lowitproject/static/js/runtime~main.5a0a00ec.js"
   },
   {
-    "revision": "0a9a4441dc9b3b603b9e",
-    "url": "/lowitproject/static/js/main.0a9a4441.chunk.js"
+    "revision": "3745dd8b619dd15fde9e",
+    "url": "/lowitproject/static/js/main.3745dd8b.chunk.js"
   },
   {
     "revision": "8b2f909a577614bf9cd4",
     "url": "/lowitproject/static/js/2.8b2f909a.chunk.js"
   },
   {
-    "revision": "0a9a4441dc9b3b603b9e",
-    "url": "/lowitproject/static/css/main.ee9105a8.chunk.css"
+    "revision": "3745dd8b619dd15fde9e",
+    "url": "/lowitproject/static/css/main.49c9cd8b.chunk.css"
   },
   {
-    "revision": "6cf9d89445e745d315e05f96f4a08a1b",
+    "revision": "fc62e1ba1430806510dac9a384ca3738",
     "url": "/lowitproject/index.html"
   }
 ];
