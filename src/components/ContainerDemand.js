@@ -39,7 +39,6 @@ class ContainerDemand extends Component {
     console.log('DEMANDA', 'Demanda Atualizada');
   }
 
-
   handleHour = (event) => {
     console.log("hour");
     this.setState({
@@ -67,7 +66,6 @@ class ContainerDemand extends Component {
       chartFilterDemand: 'year'
     })
   }
-
 
   render(){
     return(

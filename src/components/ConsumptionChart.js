@@ -10,22 +10,20 @@ defaults.global.maintainAspectRatio = false
 const options = {
   legend:{display: true,labels:{fontSize:8, boxWidth:20}},
   scales: {
-       xAxes: [{
-           stacked: true,
-           ticks: {
-            fontSize: 7
-           }
-
-       }],
-       yAxes: [{
-           stacked: true,
-           ticks: {
-            fontSize: 7
-           }
-       }]
-   }
+    xAxes: [{
+      stacked: true,
+      ticks: {
+        fontSize: 7
+      }
+    }],
+    yAxes: [{
+      stacked: true,
+      ticks: {
+        fontSize: 7
+      }
+    }]
+  }
 }
-
 
 class ConsumptionChart extends Component{
 

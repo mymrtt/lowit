@@ -46,8 +46,6 @@ class ContainerConsumption extends Component {
         consumptionValue : leitura.toFixed(precision)
       })
     });
-
-
   }
 
   componentWillUnmount() {
@@ -74,7 +72,6 @@ class ContainerConsumption extends Component {
     });
 
     console.log('CONSUMO', 'Consumo Atualizado');
-
   }
 
   childHandler(dataFromChild) {
@@ -102,8 +99,6 @@ class ContainerConsumption extends Component {
         consumptionValue : leitura.toFixed(precision)
       })
     });
-
-
   }
 
   handleRs = (event) => {
@@ -125,8 +120,6 @@ class ContainerConsumption extends Component {
         consumptionValue : leitura.toFixed(precision)
       })
     });
-
-
   }
 
 

@@ -4,14 +4,11 @@ import style from './FilterTheme';
 // import BtnOn from '../Assets/btnonpqn.png';
 // import BtnOff from '../Assets/btnoffpqn.png';
 
-
 var treeData = "";
 
 export function updateOnOff(nome, id, position) {
 
   var url = 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/devices/'+ id;
-
-
 
   (async () => {
     const rawResponse = await fetch(url, {
@@ -126,7 +123,6 @@ class Filter extends Component {
       }
 
     treeData = treeData + "}";
-
   }
 
   componentDidMount(){
