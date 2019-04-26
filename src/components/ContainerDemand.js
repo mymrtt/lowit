@@ -8,10 +8,10 @@ import ContractedDemand from './ContractedDemand';
 import './containerdemand.css';
 
 class ContainerDemand extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      chartFilterDemand: 'hour', 
+      chartFilterDemand: 'hour',
     };
 
     this.handleHour = this.handleHour.bind(this);
@@ -20,7 +20,7 @@ class ContainerDemand extends Component {
     this.handleYear = this.handleYear.bind(this);
   }
 
-  async componentDidMount(){
+  async componentDidMount() {
 
     this.intervalID = setInterval(
       () => this.tick(),
@@ -36,39 +36,35 @@ class ContainerDemand extends Component {
     this.setState({
       time: new Date().toLocaleString()
     });
-    console.log('DEMANDA', 'Demanda Atualizada');
   }
 
+
   handleHour = (event) => {
-    console.log("hour");
     this.setState({
       chartFilterDemand: 'hour'
     })
   }
 
   handleDay = (event) => {
-    console.log("day");
     this.setState({
       chartFilterDemand: 'day'
     })
   }
 
   handleMonth = (event) => {
-    console.log("month");
     this.setState({
       chartFilterDemand: 'month'
     })
   }
 
   handleYear = (event) => {
-    console.log("year");
     this.setState({
       chartFilterDemand: 'year'
     })
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <div className="ContainerDemand">
         <div className="container_demand-content">
           <div className="container_demand-content--info">
@@ -91,5 +87,5 @@ class ContainerDemand extends Component {
     )
   }
 }
-  
-  export default ContainerDemand;
+
+export default ContainerDemand;

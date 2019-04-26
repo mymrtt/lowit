@@ -1,18 +1,12 @@
 import React, { Component } from 'react';
 import {Treebeard, decorators} from 'react-treebeard';
 import style from './FilterTheme';
-// import BtnOn from '../Assets/btnonpqn.png';
-// import BtnOff from '../Assets/btnoffpqn.png';
-
 
 var treeData = "";
 
 export function updateOnOff(nome, id, position) {
 
   var url = 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/devices/'+ id;
-
-
-
   (async () => {
     const rawResponse = await fetch(url, {
       method: 'PATCH',
@@ -27,12 +21,9 @@ export function updateOnOff(nome, id, position) {
     if(content !== null && content.data.updated === true){
       if(position === 1) alert(nome + ' ligado com sucesso!');
       else alert(nome + ' desligado com sucesso!');
-
     } else {
-
       if(position === 1) alert('ocorreu um erro ao ligar ' + nome);
       else alert('ocorreu um erro ao desligar ' + nome);
-
     }
 
   })();
@@ -114,7 +105,6 @@ class Filter extends Component {
           }
 
           for(let i = 0; i < item.devices.length; i++) {
-          //console.log("-", item.children[i].name );
             this.recursiveData(item.devices[i]);
             if(i < (item.devices.length - 1)) {
               treeData = treeData + ",";
@@ -141,7 +131,6 @@ class Filter extends Component {
       ));
 
       var data = JSON.parse(treeData);
-      console.log(data);
       this.setState({
         jsonData: data
       })

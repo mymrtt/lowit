@@ -15,7 +15,6 @@ class ContractedDemand extends Component {
     .then(json => { 
     
       var leitura = JSON.parse(json.data.value);
-      console.log(leitura);
       leitura = this.formatNumber(leitura);
       this.setState({
         demandaContratada: leitura
@@ -31,7 +30,6 @@ class ContractedDemand extends Component {
         .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
     )
   }
-
 
   render(){
     return (

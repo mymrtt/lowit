@@ -7,7 +7,6 @@ class CurrentDemand extends Component {
     this.state = {
       demandaAtual: 0,
     };
-
   }
 
   componentDidMount(){
@@ -16,7 +15,6 @@ class CurrentDemand extends Component {
     .then(json => { 
     
       var leitura = JSON.parse(json.data.value);
-      console.log(leitura);
       leitura = this.formatNumber(leitura);
       this.setState({
         demandaAtual: leitura

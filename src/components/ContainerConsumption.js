@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import ButtonsGraphic from './ButtonsGraphic';
 import ConsumptionChart from './ConsumptionChart';
 import Switch from './Switch';
@@ -7,19 +6,19 @@ import Switch from './Switch';
 import './ContainerConsumption.css';
 
 class ContainerConsumption extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      chartFilterConsumption: 'hour', 
+      chartFilterConsumption: 'hour',
       chartFilterConsumptionType: false,
       consumptionTitle: 'Consumo mês atual (kWh)',
       consumptionValue: '-',
-      data: {id: -1, name: 'Prédio'}
+      data: { id: -1, name: 'Prédio' }
     };
 
     this.handleKw = this.handleKw.bind(this);
     this.handleRs = this.handleRs.bind(this);
- 
+
     this.handleHour = this.handleHour.bind(this);
     this.handleDay = this.handleDay.bind(this);
     this.handleMonth = this.handleMonth.bind(this);
@@ -27,7 +26,7 @@ class ContainerConsumption extends Component {
     this.childHandler = this.childHandler.bind(this)
   }
 
-  async componentDidMount(){
+  async componentDidMount() {
 
     this.intervalID = setInterval(
       () => this.tick(),
@@ -35,19 +34,18 @@ class ContainerConsumption extends Component {
     );
 
     var consulta = 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/consumption/current'
-    var precision = 3;
+    var precision = 0;
 
-    fetch(consulta, {mode: 'cors'})
-    .then(res => res.json())
-    .then(json => { 
-    
-      var leitura = JSON.parse(json.data);
-      leitura = this.formatNumber(leitura, precision);
-      this.setState({
-        consumptionValue : leitura
-      })
-    });
+    fetch(consulta, { mode: 'cors' })
+      .then(res => res.json())
+      .then(json => {
 
+        var leitura = JSON.parse(json.data);
+        leitura = this.formatNumber(leitura, precision);
+        this.setState({
+          consumptionValue: leitura
+        })
+      });
 
   }
 
@@ -60,66 +58,60 @@ class ContainerConsumption extends Component {
     var consulta = "";
     var precision = 0;
 
-    if (this.state.chartFilterConsumptionType === true){
+    if (this.state.chartFilterConsumptionType === true) {
       consulta = 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/consumption/current?money=true'
       precision = 2;
     } else {
       consulta = 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/consumption/current'
-      precision = 3;
+      precision = 0;
     }
 
+    fetch(consulta, { mode: 'cors' })
+      .then(res => res.json())
+      .then(json => {
 
-    fetch(consulta, {mode: 'cors'})
-    .then(res => res.json())
-    .then(json => { 
-    
-      var leitura = JSON.parse(json.data);
-      leitura = this.formatNumber(leitura, precision);
-      this.setState({
-        consumptionValue : leitura
-      })
-    });
+        var leitura = JSON.parse(json.data);
+        leitura = this.formatNumber(leitura, precision);
+        this.setState({
+          consumptionValue: leitura
+        })
+      });
 
     this.setState({
       time: new Date().toLocaleString()
     });
-
-    console.log('CONSUMO', 'Consumo Atualizado');
-
   }
 
   childHandler(dataFromChild) {
     this.setState({
-        data: dataFromChild
-    },() => console.log('Updated Parent State:', this.state));
+      data: dataFromChild
+    });
   }
 
   handleKw = (event) => {
-    console.log("kw");
     this.setState({
       chartFilterConsumptionType: false,
       consumptionTitle: 'Consumo mês atual (kWh)'
     })
 
     var consulta = 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/consumption/current'
-    var precision = 3;
+    var precision = 0;
 
-    fetch(consulta, {mode: 'cors'})
-    .then(res => res.json())
-    .then(json => { 
-    
-      var leitura = JSON.parse(json.data);
-      leitura = this.formatNumber(leitura, precision);
-      this.setState({
-        consumptionValue : leitura
-      })
-    });
+    fetch(consulta, { mode: 'cors' })
+      .then(res => res.json())
+      .then(json => {
+
+        var leitura = JSON.parse(json.data);
+        leitura = this.formatNumber(leitura, precision);
+        this.setState({
+          consumptionValue: leitura
+        })
+      });
 
 
   }
 
   handleRs = (event) => {
-    console.log("r$");
     this.setState({
       chartFilterConsumptionType: true,
       consumptionTitle: 'Consumo mês atual (R$)'
@@ -128,44 +120,38 @@ class ContainerConsumption extends Component {
     var consulta = 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/consumption/current?money=true'
     var precision = 2;
 
-    fetch(consulta, {mode: 'cors'})
-    .then(res => res.json())
-    .then(json => { 
-    
-      var leitura = JSON.parse(json.data);
-      leitura = this.formatNumber(leitura, precision);
-      this.setState({
-        consumptionValue : leitura
-      })
-    });
+    fetch(consulta, { mode: 'cors' })
+      .then(res => res.json())
+      .then(json => {
 
-
+        var leitura = JSON.parse(json.data);
+        leitura = this.formatNumber(leitura, precision);
+        this.setState({
+          consumptionValue: leitura
+        })
+      });
   }
 
 
   handleHour = (event) => {
-    console.log("hour");
     this.setState({
       chartFilterConsumption: 'hour'
     })
   }
 
   handleDay = (event) => {
-    console.log("day");
     this.setState({
       chartFilterConsumption: 'day'
     })
   }
 
   handleMonth = (event) => {
-    console.log("month");
     this.setState({
       chartFilterConsumption: 'month'
     })
   }
 
   handleYear = (event) => {
-    console.log("year");
     this.setState({
       chartFilterConsumption: 'year'
     })
@@ -181,8 +167,8 @@ class ContainerConsumption extends Component {
   }
 
 
-  render(){
-    return(
+  render() {
+    return (
       <div className="container_consumption">
         <div className="container_consumption-content">
           <div className="container_consumption-info">
@@ -194,7 +180,7 @@ class ContainerConsumption extends Component {
               <div className="table_consumption-devices">
                 <h3 className="table_devices-title">Filtro</h3>
                 <div className="filter">
-                  <Switch action={this.childHandler}/>
+                  <Switch action={this.childHandler} />
                 </div>
               </div>
             </div>
@@ -202,25 +188,25 @@ class ContainerConsumption extends Component {
           <div className="container_graphic-consumption">
             <div className="container_graphic-consumption--content">
               <div className="container_graphic-consumption--buttons">
-                <input className="input_graphic-comsumption" type="text" value={this.state.data.name}/>
+                <input className="input_graphic-comsumption" type="text" value={this.state.data.name} />
                 <div className="container_graphic-consumption--buttons-center">
-                  <ButtonsGraphic value="kWh" onClick={() => this.handleKw()}/>
-                  <ButtonsGraphic value="R$" onClick={() => this.handleRs()}/>
+                  <ButtonsGraphic value="kWh" onClick={() => this.handleKw()} />
+                  <ButtonsGraphic value="R$" onClick={() => this.handleRs()} />
                 </div>
                 <div className="container_buttons">
-                  <ButtonsGraphic value="Hora" onClick={() => this.handleHour()}/>
-                  <ButtonsGraphic value="Dia" onClick={() => this.handleDay()}/>
-                  <ButtonsGraphic value="Mês" onClick={() => this.handleMonth()}/>
-                  <ButtonsGraphic value="Ano" onClick={() => this.handleYear()}/>
+                  <ButtonsGraphic value="Hora" onClick={() => this.handleHour()} />
+                  <ButtonsGraphic value="Dia" onClick={() => this.handleDay()} />
+                  <ButtonsGraphic value="Mês" onClick={() => this.handleMonth()} />
+                  <ButtonsGraphic value="Ano" onClick={() => this.handleYear()} />
                 </div>
               </div>
               <ConsumptionChart pass={this.state.chartFilterConsumption} type={this.state.chartFilterConsumptionType} filtered={this.state.data} />
             </div>
-          </div> 
+          </div>
         </div>
       </div>
     )
   }
 }
-  
-  export default ContainerConsumption;
+
+export default ContainerConsumption;
