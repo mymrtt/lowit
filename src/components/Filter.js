@@ -4,11 +4,14 @@ import style from './FilterTheme';
 // import BtnOn from '../Assets/btnonpqn.png';
 // import BtnOff from '../Assets/btnoffpqn.png';
 
+
 var treeData = "";
 
 export function updateOnOff(nome, id, position) {
 
   var url = 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/devices/'+ id;
+
+
 
   (async () => {
     const rawResponse = await fetch(url, {
@@ -42,7 +45,7 @@ var modifiedDecorators = Object.assign({},decorators, { Header: (props) => {
       <div style={props.style.base}>
         <div style={props.style.title} className="container_filter">
         {props.node.name}
-            <a href='#' className="buttonoff" onClick={() => updateOnOff(props.node.name, props.node.id, 1)}> ● </a>
+            <a href='#' className="buttonoff" onClick={() => updateOnOff(props.node.name, props.node.id, 1)}>●</a> 
             <a href='#' className="buttonon" onClick={() => updateOnOff(props.node.name, props.node.id, 0)}>●</a>
         </div>
       </div>
@@ -123,6 +126,7 @@ class Filter extends Component {
       }
 
     treeData = treeData + "}";
+
   }
 
   componentDidMount(){

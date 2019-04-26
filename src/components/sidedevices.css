@@ -1,4 +1,4 @@
-.SideDevices{
+.container_devices-side{
 	margin: 10px 0;		
 	width: 20%;
 	height: 85vh;
@@ -19,7 +19,7 @@
   background-color: #F8F8F8;
 }
 @media(max-width: 640px){
-	.SideDevices{
+	.container_devices-side{
     margin: 30px 0 0;
 		width: 100%;
 		min-height: 90vh !important;
@@ -31,7 +31,7 @@
 	}
 }
 @media(max-width: 768px){
-	.SideDevices{
+	.container_devices-side{
 		min-width: 22%;
 		min-height: 98vh;
 	}
@@ -84,19 +84,33 @@
   align-items: center;
 }
 .buttonon{
-	font-size: 14px;
+	font-size: 20px;
 	color: #FF0000;
   width: 12px;
 	display: flex;
   justify-content: space-evenly;
-  align-items: center;
+	align-items: center;
+	margin-left: 5px;
 }
 
+.buttonon:hover{
+	font-size: 30px;
+	color: #CC0000;
+}
+
+
 .buttonoff{
-	font-size: 14px;
+	font-size: 20px;
 	color: #68CF6C;
   width: 12px;
 	display: flex;
   justify-content: space-evenly;
-  align-items: center;
+	align-items: center;
+	margin-left: 6px;
+	margin-right: 5px;
+}
+
+.buttonoff:hover{
+	font-size: 30px;
+	color: #68AC6C;
 }

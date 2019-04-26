@@ -26,7 +26,7 @@
 .form-control{
   height: 40%;
   outline: none;
-  border: .5px solid #00717F;
+  border: .5px solid #707070;
   border-radius: 6px;
 }
 .form-group{
@@ -36,12 +36,6 @@
   justify-content: space-evenly;
   align-items: center;
 }
-/* .has-error{
-  width: 100%;
-}
-.help-block{
-  width: 100%;
-} */
 .form-group--btn{
   width: 80%;
   display: flex;
@@ -53,7 +47,7 @@
   width: 80px;
   height: 25px;
   color: #00717F;
-  border: .5px solid #00717F;
+  border: .5px solid;
   border-radius: 6px;
   background-color: #F8F8F8;
   outline: none;
@@ -72,16 +66,12 @@
     height: 35%;
   }
   .form-group--btn{
-    margin-left: 0 !important;
-    width: 90% !important;
+    width: 90%;
   }
 }
 @media(max-width: 768px){
   .login_form{
     width: 40%;
-  }
-  .form-control{
-    height: 45%;
   }
   .form-group--btn{
     margin-left: 15px;

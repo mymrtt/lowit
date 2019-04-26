@@ -5,8 +5,9 @@ class CurrentDemand extends Component {
   constructor(props){
     super(props);
     this.state = {
-      demandaAtual: '-',  
+      demandaAtual: 0,
     };
+
   }
 
   componentDidMount(){
@@ -16,10 +17,21 @@ class CurrentDemand extends Component {
     
       var leitura = JSON.parse(json.data.value);
       console.log(leitura);
+      leitura = this.formatNumber(leitura);
       this.setState({
-        demandaAtual: leitura.toFixed(3)
+        demandaAtual: leitura
       })
+
     });
+  }
+
+  formatNumber(num) {
+    return (
+      num
+        .toFixed(0)
+        .replace('.', ',')
+        .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+    )
   }
 
   render(){

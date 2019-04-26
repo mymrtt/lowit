@@ -4,10 +4,28 @@ import { Line, defaults } from 'react-chartjs-2';
 import './demandchart.css';
 
 const moment = require('moment')
-
+var numeral = require('numeral');
 defaults.global.maintainAspectRatio = false
 
-const options = {
+function formatNumber(num) {
+  return (
+    Number(num)
+      .toFixed(0)
+      .replace('.', ',')
+      .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+  )
+}
+
+
+
+const options = {  
+  tooltips: {
+    callbacks: {
+        label: function(tooltipItem, data) {
+            return `${formatNumber(data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index])}`;
+        }
+    }
+},
   legend:{display: true,labels:{fontSize:8, boxWidth:20}},
   scales: {
       tooltips: {
@@ -24,37 +42,23 @@ const options = {
 
        yAxes: [{
            id: 'A',
-           stacked: true,
+           stacked: false,
            ticks: {
+            callback(value) {
+              return Number(value).toLocaleString('pt-BR')
+            },
+
             fontSize: 7,
             beginAtZero:true,
             min: 0,
-            suggestedMax: 1500   
            },
            scaleLabel: {
             display: true,
             labelString: 'W',
             fontSize: 7
           },
-          display: false,
-       }, {
-        id: 'B',
-        stacked: false,
-        ticks: {
-          fontSize: 7,
-          beginAtZero:true,
-          min: 0,
-          suggestedMax: 1500   
-         },
-         scaleLabel: {
           display: true,
-          labelString: 'W',
-          fontSize: 7
-        },
-
-        display: true,
-
-      }]
+       }]
    }
 }
 
@@ -68,6 +72,8 @@ class DemandChart extends Component{
       contractedDemand: 0, 
       chartFilterDemand: 'hour', 
     };
+
+
   }
 
   mountActiveDemandTree(dataset, filter){
@@ -81,14 +87,27 @@ class DemandChart extends Component{
     chart.datasets = [];
 
     for (const [key, value] of Object.entries(dataset)) {
+
       if(key == "contracted_demand"){
         var lineContracted = {};
         lineContracted.label = 'Demanda Contratada';
-        lineContracted.data = value.value;
-        lineContracted.borderColor = '#FF0000';
-        lineContracted.backgroundColor = '#FF0000';
-        //lineContracted.fill = false;
-//        chart.datasets.push(lineContracted);
+
+        var list = [];  
+
+        var arrayLength = value.length;
+        for (var i = 0; i < arrayLength; i++) {
+            list.push(value[i].value);
+        }
+
+        lineContracted.data = list;
+        lineContracted.backgroundColor = "#006400";
+        lineContracted.borderColor = "#006400";
+        lineContracted.radius = 2;
+        lineContracted.fill = false;
+
+
+        chart.datasets.push(lineContracted);
+
       } else {
         var lineItem = {};
         lineItem.label = key;
@@ -119,20 +138,21 @@ class DemandChart extends Component{
         lineItem.data = lista;
         lineItem.backgroundColor = colors[colorIndex];
         lineItem.radius = 2;
-        colorIndex = colorIndex + 1;
+
         if(lineItem.label !== 'Demanda Total'){
-          lineItem.yAxisID = "A";
+          lineItem.borderColor = colors[colorIndex];
+          lineItem.fill = false;
           chart.datasets.push(lineItem);
         } else {
-          lineItem.yAxisID = "B";
-          lineItem.borderColor = '#FF0000';
+          lineItem.borderColor = colors[colorIndex];
           lineItem.fill = false;
-          lineItem.backgroundColor = "rgba(255, 0, 0, 1)";
           chart.datasets.push(lineItem);
         }
-
-
+        colorIndex = colorIndex + 1;
       }
+
+
+
     }
 
     chart.labels = interval;
@@ -140,9 +160,6 @@ class DemandChart extends Component{
     this.setState({
       chartData:chart
     })
-
-    console.log('ccccc', options);
-    console.log('ddddd', chart);
 
   }
 

@@ -7,6 +7,7 @@ const moment = require('moment')
 class ContainerRealtime extends Component {
   constructor(props){
     super(props);
+
     this.state = {
       time: new Date().toLocaleString(),
       lastReadDate: '-', 
@@ -16,6 +17,7 @@ class ContainerRealtime extends Component {
       connectedDevices: '-', 
       power: '-' 
     };
+
   }
 
   async componentDidMount(){
@@ -30,6 +32,7 @@ class ContainerRealtime extends Component {
   }
 
   async tick() {
+
     const apiRealtimeCall = await fetch('https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/realtime');
     const apiRealtimeJSON = await apiRealtimeCall.json();
     this.processResult(apiRealtimeJSON.data);

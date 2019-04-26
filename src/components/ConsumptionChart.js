@@ -3,27 +3,54 @@ import { Line, defaults } from 'react-chartjs-2';
 
 import './consumptionchart.css';
 
-const moment = require('moment')
+const moment = require('moment');
+var numeral = require('numeral');
 
 defaults.global.maintainAspectRatio = false
 
+function formatNumber(num) {
+  return (
+    Number(num)
+      .toFixed(countDecimals(num))
+      .replace('.', ',')
+      .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+  )
+}
+
+var countDecimals = function (value) {
+  if(Math.floor(value) === value) return 0;
+  return value.toString().split(".")[1].length || 0; 
+}
+
 const options = {
+  tooltips: {
+    callbacks: {
+        label: function(tooltipItem, data) {
+            return `${formatNumber(data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index])}`;
+        }
+    }
+},
   legend:{display: true,labels:{fontSize:8, boxWidth:20}},
   scales: {
-    xAxes: [{
-      stacked: true,
-      ticks: {
-        fontSize: 7
-      }
-    }],
-    yAxes: [{
-      stacked: true,
-      ticks: {
-        fontSize: 7
-      }
-    }]
-  }
+       xAxes: [{
+           stacked: false,
+           ticks: {
+            fontSize: 7
+           }
+
+       }],
+       yAxes: [{
+           stacked: false,
+           ticks: {
+            callback(value) {
+              return Number(value).toLocaleString('pt-BR')
+            },
+            fontSize: 7
+           }
+       }]
+   }
 }
+
 
 class ConsumptionChart extends Component{
 
@@ -62,10 +89,12 @@ class ConsumptionChart extends Component{
       if(type === true){
         demandedBar.push(item.value.toFixed(2));        
       } else {
-        demandedBar.push(item.value);
+        demandedBar.push(item.value.toFixed(3));
       }
 
     });
+
+    console.log("demanded:" + demandedBar);
 
     return [intervalBar, demandedBar];
   }
@@ -113,8 +142,13 @@ class ConsumptionChart extends Component{
     } else {
       demandedLine.label = 'Consumo em kWh';
     }
+
     demandedLine.data = demandedBar;
+
     demandedLine.backgroundColor = '#CCF2F7';
+    demandedLine.borderColor = "#006400";
+
+
     chart.datasets.push(demandedLine);
 
     this.setState({

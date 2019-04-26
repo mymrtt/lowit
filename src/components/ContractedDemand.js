@@ -16,11 +16,22 @@ class ContractedDemand extends Component {
     
       var leitura = JSON.parse(json.data.value);
       console.log(leitura);
+      leitura = this.formatNumber(leitura);
       this.setState({
-        demandaContratada: leitura.toFixed(3)
+        demandaContratada: leitura
       })
     });
   }
+
+  formatNumber(num) {
+    return (
+      num
+        .toFixed(0)
+        .replace('.', ',')
+        .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+    )
+  }
+
 
   render(){
     return (

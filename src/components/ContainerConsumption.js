@@ -42,10 +42,13 @@ class ContainerConsumption extends Component {
     .then(json => { 
     
       var leitura = JSON.parse(json.data);
+      leitura = this.formatNumber(leitura, precision);
       this.setState({
-        consumptionValue : leitura.toFixed(precision)
+        consumptionValue : leitura
       })
     });
+
+
   }
 
   componentWillUnmount() {
@@ -54,16 +57,26 @@ class ContainerConsumption extends Component {
 
   async tick() {
 
-    var consulta = 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/consumption/current'
-    var precision = 3;
+    var consulta = "";
+    var precision = 0;
+
+    if (this.state.chartFilterConsumptionType === true){
+      consulta = 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/consumption/current?money=true'
+      precision = 2;
+    } else {
+      consulta = 'https://zh7k3p5og1.execute-api.us-east-1.amazonaws.com/testing/consumption/current'
+      precision = 3;
+    }
+
 
     fetch(consulta, {mode: 'cors'})
     .then(res => res.json())
     .then(json => { 
     
       var leitura = JSON.parse(json.data);
+      leitura = this.formatNumber(leitura, precision);
       this.setState({
-        consumptionValue : leitura.toFixed(precision)
+        consumptionValue : leitura
       })
     });
 
@@ -72,6 +85,7 @@ class ContainerConsumption extends Component {
     });
 
     console.log('CONSUMO', 'Consumo Atualizado');
+
   }
 
   childHandler(dataFromChild) {
@@ -95,10 +109,13 @@ class ContainerConsumption extends Component {
     .then(json => { 
     
       var leitura = JSON.parse(json.data);
+      leitura = this.formatNumber(leitura, precision);
       this.setState({
-        consumptionValue : leitura.toFixed(precision)
+        consumptionValue : leitura
       })
     });
+
+
   }
 
   handleRs = (event) => {
@@ -116,10 +133,13 @@ class ContainerConsumption extends Component {
     .then(json => { 
     
       var leitura = JSON.parse(json.data);
+      leitura = this.formatNumber(leitura, precision);
       this.setState({
-        consumptionValue : leitura.toFixed(precision)
+        consumptionValue : leitura
       })
     });
+
+
   }
 
 
@@ -150,6 +170,16 @@ class ContainerConsumption extends Component {
       chartFilterConsumption: 'year'
     })
   }
+
+  formatNumber(num, precision) {
+    return (
+      num
+        .toFixed(precision)
+        .replace('.', ',')
+        .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+    )
+  }
+
 
   render(){
     return(
