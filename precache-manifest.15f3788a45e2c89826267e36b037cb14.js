@@ -36,7 +36,7 @@ self.__precacheManifest = [
     "url": "/lowitproject/static/css/main.b440182d.chunk.css"
   },
   {
-    "revision": "11def61db0838956d892f055b7ade477",
+    "revision": "a1c7ab6ccb8a9c65d4b623b16ed21b18",
     "url": "/lowitproject/index.html"
   }
 ];
